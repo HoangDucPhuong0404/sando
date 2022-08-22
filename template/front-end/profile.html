@@ -1,0 +1,1832 @@
+
+<!doctype html>
+<html lang="vi">
+    <head >
+        <script>
+    var BASE_URL = 'https\u003A\u002F\u002Fsandro.com.vn\u002F';
+    var require = {
+        'baseUrl': 'https\u003A\u002F\u002Fsandro.com.vn\u002Fstatic\u002Fversion1660607991\u002Ffrontend\u002FOpenasia\u002FSandro\u002Fvi_VN'
+    };</script>        <meta charset="utf-8"/>
+<meta name="title" content="Customer Login"/>
+<meta name="keywords" content="Magento, Varien, E-commerce"/>
+<meta name="robots" content="INDEX,FOLLOW"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>Customer Login</title>
+<link  rel="stylesheet" type="text/css"  media="all" href="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/mage/calendar.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/css/styles-m.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/Magenest_MegaMenu/css/font-awesome.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/Magenest_Messenger/css/style.min.css" />
+<link  rel="stylesheet" type="text/css"  media="screen and (min-width: 768px)" href="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/css/styles-l.min.css" />
+<link  rel="stylesheet" type="text/css"  media="print" href="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/css/print.min.css" />
+<script  type="text/javascript"  src="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/requirejs/require.min.js"></script>
+<script  type="text/javascript"  src="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/requirejs-min-resolver.min.js"></script>
+<script  type="text/javascript"  src="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/mage/requirejs/mixins.min.js"></script>
+<script  type="text/javascript"  src="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/requirejs-config.min.js"></script>
+<link  rel="icon" type="image/x-icon" href="/media/favicon/stores/1/favicon.ico" />
+<link  rel="shortcut icon" type="image/x-icon" href="/media/favicon/stores/1/favicon.ico" />
+<meta name="google-site-verification" content="0qPVvxVDUdDIPCY17hIcz_9OqXJzFOgm6nHfPnnZgWM" />
+<meta name="facebook-domain-verification" content="cr3s186khyl1v8bs3kcnxa2vx30fsk" />
+<style>
+     .checkout-index-index input[name='region'] {
+           display:none !important;
+     }
+</style>            <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_PageCache/js/form-key-provider": {}
+            }
+        }
+    </script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WTHWMNZ');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+    require(['jquery', 'Magenest_LazyLoading/js/jquery_lazyload'], function($) {
+        $(document).ready(function(){
+            $("img[lazy]:not([notlazy]),iframe[lazy]:not([notlazy])").lazyload({
+                threshold: 200,
+                failure_limit: 500,
+                imageloader: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            });
+        });
+    });
+</script><link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    </head>
+    <body data-container="body"
+          data-mage-init='{"loaderAjax": {}, "loader": { "icon": "/static/version1660607991/frontend/Openasia/Sandro/vi_VN/images/loader-2.gif"}}'
+        id="html-body" class="customer-account-login page-layout-1column">
+        
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_PageBuilder/js/widget-initializer": {
+                "config": {"[data-content-type=\"slider\"][data-appearance=\"default\"]":{"Magento_PageBuilder\/js\/content-type\/slider\/appearance\/default\/widget":false},"[data-content-type=\"map\"]":{"Magento_PageBuilder\/js\/content-type\/map\/appearance\/default\/widget":false},"[data-content-type=\"row\"]":{"Magento_PageBuilder\/js\/content-type\/row\/appearance\/default\/widget":false},"[data-content-type=\"tabs\"]":{"Magento_PageBuilder\/js\/content-type\/tabs\/appearance\/default\/widget":false},"[data-content-type=\"slide\"]":{"Magento_PageBuilder\/js\/content-type\/slide\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-slide-button","showOverlay":"hover","dataRole":"slide"}},"[data-content-type=\"banner\"]":{"Magento_PageBuilder\/js\/content-type\/banner\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-banner-button","showOverlay":"hover","dataRole":"banner"}},"[data-content-type=\"buttons\"]":{"Magento_PageBuilder\/js\/content-type\/buttons\/appearance\/inline\/widget":false},"[data-content-type=\"products\"][data-appearance=\"carousel\"]":{"Magento_PageBuilder\/js\/content-type\/products\/appearance\/carousel\/widget":false},"[data-content-type=\"accordion\"]":{"WeProvide_PageBuilderAccordion\/js\/content-type\/accordion\/appearance\/default\/widget":false}},
+                "breakpoints": {"desktop":{"label":"Desktop","stage":true,"default":true,"class":"desktop-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-desktop.svg","conditions":{"min-width":"1024px"},"options":{"products":{"default":{"slidesToShow":"5"}}}},"tablet":{"conditions":{"max-width":"1024px","min-width":"768px"},"options":{"products":{"default":{"slidesToShow":"3"},"continuous":{"slidesToShow":"3"}}},"label":"Tablet","class":"tablet-switcher"},"mobile":{"label":"Mobile","stage":true,"class":"mobile-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-mobile.svg","media":"only screen and (max-width: 768px)","conditions":{"max-width":"768px","min-width":"464px"},"options":{"products":{"default":{"slidesToShow":"3"}}}},"mobile-small":{"conditions":{"max-width":"464px"},"options":{"products":{"default":{"slidesToShow":"2"},"continuous":{"slidesToShow":"2"}}},"label":"Mobile Small","class":"mobile-small-switcher"}}            }
+        }
+    }
+</script>
+
+<div class="cookie-status-message" id="cookie-status">
+    The store will not work correctly in the case when cookies are disabled.</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "cookieStatus": {}
+        }
+    }
+</script>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "mage/cookies": {
+                "expires": null,
+                "path": "\u002F",
+                "domain": ".sandro.com.vn",
+                "secure": false,
+                "lifetime": "604800"
+            }
+        }
+    }
+</script>
+    <noscript>
+        <div class="message global noscript">
+            <div class="content">
+                <p>
+                    <strong>JavaScript dường như bị vô hiệu trong trình duyệt của bạn.</strong>
+                    <span>
+                        Để có trải nghiệm tốt nhất trên trang web của chúng tôi, đảm bảo bật Javascript trong trình duyệt của bạn.                    </span>
+                </p>
+            </div>
+        </div>
+    </noscript>
+<script>    require.config({
+        map: {
+            '*': {
+                wysiwygAdapter: 'mage/adminhtml/wysiwyg/tiny_mce/tinymce4Adapter'
+            }
+        }
+    });</script>
+<script>
+    window.cookiesConfig = window.cookiesConfig || {};
+    window.cookiesConfig.secure = true;
+</script><script>
+    require.config({
+        paths: {
+            googleMaps: 'https\u003A\u002F\u002Fmaps.googleapis.com\u002Fmaps\u002Fapi\u002Fjs\u003Fv\u003D3\u0026key\u003D'
+        },
+        config: {
+            'Magento_PageBuilder/js/utils/map': {
+                style: ''
+            },
+            'Magento_PageBuilder/js/content-type/map/preview': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fsandro.com.vn\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+            'Magento_PageBuilder/js/form/element/map': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fsandro.com.vn\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+        }
+    });
+</script>
+
+<script>
+    require.config({
+        shim: {
+            'Magento_PageBuilder/js/utils/map': {
+                deps: ['googleMaps']
+            }
+        }
+    });
+</script>
+
+    <script>
+        require.config({
+            paths: {
+                'dmpt':  "//r1-t.trackedlink.net/_dmpt"
+            }
+        });
+    </script>
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "dmpt": {}
+            }
+        }
+    </script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="https://www.googletagmanager.com/ns.html?id=GTM-WTHWMNZ" 
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "google-tag-manager/cart-observer": {}
+        }
+    }
+</script>
+<div class="hidden" style="display: none">
+    <svg viewBox="0 0 180 60">
+        <defs>
+            <g id="shape-new-1"><g transform="translate(-27.402 -55.687)"><path d="M207.4,115.687H27.4L41.6,85.475,27.4,55.687h180L193.2,86.159Z" transform="translate(0 0)"/></g></g>
+            <g id="shape-new-2"><rect width="180" height="60"/></g>
+            <g id="shape-new-3"><path d="M0,0H180V60H0L15.7,31.3Z"/></g>
+            <g id="shape-new-4"><path d="M180,0H0V60H180L164.3,31.3Z"/></g>
+            <g id="shape-new-5"><path d="M180,0H19.351L0,29.576,19.351,60H180Z"/></g>
+            <g id="shape-new-6"><path d="M0,0H160.649L180,29.576,160.649,60H0Z" transform="translate(0)"/></g>
+            <g id="shape-new-7"><g transform="translate(-49.781 -250.303)"><g transform="translate(49.781 250.303)"><path id="Path_15" data-name="Path 15" d="M196.88,254.169H185.07l2.5-2.5c.85-.85,7.01-1.364,7.676-1.364.522,0,.952.317,1.241,1.039A7.909,7.909,0,0,1,196.88,254.169Z" transform="translate(-136.88 -250.303)"/><path d="M53.66,397.4v-11.81l-2.5,2.5c-.85.85-1.364,7.01-1.364,7.676,0,.522.317.952,1.039,1.241A7.913,7.913,0,0,0,53.66,397.4Z" transform="translate(-49.791 -337.402)"/><path d="M108.15,250.3h-33.5a9.386,9.386,0,0,0-6.636,2.749l-3.163,3.163L52.531,268.534a9.384,9.384,0,0,0-2.75,6.637V307.2l0,0v1.476c0-1.019.786-2.258,2.086-3.558l3.826-3.826L104.683,252.3C105.949,251.056,107.155,250.3,108.15,250.3Z" transform="translate(-49.781 -250.303)"/></g></g></g>
+            <g id="shape-new-8"><g ransform="translate(0)"><g transform="translate(0)"><path d="M185.07,254.169h11.81l-2.5-2.5c-.85-.85-7.01-1.364-7.676-1.364-.522,0-.952.317-1.241,1.039A7.909,7.909,0,0,0,185.07,254.169Z" transform="translate(-185.07 -250.303)"/><path d="M49.794,397.4v-11.81l2.5,2.5c.85.85,1.364,7.01,1.364,7.676,0,.522-.317.952-1.039,1.241A7.913,7.913,0,0,1,49.794,397.4Z" transform="translate(6.337 -337.402)"/><path d="M49.781,250.3h33.5a9.386,9.386,0,0,1,6.636,2.749l3.163,3.163L105.4,268.534a9.384,9.384,0,0,1,2.75,6.637V307.2l0,0v1.476c0-1.019-.786-2.258-2.086-3.558l-3.826-3.826L53.247,252.3C51.981,251.056,50.776,250.3,49.781,250.3Z" transform="translate(-48.15 -250.303)"/></g></g></g>
+            <g id="shape-new-9"><g transform="translate(-163.398 -374.165)"><path d="M174.906,374.165v16.694h-3.5c-.762,0-1.456-.033-2.1-.094-4.039-.358-5.792-6.447-5.913-8.219v-.351c.067-1.51,1.24-3.209,3.149-4.672A17.828,17.828,0,0,1,174.906,374.165Z" transform="translate(0)"/><path d="M343.4,394.2l-7.612,23.073,7.612,22.548H171.8c-4.638,0-8.4-5.4-8.4-12.062V388.205c.138,2.9,2.134,5.26,6.733,5.844a17.625,17.625,0,0,0,2.387.154Z" transform="translate(0 -5.659)"/></g></g>
+            <g id="shape-new-10"><path d="M29.41,0H180a0,0,0,0,1,0,0V60a0,0,0,0,1,0,0H29.41A29.41,29.41,0,0,1,0,30.59V29.41A29.41,29.41,0,0,1,29.41,0Z"/></g>
+            <g id="shape-new-11"><path d="M0,0H150.59A29.41,29.41,0,0,1,180,29.41v1.18A29.41,29.41,0,0,1,150.59,60H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z"/></g>
+            <g id="shape-new-12"><path d="M374.677,108.755l-22.5-14.074-22.5,14.074v-60h45Z" transform="translate(-329.677 -48.755)"/></g>
+            <g id="shape-new-13"><path d="M428.132,108.755h0c-12.427,0-22.5-10.889-22.5-20.621V48.755h45V88.134C450.632,97.866,440.558,108.755,428.132,108.755Z" transform="translate(-405.632 -48.755)"/></g>
+            <g id="shape-new-14"><path d="M294.363,91.588l-22.5,17.167-22.5-17.167V48.755h45Z" transform="translate(-249.363 -48.755)"/></g>
+            <g id="shape-new-15"><g transform="translate(-47.06 -58.723)"><g transform="translate(47.06 58.723)"><g transform="translate(0 0)"><path d="M52.19,58.723v8.293c-3.629,0-5.13,6.636-5.13-5.626C47.06,60.529,49.1,59.436,52.19,58.723Z" transform="translate(-47.06 -58.723)"/><path d="M52.19,166.451v8.292c-3.092-.713-5.13-1.811-5.13-2.67C47.06,159.815,48.561,166.451,52.19,166.451Z" transform="translate(-47.06 -114.744)"/></g><path d="M47.06,68.054c0,1.152,2.883,2.035,9.85,2.035H227.06l-13.846,25.3,13.846,25.3H56.91c-6.968,0-9.85.883-9.85,2.029Z" transform="translate(-47.06 -65.385)"/></g></g></g>
+            <g id="shape-new-16"><g transform="translate(-273.827 -286.181)"><path d="M289.335,295.774H273.827c1.334-5.782,3.386-9.593,4.994-9.593C301.744,286.181,289.335,288.988,289.335,295.774Z"/><path d="M283.165,286.181c3.847,0,5.986,8.691,5.986,18.609V337.6a8.665,8.665,0,0,0,8.745,8.583H398.171v-50.7a9.393,9.393,0,0,0-9.48-9.3Z" transform="translate(-4.344 0)"/></g></g>
+            <g id="shape-new-17"><g transform="translate(-344.879 -171.163)"><path d="M404.879,201.163l-4.325,2.9,3.579,3.78-4.861,1.86,2.641,4.485-5.154.725,1.575,4.961-5.187-.438.437,5.186-4.961-1.575L387.9,228.2l-4.485-2.641-1.86,4.861-3.78-3.579-2.9,4.325-2.9-4.325-3.78,3.579-1.86-4.861-4.485,2.641-.725-5.154-4.961,1.575.438-5.187-5.187.437L353,214.908l-5.154-.725,2.641-4.485-4.861-1.86,3.579-3.78-4.325-2.9,4.325-2.9-3.579-3.78,4.861-1.86-2.641-4.485,5.154-.725-1.575-4.961,5.187.438-.437-5.187,4.961,1.575.725-5.154,4.485,2.641,1.86-4.861,3.78,3.579,2.9-4.325,2.9,4.325,3.78-3.579,1.86,4.861,4.485-2.641.725,5.154,4.961-1.575-.438,5.186,5.186-.437-1.575,4.961,5.154.725-2.641,4.485,4.861,1.86-3.579,3.78Z" transform="translate(0)"/></g></g>
+            <g id="shape-new-18"><g transform="translate(-32.816 -38.895)"><g transform="translate(32.816 38.895)"><path d="M54.273,99.651a20.565,20.565,0,0,1-20.7-20.38,20.291,20.291,0,0,1,6.7-15.006,4.758,4.758,0,0,1,.854-.725c.112-.068.2-.119.285-.164a1.044,1.044,0,0,1,1.24.2,1,1,0,0,1,.121,1.232,4.6,4.6,0,0,0-.351,3.9,6.264,6.264,0,0,0,.746,1.533,14.794,14.794,0,0,1-.28-3.557,11.831,11.831,0,0,1,1.393-5.047,32.8,32.8,0,0,1,3.439-5.03l.605-.78c2.248-2.906,4.573-5.912,5.266-9.381a8.108,8.108,0,0,0-.7-5.32,1.006,1.006,0,0,1,.244-1.222,1.043,1.043,0,0,1,1.262-.072c7.417,5.011,5.6,13.02,4.275,18.868-.129.568-.254,1.118-.366,1.647a18.507,18.507,0,0,0-.429,2.778,4.572,4.572,0,0,0,2.316,4.343,12.057,12.057,0,0,1-.914-2.592,9.96,9.96,0,0,1-.035-4.262,9.014,9.014,0,0,1,4.846-6.256,1.045,1.045,0,0,1,1.17.17,1,1,0,0,1,.239,1.141,4.783,4.783,0,0,0-.321,2.809l.016.093a8.133,8.133,0,0,0,.652,1.984,8.443,8.443,0,0,0,2.316,3.192l.072.072A20.591,20.591,0,0,1,54.273,99.651Z" transform="translate(-33.572 -39.651)"/></g></g></g>
+            <g id="shape-new-19"><g transform="translate(-260.758 -29.308)"><g transform="translate(260.758 29.308)"><path d="M300.043,71.233c.059-9.725-9.277-18.188-7.312-28.7-4.25,5.116-1.266,7.752-3.2,12.376a11.6,11.6,0,0,1-.8,1.548,7.164,7.164,0,0,0,.24-1.813c.072-7.274-9.321-16.37-2.96-24.463-10.024,5.358-9.2,15.185-11.91,23.9a24.1,24.1,0,0,1-2.037,4.831,7.906,7.906,0,0,0,.669-4.271c-.357-4.524-3.217-10.013-6.331-12.093,5.2,7.207-5.336,18.817-4.757,29.241.009.373.03.743.064,1.106a18.973,18.973,0,0,0,19.141,17.285c10.6,0,19.193-8.347,19.193-18.643C300.047,71.434,300.047,71.332,300.043,71.233Z" transform="translate(-261.626 -30.175)"/></g></g></g>
+            <g id="shape-new-20"><rect width="60" height="60" rx="30"/></g>
+        </defs>
+    </svg>
+</div>
+<div class="page-wrapper"><div class="promotion-top-container"><div class="widget block block-static-block">
+    </div>
+</div><header class="page-header"><div class="panel wrapper"><div class="panel header"><a class="action skip contentarea"
+   href="#contentarea">
+    <span>
+        Chuyển đến nội dung    </span>
+</a>
+<script type="text/x-magento-init">
+{
+    ".form-shipping-address": {
+        "Magenest_Directory/js/field-updater": {
+                "defaultCity": "",
+                "defaultDistrict": "",
+                "defaultWard": "",
+                "cityData" : [{"value":"1","label":"H\u1ed3 Ch\u00ed Minh","name":"H\u1ed3 Ch\u00ed Minh","full_name":"Th\u00e0nh ph\u1ed1 H\u1ed3 Ch\u00ed Minh","disable_on_storefront":"0","country_id":"VN"},{"value":"2","label":"H\u00e0 N\u1ed9i","name":"H\u00e0 N\u1ed9i","full_name":"Th\u00e0nh ph\u1ed1 H\u00e0 N\u1ed9i","disable_on_storefront":"0","country_id":"VN"},{"value":"3","label":"\u0110\u00e0 N\u1eb5ng","name":"\u0110\u00e0 N\u1eb5ng","full_name":"Th\u00e0nh ph\u1ed1 \u0110\u00e0 N\u1eb5ng","disable_on_storefront":"0","country_id":"VN"},{"value":"14","label":"An Giang","name":"An Giang","full_name":"T\u1ec9nh An Giang","disable_on_storefront":"0","country_id":"VN"},{"value":"11","label":"B\u00e0 R\u1ecba - V\u0169ng T\u00e0u","name":"B\u00e0 R\u1ecba - V\u0169ng T\u00e0u","full_name":"T\u1ec9nh B\u00e0 R\u1ecba - V\u0169ng T\u00e0u","disable_on_storefront":"0","country_id":"VN"},{"value":"62","label":"B\u1eafc Giang","name":"B\u1eafc Giang","full_name":"T\u1ec9nh B\u1eafc Giang","disable_on_storefront":"0","country_id":"VN"},{"value":"63","label":"B\u1eafc K\u1ea1n","name":"B\u1eafc K\u1ea1n","full_name":"T\u1ec9nh B\u1eafc K\u1ea1n","disable_on_storefront":"0","country_id":"VN"},{"value":"50","label":"B\u1ea1c Li\u00eau","name":"B\u1ea1c Li\u00eau","full_name":"T\u1ec9nh B\u1ea1c Li\u00eau","disable_on_storefront":"0","country_id":"VN"},{"value":"8","label":"B\u1eafc Ninh","name":"B\u1eafc Ninh","full_name":"T\u1ec9nh B\u1eafc Ninh","disable_on_storefront":"0","country_id":"VN"},{"value":"37","label":"B\u1ebfn Tre","name":"B\u1ebfn Tre","full_name":"T\u1ec9nh B\u1ebfn Tre","disable_on_storefront":"0","country_id":"VN"},{"value":"27","label":"B\u00ecnh \u0110\u1ecbnh","name":"B\u00ecnh \u0110\u1ecbnh","full_name":"T\u1ec9nh B\u00ecnh \u0110\u1ecbnh","disable_on_storefront":"0","country_id":"VN"},{"value":"7","label":"B\u00ecnh D\u01b0\u01a1ng","name":"B\u00ecnh D\u01b0\u01a1ng","full_name":"T\u1ec9nh B\u00ecnh D\u01b0\u01a1ng","disable_on_storefront":"0","country_id":"VN"},{"value":"18","label":"B\u00ecnh Ph\u01b0\u1edbc","name":"B\u00ecnh Ph\u01b0\u1edbc","full_name":"T\u1ec9nh B\u00ecnh Ph\u01b0\u1edbc","disable_on_storefront":"0","country_id":"VN"},{"value":"9","label":"B\u00ecnh Thu\u1eadn","name":"B\u00ecnh Thu\u1eadn","full_name":"T\u1ec9nh B\u00ecnh Thu\u1eadn","disable_on_storefront":"0","country_id":"VN"},{"value":"12","label":"C\u00e0 Mau","name":"C\u00e0 Mau","full_name":"T\u1ec9nh C\u00e0 Mau","disable_on_storefront":"0","country_id":"VN"},{"value":"10","label":"C\u1ea7n Th\u01a1","name":"C\u1ea7n Th\u01a1","full_name":"Th\u00e0nh ph\u1ed1 C\u1ea7n Th\u01a1","disable_on_storefront":"0","country_id":"VN"},{"value":"38","label":"Cao B\u1eb1ng","name":"Cao B\u1eb1ng","full_name":"T\u1ec9nh Cao B\u1eb1ng","disable_on_storefront":"0","country_id":"VN"},{"value":"47","label":"\u0110\u1eafk L\u1eafk","name":"\u0110\u1eafk L\u1eafk","full_name":"T\u1ec9nh \u0110\u1eafk L\u1eafk","disable_on_storefront":"0","country_id":"VN"},{"value":"16","label":"\u0110\u1eafk N\u00f4ng","name":"\u0110\u1eafk N\u00f4ng","full_name":"T\u1ec9nh \u0110\u1eafk N\u00f4ng","disable_on_storefront":"0","country_id":"VN"},{"value":"44","label":"\u0110i\u1ec7n Bi\u00ean","name":"\u0110i\u1ec7n Bi\u00ean","full_name":"T\u1ec9nh \u0110i\u1ec7n Bi\u00ean","disable_on_storefront":"0","country_id":"VN"},{"value":"13","label":"\u0110\u1ed3ng Nai","name":"\u0110\u1ed3ng Nai","full_name":"T\u1ec9nh \u0110\u1ed3ng Nai","disable_on_storefront":"0","country_id":"VN"},{"value":"55","label":"\u0110\u1ed3ng Th\u00e1p","name":"\u0110\u1ed3ng Th\u00e1p","full_name":"T\u1ec9nh \u0110\u1ed3ng Th\u00e1p","disable_on_storefront":"0","country_id":"VN"},{"value":"41","label":"Gia Lai","name":"Gia Lai","full_name":"T\u1ec9nh Gia Lai","disable_on_storefront":"0","country_id":"VN"},{"value":"30","label":"H\u00e0 Giang","name":"H\u00e0 Giang","full_name":"T\u1ec9nh H\u00e0 Giang","disable_on_storefront":"0","country_id":"VN"},{"value":"61","label":"H\u00e0 Nam","name":"H\u00e0 Nam","full_name":"T\u1ec9nh H\u00e0 Nam","disable_on_storefront":"0","country_id":"VN"},{"value":"53","label":"H\u00e0 T\u0129nh","name":"H\u00e0 T\u0129nh","full_name":"T\u1ec9nh H\u00e0 T\u0129nh","disable_on_storefront":"0","country_id":"VN"},{"value":"49","label":"H\u1ea3i D\u01b0\u01a1ng","name":"H\u1ea3i D\u01b0\u01a1ng","full_name":"T\u1ec9nh H\u1ea3i D\u01b0\u01a1ng","disable_on_storefront":"0","country_id":"VN"},{"value":"6","label":"H\u1ea3i Ph\u00f2ng","name":"H\u1ea3i Ph\u00f2ng","full_name":"Th\u00e0nh ph\u1ed1 H\u1ea3i Ph\u00f2ng","disable_on_storefront":"0","country_id":"VN"},{"value":"57","label":"H\u1eadu Giang","name":"H\u1eadu Giang","full_name":"T\u1ec9nh H\u1eadu Giang","disable_on_storefront":"0","country_id":"VN"},{"value":"42","label":"Ho\u00e0 B\u00ecnh","name":"Ho\u00e0 B\u00ecnh","full_name":"T\u1ec9nh Ho\u00e0 B\u00ecnh","disable_on_storefront":"0","country_id":"VN"},{"value":"19","label":"H\u01b0ng Y\u00ean","name":"H\u01b0ng Y\u00ean","full_name":"T\u1ec9nh H\u01b0ng Y\u00ean","disable_on_storefront":"0","country_id":"VN"},{"value":"5","label":"Kh\u00e1nh H\u00f2a","name":"Kh\u00e1nh H\u00f2a","full_name":"T\u1ec9nh Kh\u00e1nh H\u00f2a","disable_on_storefront":"0","country_id":"VN"},{"value":"29","label":"Ki\u00ean Giang","name":"Ki\u00ean Giang","full_name":"T\u1ec9nh Ki\u00ean Giang","disable_on_storefront":"0","country_id":"VN"},{"value":"15","label":"Kon Tum","name":"Kon Tum","full_name":"T\u1ec9nh Kon Tum","disable_on_storefront":"0","country_id":"VN"},{"value":"36","label":"Lai Ch\u00e2u","name":"Lai Ch\u00e2u","full_name":"T\u1ec9nh Lai Ch\u00e2u","disable_on_storefront":"0","country_id":"VN"},{"value":"26","label":"L\u00e2m \u0110\u1ed3ng","name":"L\u00e2m \u0110\u1ed3ng","full_name":"T\u1ec9nh L\u00e2m \u0110\u1ed3ng","disable_on_storefront":"0","country_id":"VN"},{"value":"32","label":"L\u1ea1ng S\u01a1n","name":"L\u1ea1ng S\u01a1n","full_name":"T\u1ec9nh L\u1ea1ng S\u01a1n","disable_on_storefront":"0","country_id":"VN"},{"value":"24","label":"L\u00e0o Cai","name":"L\u00e0o Cai","full_name":"T\u1ec9nh L\u00e0o Cai","disable_on_storefront":"0","country_id":"VN"},{"value":"56","label":"Long An","name":"Long An","full_name":"T\u1ec9nh Long An","disable_on_storefront":"0","country_id":"VN"},{"value":"35","label":"Nam \u0110\u1ecbnh","name":"Nam \u0110\u1ecbnh","full_name":"T\u1ec9nh Nam \u0110\u1ecbnh","disable_on_storefront":"0","country_id":"VN"},{"value":"28","label":"Ngh\u1ec7 An","name":"Ngh\u1ec7 An","full_name":"T\u1ec9nh Ngh\u1ec7 An","disable_on_storefront":"0","country_id":"VN"},{"value":"39","label":"Ninh B\u00ecnh","name":"Ninh B\u00ecnh","full_name":"T\u1ec9nh Ninh B\u00ecnh","disable_on_storefront":"0","country_id":"VN"},{"value":"54","label":"Ninh Thu\u1eadn","name":"Ninh Thu\u1eadn","full_name":"T\u1ec9nh Ninh Thu\u1eadn","disable_on_storefront":"0","country_id":"VN"},{"value":"59","label":"Ph\u00fa Th\u1ecd","name":"Ph\u00fa Th\u1ecd","full_name":"T\u1ec9nh Ph\u00fa Th\u1ecd","disable_on_storefront":"0","country_id":"VN"},{"value":"31","label":"Ph\u00fa Y\u00ean","name":"Ph\u00fa Y\u00ean","full_name":"T\u1ec9nh Ph\u00fa Y\u00ean","disable_on_storefront":"0","country_id":"VN"},{"value":"60","label":"Qu\u1ea3ng B\u00ecnh","name":"Qu\u1ea3ng B\u00ecnh","full_name":"T\u1ec9nh Qu\u1ea3ng B\u00ecnh","disable_on_storefront":"0","country_id":"VN"},{"value":"46","label":"Qu\u1ea3ng Nam","name":"Qu\u1ea3ng Nam","full_name":"T\u1ec9nh Qu\u1ea3ng Nam","disable_on_storefront":"0","country_id":"VN"},{"value":"23","label":"Qu\u1ea3ng Ng\u00e3i","name":"Qu\u1ea3ng Ng\u00e3i","full_name":"T\u1ec9nh Qu\u1ea3ng Ng\u00e3i","disable_on_storefront":"0","country_id":"VN"},{"value":"58","label":"Qu\u1ea3ng Ninh","name":"Qu\u1ea3ng Ninh","full_name":"T\u1ec9nh Qu\u1ea3ng Ninh","disable_on_storefront":"0","country_id":"VN"},{"value":"21","label":"Qu\u1ea3ng Tr\u1ecb","name":"Qu\u1ea3ng Tr\u1ecb","full_name":"T\u1ec9nh Qu\u1ea3ng Tr\u1ecb","disable_on_storefront":"0","country_id":"VN"},{"value":"17","label":"S\u00f3c Tr\u0103ng","name":"S\u00f3c Tr\u0103ng","full_name":"T\u1ec9nh S\u00f3c Tr\u0103ng","disable_on_storefront":"0","country_id":"VN"},{"value":"33","label":"S\u01a1n La","name":"S\u01a1n La","full_name":"T\u1ec9nh S\u01a1n La","disable_on_storefront":"0","country_id":"VN"},{"value":"34","label":"T\u00e2y Ninh","name":"T\u00e2y Ninh","full_name":"T\u1ec9nh T\u00e2y Ninh","disable_on_storefront":"0","country_id":"VN"},{"value":"52","label":"Th\u00e1i B\u00ecnh","name":"Th\u00e1i B\u00ecnh","full_name":"T\u1ec9nh Th\u00e1i B\u00ecnh","disable_on_storefront":"0","country_id":"VN"},{"value":"48","label":"Th\u00e1i Nguy\u00ean","name":"Th\u00e1i Nguy\u00ean","full_name":"T\u1ec9nh Th\u00e1i Nguy\u00ean","disable_on_storefront":"0","country_id":"VN"},{"value":"20","label":"Thanh H\u00f3a","name":"Thanh H\u00f3a","full_name":"T\u1ec9nh Thanh H\u00f3a","disable_on_storefront":"0","country_id":"VN"},{"value":"4","label":"Th\u1eeba Thi\u00ean Hu\u1ebf","name":"Th\u1eeba Thi\u00ean Hu\u1ebf","full_name":"T\u1ec9nh Th\u1eeba Thi\u00ean Hu\u1ebf","disable_on_storefront":"0","country_id":"VN"},{"value":"43","label":"Ti\u1ec1n Giang","name":"Ti\u1ec1n Giang","full_name":"T\u1ec9nh Ti\u1ec1n Giang","disable_on_storefront":"0","country_id":"VN"},{"value":"51","label":"Tr\u00e0 Vinh","name":"Tr\u00e0 Vinh","full_name":"T\u1ec9nh Tr\u00e0 Vinh","disable_on_storefront":"0","country_id":"VN"},{"value":"22","label":"Tuy\u00ean Quang","name":"Tuy\u00ean Quang","full_name":"T\u1ec9nh Tuy\u00ean Quang","disable_on_storefront":"0","country_id":"VN"},{"value":"25","label":"V\u0129nh Long","name":"V\u0129nh Long","full_name":"T\u1ec9nh V\u0129nh Long","disable_on_storefront":"0","country_id":"VN"},{"value":"45","label":"V\u0129nh Ph\u00fac","name":"V\u0129nh Ph\u00fac","full_name":"T\u1ec9nh V\u0129nh Ph\u00fac","disable_on_storefront":"0","country_id":"VN"},{"value":"40","label":"Y\u00ean B\u00e1i","name":"Y\u00ean B\u00e1i","full_name":"T\u1ec9nh Y\u00ean B\u00e1i","disable_on_storefront":"0","country_id":"VN"}]        }
+    }
+}
+</script>
+</div></div><div class="header content"><div class="header-gender-container"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><ul class="switch-gender">
+<li data-id="4">
+<a href="#">Nữ</a>
+</li>
+<li data-id="2">
+<a href="/shoes.html">Nam</a>
+</li>	
+</ul></div></div><span data-action="toggle-nav" class="action nav-toggle"><span>Chuyển đổi điều hướng</span></span>
+<a
+    class="logo"
+    href="/"
+    title=""
+    aria-label="store logo">
+    <img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/logo/stores/1/Sandro-Logo-Noir.png" 
+         title=""
+         alt=""
+            width="170"                />
+</a>
+<div class="header-account-container">
+<div data-block="minicart" class="minicart-wrapper">
+    <a class="action showcart" href="cart.html"
+       data-bind="scope: 'minicart_content'">
+        <span class="text">Giỏ hàng của tôi</span>
+        <span class="counter qty empty"
+              data-bind="css: { empty: !!getCartParam('summary_count') == false && !isLoading() },
+               blockLoader: isLoading">
+            <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+            <span class="counter-label">
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                <!-- ko i18n: 'items' --><!-- /ko -->
+            <!-- /ko -->
+            </span>
+        </span>
+    </a>
+            <div class="block block-minicart"
+             data-role="dropdownDialog"
+             data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=minicart]",
+                "triggerTarget":".showcart",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]}}'>
+            <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                <!-- ko template: getTemplate() --><!-- /ko -->
+                <div class="widget block block-static-block">
+    <style>#html-body [data-pb-style=IL10SN3]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}</style><div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="IL10SN3"><div data-content-type="text" data-appearance="default" data-element="main"><ul>
+<li><img loading="lazy" lazy  id="RWMNH2S" style="width: 26px; height: 26px;"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="https://www.sandro.com.vn/media/wysiwyg/minicart/colis-x2.png"  alt="" width="36" height="36">Cam kết hàng chính hãng</li>
+<li><img loading="lazy" lazy  style="width: 26px; height: 26px;"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="https://www.sandro.com.vn/media/wysiwyg/minicart/securise-x2.png"  alt="" width="36" height="36"> Thanh toán an toàn</li>
+<li><img loading="lazy" lazy  style="width: 26px; height: 26px;"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="https://www.sandro.com.vn/media/wysiwyg/minicart/livraison-x2.png"  alt="" width="36" height="36"> <a tabindex="0" href="/sales/guest/form">Theo dõi đơn hàng</a></li>
+<li><img loading="lazy" lazy  style="width: 26px; height: 26px;"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="https://www.sandro.com.vn/media/wysiwyg/minicart/sc-x2.png"  alt="" width="36" height="36"> <a tabindex="0" href="contact" target="_blank" rel="noopener">Hỗ trợ khách hàng</a> <a href="tel:0961272486">(+84) 96 127 2486</a><br><br></li>
+</ul></div></div></div>
+            </div>
+        </div>
+        <script>window.checkout = {"shoppingCartUrl":"https:\/\/sandro.com.vn\/checkout\/cart\/","checkoutUrl":"https:\/\/sandro.com.vn\/checkout\/","updateItemQtyUrl":"https:\/\/sandro.com.vn\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/sandro.com.vn\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/sandro.com.vn\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","storeGroupId":"1","updateItemOptionsUrl":"https:\/\/sandro.com.vn\/checkout\/cart\/updateItemOptionsAjax\/","customerLoginUrl":"https:\/\/sandro.com.vn\/customer\/account\/login\/referer\/aHR0cHM6Ly9zYW5kcm8uY29tLnZuL2N1c3RvbWVyL2FjY291bnQvaW5kZXgv\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/sandro.com.vn\/captcha\/refresh\/","isRequired":false,"timestamp":1661153840}}}</script>    <script type="text/x-magento-init">
+    {
+        "[data-block='minicart']": {
+            "Magento_Ui/js/core/app": {"components":{"minicart_content":{"children":{"subtotal.container":{"children":{"subtotal":{"children":{"subtotal.totals":{"config":{"display_cart_subtotal_incl_tax":0,"display_cart_subtotal_excl_tax":1,"template":"Magento_Tax\/checkout\/minicart\/subtotal\/totals"},"component":"Magento_Tax\/js\/view\/checkout\/minicart\/subtotal\/totals","children":{"subtotal.totals.msrp":{"component":"Magento_Msrp\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"displayArea":"minicart-subtotal-hidden","template":"Magento_Msrp\/checkout\/minicart\/subtotal\/totals"}}}}},"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/subtotal"}}},"component":"uiComponent","config":{"displayArea":"subtotalContainer"}},"item.renderer":{"component":"Magento_Checkout\/js\/view\/cart-item-renderer","config":{"displayArea":"defaultRenderer","template":"Magento_Checkout\/minicart\/item\/default"},"children":{"item.image":{"component":"Magento_Catalog\/js\/view\/image","config":{"template":"Magento_Catalog\/product\/image","displayArea":"itemImage"}},"item.old.price":{"component":"Magenest_CustomCheckoutCart\/js\/view\/attribute\/size","config":{"template":"Magenest_CustomCheckoutCart\/product\/render\/old-price","displayArea":"itemOldPrice"}},"item.attribute.size":{"component":"Magenest_CustomCheckoutCart\/js\/view\/attribute\/size","config":{"template":"Magenest_CustomCheckoutCart\/product\/attribute\/size","displayArea":"itemAttributeSize"}},"checkout.cart.item.price.sidebar":{"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/item\/price","displayArea":"priceSidebar"}}}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}},"config":{"itemRenderer":{"default":"defaultRenderer","simple":"defaultRenderer","virtual":"defaultRenderer"},"template":"Magento_Checkout\/minicart\/content"},"component":"Magento_Checkout\/js\/view\/minicart"}},"types":[]},
+            "Magento_Checkout/js/view/minicart_open" : {}
+        },
+        "*": {
+            "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Fsandro.com.vn\u002Fstatic\u002Fversion1660607991\u002Ffrontend\u002FOpenasia\u002FSandro\u002Fvi_VN\u002Fimages\u002Floader\u002D1.gif"
+        }
+    }
+    </script>
+</div>
+<ul class="header links">    <li class="header-customer greet welcome" data-bind="scope: 'customer'">
+        <!-- ko if: customer().fullname  -->
+        <a class="is-logged-in" href="/customer/account/"><span>Tài khoản</span></a>
+        <div class="header-customer-dropdown">
+            <p class="header-customer-title">
+                Xin Chào                <span class="logged-in" data-bind="text: customer().fullname"></span>
+            </p>
+            <ul>
+                <li><a href="/customer/account/">Tài khoản</a></li>
+                <li><a href="/sales/order/history/">Đơn hàng của tôi</a></li>
+                <li><a href="/customer/account/">Yêu cầu đổi hàng của tôi</a></li>
+                <li><a href="/vault/cards/listaction/">Tùy chọn thanh toán</a></li>
+                <li><a href="/customer/account/edit/changepass/1/">Thay đổi mật khẩu</a></li>
+                <li><a href="/wishlist/">Danh sách yêu thích</a></li>
+                <li><a href="/contact/">Liên hệ hỗ trợ</a></li>
+                <li class="logout"><a href="/customer/account/logout/">Đăng xuất</a></li>
+            </ul>
+        </div>
+        <!-- /ko -->
+        <!-- ko ifnot: customer().fullname  -->
+        <a class="not-logged-in" href="/customer/account/"><span data-bind="html: 'Tài khoản'"></span></a>
+                <!-- /ko -->
+    </li>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "customer": {
+                        "component": "Magento_Customer/js/view/customer"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</ul><div class="block block-search">
+    <div class="block block-title"><strong>Tìm kiếm</strong></div>
+    <div class="block block-content">
+        <form class="form minisearch" id="search_mini_form"
+              action="/catalogsearch/result/" method="get">
+            <div class="field search">
+                <label class="label" for="search" data-role="minisearch-label">
+                    <span>Tìm kiếm</span>
+                </label>
+                <div class="control">
+                    <input id="search"
+                           data-mage-init='{
+                            "quickSearch": {
+                                "formSelector": "#search_mini_form",
+                                "url": "",
+                                "destinationSelector": "#search_autocomplete",
+                                "minSearchLength": "3"
+                            }
+                        }'
+                           type="text"
+                           name="q"
+                           value=""
+                           placeholder="T&#xEC;m&#x20;ki&#x1EBF;m&#x20;s&#x1EA3;n&#x20;ph&#x1EA9;m..."
+                           class="input-text"
+                           maxlength="128"
+                           role="combobox"
+                           aria-haspopup="false"
+                           aria-autocomplete="both"
+                           autocomplete="off"
+                           aria-expanded="false"/>
+                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                    <div class="nested">
+    <a class="action advanced" href="/catalogsearch/advanced/" data-action="advanced-search">
+        Tìm kiếm nâng cao    </a>
+</div>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit"
+                        title="Tìm kiếm"
+                        class="action search"
+                        aria-label="Search"
+                >
+                    <span>Tìm kiếm</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</div></div>    <div class="sections nav-sections">
+                <div class="section-items nav-sections-items"
+             data-mage-init='{"tabs":{"openedState":"active"}}'>
+                                            <div class="section-item-title nav-sections-item-title"
+                     data-role="collapsible">
+                    <a class="nav-sections-item-switch"
+                       data-toggle="switch" href="#store.menu">
+                        Menu                    </a>
+                </div>
+                <div class="section-item-content nav-sections-item-content"
+                     id="store.menu"
+                     data-role="content">
+                    <div class="header-gender-container"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><ul class="switch-gender">
+<li data-id="4">
+<a href="/woman.html">Nữ</a>
+</li>
+<li data-id="2">
+<a href="/shoes.html">Nam</a>
+</li>	
+</ul></div></div><div class="store-menu-actions">
+    <span class="store-menu-back"><span>Trở lại</span></span>
+    <span class="nav-toggle store-menu-close"><span>Chuyển đổi điều hướng</span></span>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Theme/js/menu-action":{}
+    }
+}
+</script>
+
+<div class="sandro-main-menu main-menu"><nav class="navigation nav-magemenu-menu horizontal magemenu-effect-none"
+     style="--color: 1; --colorHover: 1; --bgHover: 1; --bgDropdown: 1"
+     id="megamenu_2"
+     role="navigation">
+
+    
+    <div class="magemenu-menu horizontal-menu " data-title="Nhóm">
+        <ul class="megamenu-items">
+            <li class="megamenu-item has-content hide">
+                        <span class="menu-collapse"></span>
+                <a href="/man/sale.html"
+       class="megamenu-item-link item_201"
+       style="--color: #ff0000;--colorHover: #ff0000;--bgHover: #FFFFFF;">
+        <span class="megamenu-item-inner">
+            
+            <span>OUTLET</span>
+                    </span>
+    </a>
+                        <div class="megamenu-dropdown"
+                                    style="border-color: #FFFFFF"
+                            >
+                    <div class="megamenu-dropdown-background"
+         style="--bgImage: none;--bgSize: cover;--opacity: 1;--bgDropdown: #FFFFFF;">
+    </div>
+                    <div class="megamenu-dropdown-inner grid">
+                                                                                                                        <div class="grid-child col-numbers-12">
+                                        <ul class="megamenu-sub-items">
+                                            
+    <li class="megamenu-sub-item nolink">
+                    <p class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Trang phục</span>
+                                    </span>
+            </p>
+                            <ul class="megamenu-sub-items ">
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/sweaters-and-cardigans.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Áo Sweater & Cardigan</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/blazers-and-jackets.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Áo khoác Blazer & Jacket</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/shirts.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Áo sơ mi</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/tshirt-and-polo.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Áo phông & Polo</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/pants-and-jeans.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Quần dài, jeans & Quần short </span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/ready-to-wear.html"
+               class="megamenu-item-link"
+               style="--color: #006400;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Toàn bộ Trang phục</span>
+                                    </span>
+            </a>
+                    </li>
+                            </ul>
+            </li>
+                                        </ul>
+                                    </div>
+                                                                    <div class="grid-child col-numbers-12">
+                                        <ul class="megamenu-sub-items">
+                                            
+    <li class="megamenu-sub-item nolink">
+                    <p class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Phụ kiện</span>
+                                    </span>
+            </p>
+                            <ul class="megamenu-sub-items ">
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/shoes.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Giày</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/bags-and-accessories.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Túi, ví da & Phụ kiện</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/all-accessories.html"
+               class="megamenu-item-link"
+               style="--color: #006400;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Toàn bộ Phụ kiện</span>
+                                    </span>
+            </a>
+                    </li>
+                            </ul>
+            </li>
+                                        </ul>
+                                    </div>
+                                                                    <div class="grid-child col-numbers-12">
+                                        <ul class="megamenu-sub-items">
+                                            
+    <li class="megamenu-sub-item nolink">
+                    <p class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Lựa chọn</span>
+                                    </span>
+            </p>
+                            <ul class="megamenu-sub-items ">
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale.html"
+               class="megamenu-item-link"
+               style="--color: #ff0000;--colorHover: #ff0000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Toàn bộ Khuyến mãi</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/50-off.html"
+               class="megamenu-item-link"
+               style="--color: #ff0000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>-50%</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/40-off.html"
+               class="megamenu-item-link"
+               style="--color: #ff0000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>-40%</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/30-off.html"
+               class="megamenu-item-link"
+               style="--color: #ff0000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>-30%</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sale/20-off.html"
+               class="megamenu-item-link"
+               style="--color: #ff0000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>-20%</span>
+                                    </span>
+            </a>
+                    </li>
+                            </ul>
+            </li>
+                                        </ul>
+                                    </div>
+                                                                        <div class="block-right  col-md-5">
+    <p><a href="http://sandro.com.vn/man/sale.html/"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/wysiwyg/sandro_outlet_717X446.jpg"  alt="" width="720" height="448"></a></p><p>OUTLET - <a title="Xem ngay" href="http://sandro.com.vn/man/sale.html">Cơ hội cuối - Giảm đến 50%++</a></p></div>
+                                    </div>
+            </div>
+            </li>
+<li class="megamenu-item ">
+                    <a href="/man/new-in.html"
+       class="megamenu-item-link item_8"
+       style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+        <span class="megamenu-item-inner">
+            
+            <span>Hàng mới về</span>
+                    </span>
+    </a>
+                </li>
+<li class="megamenu-item has-content">
+                        <span class="menu-collapse"></span>
+                <a href="/man/ready-to-wear.html"
+       class="megamenu-item-link item_9"
+       style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+        <span class="megamenu-item-inner">
+            
+            <span>Trang phục</span>
+                    </span>
+    </a>
+                        <div class="megamenu-dropdown"
+                                    style="border-color: #FFFFFF"
+                            >
+                    <div class="megamenu-dropdown-background"
+         style="--bgImage: none;--bgSize: cover;--opacity: 1;--bgDropdown: #FFFFFF;">
+    </div>
+                    <div class="megamenu-dropdown-inner grid">
+                                                                                                                        <div class="grid-child col-numbers-4">
+                                        <ul class="megamenu-sub-items">
+                                            
+    <li class="megamenu-sub-item nolink">
+                    <p class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Lựa chọn</span>
+                                    </span>
+            </p>
+                            <ul class="megamenu-sub-items ">
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/spring-summer-collection.html"
+               class="megamenu-item-link"
+               style="--color: #3f9315;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Bộ sưu tập Xuân - Hè</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/ready-to-wear/eco-responsible.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Thân thiện với môi trường</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/sandro-x-smiley.html"
+               class="megamenu-item-link"
+               style="--color: #ffa600;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Sandro x Smiley</span>
+                                    </span>
+            </a>
+                    </li>
+                            </ul>
+            </li>
+                                        </ul>
+                                    </div>
+                                                                    <div class="grid-child col-numbers-4">
+                                        <ul class="megamenu-sub-items">
+                                            
+    <li class="megamenu-sub-item nolink">
+                    <p class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Trang phục</span>
+                                    </span>
+            </p>
+                            <ul class="megamenu-sub-items ">
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/ready-to-wear/t-shirts-and-polo-shirts.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Áo phông & Áo Polo</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/ready-to-wear/shirts.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Áo sơ mi</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/ready-to-wear/sweaters-and-cardigans.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Áo Sweater & Cardigan</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/ready-to-wear/blazers-and-jackets.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Áo khoác Blazer & Jacket</span>
+                                    </span>
+            </a>
+                    </li>
+                            </ul>
+            </li>
+                                        </ul>
+                                    </div>
+                                                                    <div class="grid-child col-numbers-4">
+                                        <ul class="megamenu-sub-items">
+                                            
+    <li class="megamenu-sub-item nolink">
+                    <p class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span><span hidden/></span>
+                                    </span>
+            </p>
+                            <ul class="megamenu-sub-items ">
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/ready-to-wear/pants-and-shorts.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Quần dài & Quần short</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/ready-to-wear/jeans.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Quần jeans</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item hide">
+                    <a href="/man/ready-to-wear/suits.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Suit & Tuxedo</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/ready-to-wear.html"
+               class="megamenu-item-link"
+               style="--color: #0c00bb;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Toàn bộ Trang phục</span>
+                                    </span>
+            </a>
+                    </li>
+                            </ul>
+            </li>
+                                        </ul>
+                                    </div>
+                                                                        <div class="block-right  col-md-5">
+    <p><a href="/man/new-collection.html/"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/wysiwyg/MENU_H_CAMPAGNE_SS22_UK.jpg"  alt="" width="720" height="448"></a>Toàn bộ Trang phục - <a title="Xem ngay" href="http://sandro.com.vn/man/ready-to-wear.html">Xem ngay</a></p></div>
+                                    </div>
+            </div>
+            </li>
+<li class="megamenu-item has-content">
+                        <span class="menu-collapse"></span>
+                <a href="/man/accessories.html"
+       class="megamenu-item-link item_11"
+       style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+        <span class="megamenu-item-inner">
+            
+            <span>Túi xách & Phụ kiện</span>
+                    </span>
+    </a>
+                        <div class="megamenu-dropdown"
+                                    style="border-color: #FFFFFF"
+                            >
+                    <div class="megamenu-dropdown-background"
+         style="--bgImage: none;--bgSize: cover;--opacity: 1;--bgDropdown: #FFFFFF;">
+    </div>
+                    <div class="megamenu-dropdown-inner grid">
+                                                                                                                        <div class="grid-child col-numbers-12">
+                                        <ul class="megamenu-sub-items">
+                                            
+    <li class="megamenu-sub-item nolink">
+                    <p class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Lựa chọn</span>
+                                    </span>
+            </p>
+                            <ul class="megamenu-sub-items ">
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/accessories/new-collection.html"
+               class="megamenu-item-link"
+               style="--color: #3f9315;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Bộ sưu tập mới</span>
+                                    </span>
+            </a>
+                    </li>
+                            </ul>
+            </li>
+                                        </ul>
+                                    </div>
+                                                                    <div class="grid-child col-numbers-12">
+                                        <ul class="megamenu-sub-items">
+                                            
+    <li class="megamenu-sub-item nolink">
+                    <p class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Phụ kiện</span>
+                                    </span>
+            </p>
+                            <ul class="megamenu-sub-items ">
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/accessories/shoes.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Giày dép</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/accessories/hats.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Mũ</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/accessories/belts.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Thắt lưng</span>
+                                    </span>
+            </a>
+                    </li>
+                            </ul>
+            </li>
+                                        </ul>
+                                    </div>
+                                                                    <div class="grid-child col-numbers-12">
+                                        <ul class="megamenu-sub-items">
+                                            
+    <li class="megamenu-sub-item nolink">
+                    <p class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Túi xách & Ví da</span>
+                                    </span>
+            </p>
+                            <ul class="megamenu-sub-items ">
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/accessories/bags.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Ba lô, Túi & Cặp xách</span>
+                                    </span>
+            </a>
+                    </li>
+                                    
+    <li class="megamenu-sub-item ">
+                    <a href="/man/accessories/all-leather-goods.html"
+               class="megamenu-item-link"
+               style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+                <span class="megamenu-item-inner">
+                    
+                    <span>Ví da</span>
+                                    </span>
+            </a>
+                    </li>
+                            </ul>
+            </li>
+                                        </ul>
+                                    </div>
+                                                                        <div class="block-right  col-md-5">
+    <p><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/wysiwyg/MENU_3_ACCESS.jpg"  alt="">Toàn bộ Túi xách &amp; Phụ kiện - <a title="Xem ngay" href="http://sandro.com.vn/man/accessories.html">Xem ngay</a></p></div>
+                                    </div>
+            </div>
+            </li>
+<li class="megamenu-item ">
+                    <a href="/sandro-for-the-future"
+       class="megamenu-item-link item_12"
+       style="--color: #000000;--colorHover: #000000;--bgHover: #FFFFFF;">
+        <span class="megamenu-item-inner">
+            
+            <span>Sandro for the Future</span>
+                    </span>
+    </a>
+                </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magenest_DynamicMemuCategory/js/dynamic-menu": {
+                "categoryMenuId": 2,
+                "categoryFirst": "",
+                "listCate": "3,11"
+            }
+        }
+    }
+
+</script>
+</div><ul class="header-links-mobile">    <li class="header-customer greet welcome" data-bind="scope: 'customer'">
+        <!-- ko if: customer().fullname  -->
+        <a class="is-logged-in" href="/customer/account/"><span>Tài khoản</span></a>
+        <div class="header-customer-dropdown">
+            <p class="header-customer-title">
+                Xin Chào                <span class="logged-in" data-bind="text: customer().fullname"></span>
+            </p>
+            <ul>
+                <li><a href="/customer/account/">Tài khoản</a></li>
+                <li><a href="/sales/order/history/">Đơn hàng của tôi</a></li>
+                <li><a href="/customer/account/">Yêu cầu đổi hàng của tôi</a></li>
+                <li><a href="/vault/cards/listaction/">Tùy chọn thanh toán</a></li>
+                <li><a href="/customer/account/edit/changepass/1/">Thay đổi mật khẩu</a></li>
+                <li><a href="/wishlist/">Danh sách yêu thích</a></li>
+                <li><a href="/contact/">Liên hệ hỗ trợ</a></li>
+                <li class="logout"><a href="/customer/account/logout/">Đăng xuất</a></li>
+            </ul>
+        </div>
+        <!-- /ko -->
+        <!-- ko ifnot: customer().fullname  -->
+        <a class="not-logged-in" href="/customer/account/"><span data-bind="html: 'Tài khoản'"></span></a>
+                <!-- /ko -->
+    </li>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "customer": {
+                        "component": "Magento_Customer/js/view/customer"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</ul><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><ul class="custom-link">
+    <li class="shop">
+        <a href="/maplist">Cửa hàng</a>
+    </li>
+    <li class="service">
+        <a href="/contact">Dịch vụ khách hàng</a>
+    </li>
+    <li class="faq">
+        <a href="/faq">Câu hỏi thường gặp</a>
+    </li>
+</ul></div>                </div>
+                                            <div class="section-item-title nav-sections-item-title"
+                     data-role="collapsible">
+                    <a class="nav-sections-item-switch"
+                       data-toggle="switch" href="#store.links">
+                        Tài khoản                    </a>
+                </div>
+                <div class="section-item-content nav-sections-item-content"
+                     id="store.links"
+                     data-role="content">
+                    <!-- Account links -->                </div>
+                                    </div>
+    </div>
+</header><main id="maincontent" class="page-main"><a id="contentarea" tabindex="-1"></a>
+<div class="page messages"><div data-placeholder="messages"></div>
+<div data-bind="scope: 'messages'">
+    <!-- ko if: cookieMessages && cookieMessages.length > 0 -->
+    <div aria-atomic="true" role="alert" data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: messages().messages && messages().messages.length > 0 -->
+    <div aria-atomic="true" role="alert" class="messages" data-bind="foreach: {
+        data: messages().messages, as: 'message'
+    }">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "messages": {
+                            "component": "Magento_Theme/js/view/messages"
+                        }
+                    }
+                }
+            }
+    }
+</script>
+</div><a href="javascript:history.go(-1)" class="mobile-back-button" title="Trở lại">Trở lại</a>
+<div class="columns"><div class="column main"><input name="form_key" type="hidden" value="LAEuzsT3gJ8xChhD" /><div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}">
+        <script>window.authenticationPopup = {"autocomplete":"off","customerRegisterUrl":"https:\/\/sandro.com.vn\/customer\/account\/create\/","customerForgotPasswordUrl":"https:\/\/sandro.com.vn\/customer\/account\/forgotpassword\/","baseUrl":"https:\/\/sandro.com.vn\/"}</script>    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#authenticationPopup": {
+                "Magento_Ui/js/core/app": {"components":{"authenticationPopup":{"component":"Magento_Customer\/js\/view\/authentication-popup","children":{"messages":{"component":"Magento_Ui\/js\/view\/messages","displayArea":"messages"},"captcha":{"component":"Magento_Captcha\/js\/view\/checkout\/loginCaptcha","displayArea":"additional-login-form-fields","formId":"user_login","configSource":"checkout"}}}}}            },
+            "*": {
+                "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Fsandro.com.vn\u002Fstatic\u002Fversion1660607991\u002Ffrontend\u002FOpenasia\u002FSandro\u002Fvi_VN\u002Fimages\u002Floader\u002D1.gif"
+            }
+        }
+    </script>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/section-config": {
+                "sections": {"stores\/store\/switch":["*"],"stores\/store\/switchrequest":["*"],"directory\/currency\/switch":["*"],"*":["messages"],"customer\/account\/logout":["*","recently_viewed_product","recently_compared_product","persistent"],"customer\/account\/loginpost":["*"],"customer\/account\/createpost":["*"],"customer\/account\/editpost":["*"],"customer\/ajax\/login":["checkout-data","cart","captcha"],"catalog\/product_compare\/add":["compare-products"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data","google-tag-manager-product-info"],"checkout\/cart\/delete":["cart","google-tag-manager-product-info"],"checkout\/cart\/updatepost":["cart","google-tag-manager-product-info"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items"],"checkout\/sidebar\/removeitem":["cart","google-tag-manager-product-info"],"checkout\/sidebar\/updateitemqty":["cart","google-tag-manager-product-info"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","captcha"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","captcha"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data"],"wishlist\/index\/add":["wishlist"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"giftregistry\/index\/cart":["cart"],"giftregistry\/view\/addtocart":["cart"],"customer_order\/cart\/updatefaileditemoptions":["cart"],"checkout\/cart\/updatefaileditemoptions":["cart"],"customer_order\/cart\/advancedadd":["cart"],"checkout\/cart\/advancedadd":["cart"],"checkout\/cart\/removeallfailed":["cart"],"checkout\/cart\/removefailed":["cart"],"customer_order\/cart\/addfaileditems":["cart"],"checkout\/cart\/addfaileditems":["cart"],"customer_order\/sku\/uploadfile":["cart"],"wishlist\/index\/copyitem":["wishlist"],"wishlist\/index\/copyitems":["wishlist"],"wishlist\/index\/deletewishlist":["wishlist","multiplewishlist"],"wishlist\/index\/createwishlist":["multiplewishlist"],"wishlist\/index\/editwishlist":["multiplewishlist"],"wishlist\/index\/moveitem":["wishlist"],"wishlist\/index\/moveitems":["wishlist"],"wishlist\/search\/addtocart":["cart","wishlist"],"persistent\/index\/unsetcookie":["persistent"],"review\/product\/post":["review"],"checkout\/cart\/updateitemoptionsajax":["cart"],"weltpixel_quickview\/index\/updatecart":["cart"]},
+                "clientSideSections": ["checkout-data","cart-data"],
+                "baseUrls": ["https:\/\/sandro.com.vn\/"],
+                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","wishlist","loggedAsCustomer","multiplewishlist","persistent","review","google-tag-manager-product-info","recently_viewed_product","recently_compared_product","product_data_storage"]            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/customer-data": {
+                "sectionLoadUrl": "https\u003A\u002F\u002Fsandro.com.vn\u002Fcustomer\u002Fsection\u002Fload\u002F",
+                "expirableSectionLifetime": 60,
+                "expirableSectionNames": ["cart","persistent"],
+                "cookieLifeTime": "604800",
+                "updateSessionUrl": "https\u003A\u002F\u002Fsandro.com.vn\u002Fcustomer\u002Faccount\u002FupdateSession\u002F"
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/invalidation-processor": {
+                "invalidationRules": {
+                    "website-rule": {
+                        "Magento_Customer/js/invalidation-rules/website-rule": {
+                            "scopeConfig": {
+                                "websiteId": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "pageCache": {"url":"https:\/\/sandro.com.vn\/page_cache\/block\/render\/referer\/aHR0cHM6Ly9zYW5kcm8uY29tLnZuL2N1c3RvbWVyL2FjY291bnQvaW5kZXgv\/","handles":["default","customer_account_login"],"originalRequest":{"route":"customer","controller":"account","action":"login","uri":"\/customer\/account\/login\/referer\/aHR0cHM6Ly9zYW5kcm8uY29tLnZuL2N1c3RvbWVyL2FjY291bnQvaW5kZXgv\/"},"versionCookieName":"private_content_version"}        }
+    }
+</script>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Banner/js/model/banner":
+            {"sectionLoadUrl":"https:\/\/sandro.com.vn\/banner\/ajax\/load\/","cacheTtl":30000}        }
+}
+</script>
+<div id="mgn_custom_cart_popup" class="mgn-cart-popup-success" >
+    <div class="content"></div>
+</div>
+<script type="text/x-magento-init">
+{
+   "*": {
+       "Magenest_CustomAddToCart/js/custom-to-cart-modal":{}
+   }
+}
+</script>
+<!-- Load Facebook SDK for JavaScript -->
+<!--    enable messenger live chat -->
+<div data-bind="scope: 'messenger'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "messenger": {
+                        "component": "Magenest_Messenger/js/view/messenger",
+                        "app_config": {"enable_messenger":"1","greeting_message":"Xin ch\u00e0o! Ch\u00fang t\u00f4i c\u00f3 th\u1ec3 h\u1ed7 tr\u1ee3 g\u00ec cho qu\u00fd kh\u00e1ch?","theme_color":"#0084ff","page_id":"110385194811393","enable_fanpage":"0","link_page":"https:\/\/www.facebook.com\/MagenestMessenger\/","app_id":"413438232494492","tabs_setting":"timeline,events,messages","small_header":"true","hide_cover":"false","show_facepile":"true","title_tab":"Live Support","tab_color":"#1212e0","text_color":"#f5f9fa","text_font":"Roboto-Regular","box_width":300,"box_height":480,"user_url":"https:\/\/sandro.com.vn\/messenger\/index\/user\/"}                    }
+                }
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId           : '413438232494492',
+            autoLogAppEvents: true,
+            xfbml           : true,
+            version         : 'v3.3'
+        });
+    };
+</script>
+            <div id="fb-root"></div>
+        <!-- Your customer chat code -->
+        <div class="fb-customerchat"
+             minimized="true"
+             attribution=setup_tool
+             logged_in_greeting="Xin chào! Chúng tôi có thể hỗ trợ gì cho quý khách?"
+             greeting_dialog_display = "hide"
+             page_id="110385194811393"
+             theme_color="#0084ff">
+        </div>
+    <script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div data-mage-init='{"Mirasvit_CacheWarmer\/js\/track":{"pageType":"customer_account_login","url":"https:\/\/sandro.com.vn\/cache_warmer\/track\/","cookieName":"mst-cache-warmer-track","cookieValue":1661153822364}}'></div>
+<div class="login-container">    <div class="page-title-wrapper">
+        <h1 class="page-title"
+                        >
+            <span class="base" data-ui-id="page-title-wrapper" >Đăng nhập</span>        </h1>
+            </div>
+    <div class="block block-new-customer">
+        <style>#html-body [data-pb-style=AYBRTYI]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}</style><div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="AYBRTYI"><div data-content-type="text" data-appearance="default" data-element="main"><h3>KHÁCH HÀNG MỚI</h3>
+<p>Bằng cách tạo tài khoản, bạn có thể</p>
+<ul>
+<li>đặt hàng trên website</li>
+<li>nhận các ưu đãi đặc biệt</li>
+<li>tra cứu đơn đặt hàng</li>
+</ul></div></div>        <div class="block-content" aria-labelledby="block-new-customer-heading">
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <a href="/customer/account/create/" class="action create primary"><span>Tạo tài khoản</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="block block-customer-login">
+    <div class="block-title">
+        <strong id="block-customer-login-heading" role="heading"
+                aria-level="2">Khách hàng đã có tài khoản</strong>
+    </div>
+    <div class="block-content" aria-labelledby="block-customer-login-heading">
+        <form class="form form-login"
+              action="/customer/account/loginPost/referer/aHR0cHM6Ly9zYW5kcm8uY29tLnZuL2N1c3RvbWVyL2FjY291bnQvaW5kZXgv/"
+              method="post"
+              id="login-form"
+              data-mage-init='{"validation":{}}'>
+            <input name="form_key" type="hidden" value="LAEuzsT3gJ8xChhD" />            <fieldset class="fieldset login" data-hasrequired="&#x2A;&#x20;B&#x1EAF;t&#x20;bu&#x1ED9;c">
+                <div
+                    class="field note">Nếu bạn có tài khoản, hãy đăng nhập bằng địa chỉ email của bạn.</div>
+                <div class="field email required">
+                    <label class="label" for="email"><span>Email / Sđt</span></label>
+                    <div class="control">
+                        <input name="login[username]"
+                               value=""  autocomplete="off"                               id="email" type="text" class="input-text"
+                               title="Email&#x2F;s&#x1ED1;&#x20;&#x0111;i&#x1EC7;n&#x20;tho&#x1EA1;i"
+                               data-mage-init='{"mage/trim-input":{}}'>
+                    </div>
+                </div>
+                <div class="field password required">
+                    <label for="pass" class="label"><span>Mật khẩu</span></label>
+                    <div class="control">
+                        <input name="login[password]"
+                               type="password"  autocomplete="off"                               class="input-text" id="pass" title="M&#x1EAD;t&#x20;kh&#x1EA9;u"
+                               data-validate="{required:true}">
+                    </div>
+                </div>
+                                <div class="actions-toolbar">
+                    <div class="primary">
+                        <button type="submit" class="action login primary" name="send" id="send2">
+                            <span>Đăng nhập</span></button>
+                    </div>
+                    <div class="secondary">
+                        <span class="action remind" id="open-forgot-action">
+                            Quên mật khẩu                        </span>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="forgot-password-modal" id="forgot-password-modal">
+        <form class="form password forget"
+      action="/customer/account/forgotpasswordpost/"
+      method="post"
+      id="form-validate"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset" data-hasrequired="&#x2A;&#x20;B&#x1EAF;t&#x20;bu&#x1ED9;c">
+        <div
+            class="field note">Vui lòng nhập địa chỉ email hoặc số điện thoại của bạn dưới đây để nhận được một liên kết đặt lại mật khẩu.</div>
+        <div class="field email required">
+            <label for="email_address" class="label"><span>Email / Sđt</span></label>
+            <div class="control">
+                <input type="text" name="email" alt="email" id="email_address" class="input-text  email-or-mobile"
+                       value=""
+                       data-mage-init='{"mage/trim-input":{}}' data-validate="{required:true}">
+                                    <button id="sendOTPCode" type="button">Gửi mã OTP</button>
+                    <div class="note-message">*Lưu ý: Phương thức Gửi mã OTP Chỉ sử dụng cho số điện thoại</div>
+                            </div>
+        </div>
+                    <div class="message-otp-code"></div>
+            <div class="life-time-otp"style="color: #e02b27;font-size: 1.2rem;"></div>
+            <div class="field otp_code required">
+                <label for="otp_code" class="label">
+                    <span>Mã OTP</span>
+                </label>
+                <div class="control">
+                    <input type="text" name="otp_code" alt="otp-code" id="otp_code" class="input-text"
+                           data-mage-init='{"mage/trim-input":{}}' data-validate="{required:false}"/>
+                </div>
+            </div>
+        
+            </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary">
+                <span>Đặt lại mật khẩu</span></button>
+        </div>
+        <div class="secondary">
+            <a class="action back"
+               href="/customer/account/login/referer/aHR0cHM6Ly9zYW5kcm8uY29tLnZuL2N1c3RvbWVyL2FjY291bnQvaW5kZXgv/"><span>Quay lại</span></a>
+        </div>
+    </div>
+</form>
+<script type="text/x-magento-init">
+                {
+                    "*": {
+                        "MagenestCustomer": {
+                           "page":"forgot_password",
+                           "lifeTimeOTP": 5,
+                           "isDisableBtnSendOTP": "1",
+                           "disableButtonTime": "30"                        }
+                    }
+                }
+</script>
+    </div>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/popup-forgotpassword": {}
+        }
+    }
+</script>
+</div>
+</div><script type="text/x-magento-init">
+    {
+        "body": {
+            "requireCookie": {"noCookieUrl":"https:\/\/sandro.com.vn\/cookie\/index\/noCookies\/","triggers":[".action.login"],"isRedirectCmsPage":true}        }
+    }
+</script>
+<div id="location-popup-modal" style="display: none;">
+    <div class="location-popup-content">
+        <div class="heading-popup">
+            <h2 class="title">Chào mừng bạn đến với Sandro Online Boutique VN</h2>
+            <div class="location-popup-logo-website">
+                            </div>
+            <div
+                class="sub-description">Xin lỗi, chúng tôi không thể tìm thấy phiên bản cửa hàng trực tuyến phù hợp với quốc gia vị trí của bạn</div>
+        </div>
+        <!--button continue with site VN -->
+        <button id="mgn-location-popup-button"
+                class="mgn-location-popup-button">Tiếp tục mua sắm trên cửa hàng trực tuyến VN</button>
+        <!--button other sites-->
+        <button id="mgn-other-location" class="mgn-other-location-button"><span>Xem các website khác của thương hiệu</span></button>
+       <!-- select other country-->
+        <label for="geolocation-select"></label>
+        <select id="geolocation-select" style="display: none">
+            <option id="geolocation-select-label" disabled="" selected="">Select a country/a region</option>
+            <option value=" https://fr.sandro-paris.com">France</option>
+            <option value=" https://sandro.ua/">Ukraine</option>
+            <option value=" https://ch.sandro-paris.com">Switzerland</option>
+            <option value=" https://ie.sandro-paris.com">France</option>
+            <option value=" https://us.sandro-paris.com">United States</option>
+            <option value=" https://sandro.mx">Mexico</option>
+            <option value=" https://www.sandro-paris.com.tw">Taiwan Region</option>
+            <option value=" https://eu.sandro-paris.com/">Luxembourg</option>
+            <option value=" https://eu.sandro-paris.com/">Austria</option>
+            <option value=" https://nld.sandro-paris.com">Netherlands</option>
+            <option value=" https://es.sandro-paris.com">España</option>
+            <option value=" https://www.sandro-paris.com.sg">Singapore</option>
+            <option value=" https://sandro-paris.ru">Russia</option>
+            <option value=" https://eu.sandro-paris.com/">Belgium</option>
+            <option value=" https://www.sandro-paris.cn/">China</option>
+            <option value=" https://www.sandro-paris.com.hk">Hong Kong SAR/Macau SAR</option>
+            <option value=" https://www.sandro-paris.com.au/">Australia</option>
+            <option value=" https://de.sandro-paris.com">Deutschland</option>
+            <option value=" https://eu.sandro-paris.com/">Portugal</option>
+            <option value=" https://it.sandro-paris.com">Italy</option>
+        </select>
+    </div>
+</div>
+<script type="text/javascript">
+    require([
+        "jquery",
+        'Magento_Ui/js/modal/modal',
+        'jquery/jquery.cookie'
+    ], function ($, modal) {
+        const COOKIE_NAME = 'mgn_location_popup';
+
+        function initPopup(){
+            let options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                modalClass: "mgn_location_popup",
+                overlayClass: "modals-overlay mgn_location_overlay",
+                buttons: []
+            };
+            modal(options, $('#location-popup-modal'));
+            $("#location-popup-modal").modal("openModal");
+            initPopupEvent();
+        }
+
+        function initPopupEvent(){
+            $('#mgn-location-popup-button').on('click', function () {
+                $.cookie(COOKIE_NAME,'VN', '365');
+                $("#location-popup-modal").modal("closeModal");
+            });
+
+            $('#geolocation-select').on('change', function () {
+                let url = $(this).val();
+                if (url) {
+                    window.location = url;
+                }
+            });
+
+            $('#mgn-other-location').on('click', function () {
+                $('#geolocation-select').show();
+            });
+        }
+        //check cookie region exists
+        if (!$.cookie(COOKIE_NAME))
+        {
+            $.ajax({
+                url: "https://ipinfo.io/json",
+                type: "GET",
+                success: function (response) {
+                    // to show popup in VN
+                    if (response.country !== "VN") {
+                        initPopup();
+                    } else {
+                    }
+                }
+            });
+        }
+    });
+</script>
+</div></div></main><footer class="page-footer"><div class="footer content"><div class="footer-reinsurance-container"><style>#html-body [data-pb-style=CNE00KR],#html-body [data-pb-style=L0CND8W],#html-body [data-pb-style=QCP481W],#html-body [data-pb-style=XKX270X]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:25%;align-self:stretch}</style><div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="L0CND8W"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><a href="/">
+    <span class="reinsurance-img"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/images/footer/colis-x2.png"  alt=""></span>
+    Cam kết <br>hàng chính hãng
+</a></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="CNE00KR"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><a href="/">
+    <span class="reinsurance-img"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/images/footer/securise-x2.png"  alt=""></span>
+    Thanh toán an toàn
+</a></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="XKX270X"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><a href="/sales/guest/form">
+    <span class="reinsurance-img"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/images/footer/livraison-x2.png"  alt=""></span>
+    Theo dõi đơn hàng
+</a>
+</div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="QCP481W"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><a href="/contact/">
+    <span class="reinsurance-img"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/images/footer/sc-x2.png"  alt=""></span>
+    Hỗ trợ khách hàng <br> (+84) 96 127 2486 <br> (9h - 18h, Thứ 2 - Thứ 6)
+</a></div></div></div></div><div class="block newsletter">
+    <div class="title">
+        <strong>Bản tin</strong>
+        <p>Đăng ký nhận bản tin của chúng tôi để nhận các tin tức, <br>ưu đãi đặc biệt và các khuyến mãi độc quyền</p>
+    </div>
+    <div class="content">
+        <form class="form subscribe"
+              novalidate
+              action="/newsletter/subscriber_ajax/new/"
+              data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+              id="newsletter-validate-detail">
+            <div class="main-content-newsletterinscription">
+                <div class="field newsletter">
+                    <div class="control">
+                        <label for="newsletter">
+                        <span class="label">
+                            Đăng ký nhận bản tin của chúng tôi:                        </span>
+                            <input name="email" type="email" id="newsletter"
+                                   placeholder="Email của bạn"
+                                   data-mage-init='{"mage/trim-input":{}}'
+                                   data-validate="{required:true, 'validate-email':true}"
+                            />
+                        </label>
+                    </div>
+                </div>
+                <div class="field gender" style="display: none;">
+                    <div class="control">
+                        <input type="radio" name="gender" id="newsletter_gender"/>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="action subscribe primary" id="subscribe_button"
+                            type="button"
+                            aria-label="Subscribe">
+                        <span>Đặt mua</span>
+                    </button>
+                </div>
+            </div>
+            <div class="newsletterinscription-subscribe footer-newsletterinscription visually-hidden"
+                 style="display: none">
+                <button type="submit"
+                        data-value="woman"
+                        class="woman newsletter_gender_button">Nữ                </button>
+                <button type="submit"
+                        data-value="man"
+                        class="man newsletter_gender_button">Nam                </button>
+            </div>
+            <div class="news-inscription-result" style="display: none">
+                <div class="newsletter-inner-result">
+                    <p class="newsletter-form-message"
+                       tabindex="-1">You are already subscribed to the newsletter.</p>
+                    <div>
+                                                    <a href="/customer/account/create/">Tạo tài khoản</a>
+                                            </div>
+
+                </div>
+            </div>
+        </form>
+        <div
+            class="sub-title">Bằng cách tạo tài khoản, bạn đồng ý với <a href="/privacy-policy/">Chính sách bảo mật.</a> của chúng tôi</div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/block-submit-on-send": {
+                "formId": "newsletter-validate-detail"
+            }
+        }
+    }
+</script>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magenest_CustomNewsletter/js/subscribe-newsletter-ajax": {
+                "formId": "newsletter-validate-detail"
+            }
+        }
+    }
+</script>
+<div class="footer-sharing-container"><style>#html-body [data-pb-style=I3GX41P]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:33.3333%;align-self:stretch}#html-body [data-pb-style=RPWH9UE]{border-style:none}#html-body [data-pb-style=CHJN6D8],#html-body [data-pb-style=Q9V0SBT]{max-width:100%;height:auto}#html-body [data-pb-style=ND2BS6X],#html-body [data-pb-style=TQD3YSM]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:33.3333%;align-self:stretch}@media only screen and (max-width: 768px) { #html-body [data-pb-style=RPWH9UE]{border-style:none} }</style><div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main"><div class="pagebuilder-column share-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="I3GX41P"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="RPWH9UE"><img loading="lazy" lazy  class="pagebuilder-mobile-hidden"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/logo/stores/1/sandro.png"  alt="" title="" data-element="desktop_image" data-pb-style="Q9V0SBT"><img loading="lazy" lazy  class="pagebuilder-mobile-only"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/logo/stores/1/sandro.png"  alt="" title="" data-element="mobile_image" data-pb-style="CHJN6D8"></figure></div><div class="pagebuilder-column footer-social-icon" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="TQD3YSM"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><ul class="sharing">
+    <li>
+        <a target="_blank" href="http://instagram.com/sandroparis" class="instagram">
+            <span class="icon-instagram"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/images/social/insta-x2.png"  alt=""></span>
+            <span class="visually-hidden">Instagram Sandro Paris - </span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" href="https://www.facebook.com/sandrofrance" class="facebook">
+            <span class="icon-facebook"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/images/social/facebook-x2.png"  alt=""></span>
+            <span class="visually-hidden">Facebook Sandro Paris</span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" href="https://smartlink.music-work.com/channel/sandroparis" class="spotify">
+            <span class="icon-spotify"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/images/social/spotifyLogo.png"  alt=""></span>
+            <span class="visually-hidden">Spotify Sandro Paris</span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" href="https://vm.tiktok.com/ZMRMD6T67/" class="tiktok">
+            <span class="icon-tiktok"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/wysiwyg/social/tiktok.png"  alt="" /></span>
+            <span class="visually-hidden">Tiktok Sandro Paris</span>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" href="https://pinterest.com/sandroofficial/" class="pinterest">
+            <span class="icon-pinterest"><img loading="lazy" lazy   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/static/version1660607991/frontend/Openasia/Sandro/vi_VN/images/social/pinterest-x2.png"  alt=""></span>
+            <span class="visually-hidden">Pinterest Sandro Paris</span>
+        </a>
+    </li>
+</ul>
+</div></div><div class="pagebuilder-column footer-country-select" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="ND2BS6X"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><select class="changeCountryContent">
+    <option>Quốc gia / Khu vực</option>
+    <option value="http://www.sandro.com.vn/">Viet Nam</option>
+    <option value="https://eu.sandro-paris.com/">Austria</option>
+    <option value="https://www.sandro-paris.com.au/">Australia</option>
+    <option value="https://eu.sandro-paris.com/">Belgium</option>
+    <option value="https://www.sandro-paris.cn/">China</option>
+    <option value="https://de.sandro-paris.com/">Deutschland</option>
+    <option value="https://es.sandro-paris.com/">España</option>
+    <option value="https://fr.sandro-paris.com/">France</option>
+    <option value="https://www.sandro-paris.com.hk/">Hong Kong/Macau</option>
+    <option value="https://it.sandro-paris.com/">Italy</option>
+    <option value="https://ie.sandro-paris.com/">Ireland</option>
+    <option value="https://eu.sandro-paris.com/">Luxembourg</option>
+    <option value="https://sandro.mx/">Mexico</option>
+    <option value="https://nld.sandro-paris.com/">Netherlands</option>
+    <option value="https://eu.sandro-paris.com/">Portugal</option>
+    <option value="https://sandro-paris.ru/">Russia</option>
+    <option value="http://www.sandro-paris.com.sg/">Singapore</option>
+    <option value="https://ch.sandro-paris.com/">Switzerland</option>
+    <option value="http://www.sandro-paris.com.tw/">Taiwan Region</option>
+    <option value="https://sandro.ua/">Ukraine</option>
+    <option value="https://us.sandro-paris.com/">United States</option>
+    <option value="https://uk.sandro-paris.com/">United Kingdom</option>
+    <option value="https://www.sandro.ae/">UAE</option>
+
+</select>
+<script>
+    require([
+        "jquery"
+    ], function($) {
+        $(".changeCountryContent").on("change", function (e) {
+            window.location.replace($(this).val());
+        });
+    })
+</script>
+</div></div></div></div><div class="links"><div class="widget block block-static-block">
+    <style>#html-body [data-pb-style=A2660DB],#html-body [data-pb-style=BSTXK4C],#html-body [data-pb-style=PY37PYF],#html-body [data-pb-style=QKL81WU]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:25%;align-self:stretch}#html-body [data-pb-style=LGBJWT4]{margin-top:10px;border-style:none}#html-body [data-pb-style=AYD2I5H],#html-body [data-pb-style=W4Q74J2]{max-width:100%;height:auto}#html-body [data-pb-style=DARSVJ0]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;margin-top:20px}#html-body [data-pb-style=KAFS1SX]{text-align:center;border-style:none}#html-body [data-pb-style=JQ6WGDO],#html-body [data-pb-style=WY0MO5I]{max-width:100%;height:auto}#html-body [data-pb-style=KMR23GB]{margin-top:20px}@media only screen and (max-width: 768px) { #html-body [data-pb-style=KAFS1SX],#html-body [data-pb-style=LGBJWT4]{border-style:none} }</style><div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="PY37PYF"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><strong class="footer-link-title">Hỗ trợ khách hàng</strong>
+<ul>
+    <li> <a href="/faq">Các câu hỏi thường gặp</a></li>
+    <li> <a href="/contact">Liên hệ chúng tôi</a></li>
+    <li> <a href="/maplist">Hệ thống cửa hàng</a></li>
+    <li> <a href="/sales/guest/form">Tra cứu đơn hàng </a></li>
+    <li> <a href="/size-guide">Hướng dẫn đo kích thước</a></li>
+    <li> <a href="/return-policy">Chính sách đổi hàng</a></li>
+    <li> <a href="/sandro-delivery-policy">Chính sách giao hàng</a></li>
+    <li> <a href="https://tamsonvn.com/member-benefit/">Chính sách khách hàng thân thiết Tam Sơn</a></li>
+</ul></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="QKL81WU"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><strong class="footer-link-title">Bộ sưu tập Nữ</strong>
+<ul>
+    <li> <a href="/woman/ready-to-wear/new-collection.html">Bộ sưu tập Xuân/Hè</a></li>
+    <li> <a href="/woman/ready-to-wear/dresses.html">Đầm</a></li>
+    <li> <a href="/woman/ready-to-wear/tops-and-shirts.html">Áo sơmi & Áo kiểu</a></li>
+    <li> <a href="/woman/ready-to-wear/pants.html">Quần dài</a></li>
+    <li> <a href="/woman/woman-bags-and-accessories/small-leather-goods.html">Ví da</a></li>
+    <li> <a href="/woman/shoes.html">Giày dép</a></li>
+</ul>
+</div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="A2660DB"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><strong class="footer-link-title">Bộ sưu tập Nam</strong>
+<ul>
+    <li> <a href="/man/fall-winter-collection.html">Bộ sưu tập Xuân/Hè</a></li>
+    <li> <a href="/man/ready-to-wear/shirts.html">Áo sơ mi</a></li>
+    <li> <a href="/man/ready-to-wear/t-shirts-and-polo-shirts.html">Áo thun & Áo Polo</a></li>
+    <li> <a href="/man/ready-to-wear/pants-and-shorts.html">Quần dài & Quần short</a></li>
+    <li> <a href="/man/accessories/bags.html">Túi xách</a></li>
+    <li> <a href="/man/accessories/shoes.html">Giày dép</a></li>
+</ul>
+
+
+</div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="BSTXK4C"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><strong class="footer-link-title">Thông báo pháp lý</strong>
+<ul>
+    <li><a href="/sandro-company/">Thông tin công ty</a></li>
+    <li><a href="/terms-of-use/">Điều khoản sử dụng</a></li>
+    <li> <a href="/privacy-policy">Chính sách bảo mật</a></li>
+    <li> <a href="/cookies-policy">Chính sách Cookie</a></li>
+    <li> <a href="javascript:void(0)" class="cookies-manage">Quản lý Cookie của tôi</a></li>
+</ul>
+</div><figure class="mobile-hide" data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="LGBJWT4"><a href="http://online.gov.vn/Home/WebDetails/90065" target="_blank" data-link-type="default" title="" data-element="link"><img loading="lazy" lazy  class="pagebuilder-mobile-hidden"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/wysiwyg/saleNoti-logo.png"  alt="" title="" data-element="desktop_image" data-pb-style="W4Q74J2"><img loading="lazy" lazy  class="pagebuilder-mobile-only"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/wysiwyg/saleNoti-logo.png"  alt="" title="" data-element="mobile_image" data-pb-style="AYD2I5H"></a></figure></div></div><div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="DARSVJ0"><figure class="desktop-hide" data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="KAFS1SX"><a href="http://online.gov.vn/Home/WebDetails/90065" target="_blank" data-link-type="default" title="" data-element="link"><img loading="lazy" lazy  class="pagebuilder-mobile-hidden"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/wysiwyg/saleNoti-logo.png"  alt="" title="" data-element="desktop_image" data-pb-style="JQ6WGDO"><img loading="lazy" lazy  class="pagebuilder-mobile-only"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="/media/wysiwyg/saleNoti-logo.png"  alt="" title="" data-element="mobile_image" data-pb-style="WY0MO5I"></a></figure><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="KMR23GB"><p style="text-align: center;"><span style="line-height: 20px; font-size: 10px;">Th&#432;&#417;ng hi&#7879;u Sandro &#273;&#432;&#7907;c ph&acirc;n ph&#7889;i ch&iacute;nh th&#7913;c b&#7903;i C&ocirc;ng ty TNHH Qu&#7889;c t&#7871; Tam S&#417;n</span><br><span style="line-height: 20px; font-size: 10px;">Gi&#7845;y ch&#7913;ng nh&#7853;n &#273;&#259;ng k&yacute; kinh doanh s&#7889;: 0101794983 do S&#7903; K&#7871; ho&#7841;ch v&agrave; &#272;&#7847;u t&#432; th&agrave;nh ph&#7889; H&agrave; N&#7897;i c&#7845;p l&#7847;n &#273;&#7847;u ng&agrave;y 07 th&aacute;ng 10 n&#259;m 2005</span><br><span style="line-height: 20px; font-size: 10px;">&#272;&#7883;a ch&#7881; tr&#7909; s&#7903; :&nbsp;S&#7889; 21, Ng&otilde; 2, L&ecirc; V&#259;n H&#432;u, Qu&#7853;n Hai B&agrave; Tr&#432;ng, H&agrave; N&#7897;i, Vi&#7879;t Nam</span><br><span style="line-height: 20px; font-size: 10px;">Tel: +84 24 39369757</span><br><span style="line-height: 20px; font-size: 10px;">Fax: +84 24 39369759</span></p></div></div></div>
+</div><div class="block block-customer-login" id="resetpassword-block" style="display: none">
+    <div class="block-content">
+        <form class="form-password-reset-modal form form-login form-create-account"
+              action="/smsmarketing/customer/resetPasswordPost/"
+              method="post"
+             autocomplete="off"              id="form-validate-md"
+              data-mage-init='{"validation":{}}'>
+            <fieldset class="fieldset" data-hasrequired="&#x2A;&#x20;B&#x1EAF;t&#x20;bu&#x1ED9;c">
+                <input type="text" name="form_key" value='<input name="form_key" type="hidden" value="LAEuzsT3gJ8xChhD" />' style="visibility: hidden">
+                <div class="mgn-legend" style="border-top: 0">Tạo tài khoản Online</div>
+                <div class="field field-telephone required" id="field-phone-modal">
+                    <label for="email_address" class="label"><span>Điện thoại</span></label>
+                    <div class="control" style="display: flex; position: relative;">
+                        <input type="text" name="email_address" alt="email" id="email_address_md"
+                               class="input-text email-or-mobile"
+                               placeholder="Nhập email hoặc điện thoại của bạn"
+                               data-mage-init='{"mage/trim-input":{}}' readonly>
+                    </div>
+                </div>
+                                    <div class="password-strength-meter" id="message-otp-code" style="display: none"></div>
+                    <div class= "message-otp-code" id="message-otp-code-default"></div>
+                    <div id="message-invalid" style="color: #e02b27;font-size: 1.2rem;">
+                        <span class="message-invalid" style="display: none;">
+                            Mã OTP có giá trị cho <span class="life-time-otp"
+                                                                          style="font-weight: 500;"></span>
+                        </span>
+                        <span class="message-expired" style="display: none">Mã OTP đã hết hạn.</span>
+                    </div>
+                    <div class="field otp_code field-telephone required" id="opt-code-required">
+                        <label for="otp_code" class="label">
+                            <span>Mã OTP</span>
+                        </label>
+                        <div class="control" style="display: flex; position: relative;">
+                            <input type="text" name="otp_code" alt="otp-code" id="otp_code_md" class="input-text"
+                                   data-mage-init='{"mage/trim-input":{}}' data-validate="{required:false}"/>
+                            <button id="confirmOtpMd" type="button">Xác nhận OTP.</button>
+                        </div>
+                        <div id="confirm-otp-message-md" data-role="confirm-otp-message-md" aria-live="polite"
+                             class="password-strong" style="display: none">
+                            <div id="confirm-otp-message-content-md" class="password-strength-meter"></div>
+                        </div>
+                    </div>
+                    <div class="note-message"
+                         style="color: red;">*Lưu ý: Phương thức Gửi mã OTP Chỉ sử dụng cho số điện thoại</div>
+                                <!--Password Reset Start-->
+                <div class="field password required" data-mage-init='{"passwordStrengthIndicator": {}}' id="password-required" style="display: none">
+                    <label class="label" for="password"><span>Mật khẩu mới</span></label>
+                    <div class="control">
+                        <input type="password" class="input-text" name="password" id="password-md"
+                               data-password-min-length="8"
+                               data-password-min-character-sets="4"
+                               data-validate="{required:true, 'validate-customer-password':true}"
+                               autocomplete="off">
+                        <div id="password-strength-meter-container" data-role="password-strength-meter" aria-live="polite">
+                            <div id="password-strength-meter" class="password-strength-meter">
+                                Mật khẩu mạnh:
+                                <span id="password-strength-meter-label" data-role="password-strength-meter-label">
+                                Không mật khẩu                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field confirmation required" id="password-confirm-required" style="display: none">
+                    <label class="label" for="password-confirmation"><span>Xác nhận Mật khẩu Mới</span></label>
+                    <div class="control">
+                        <input type="password" class="input-text" name="password_confirmation" id="password-confirmation-md" data-validate="{required:true,equalTo:'#password-md'}" autocomplete="off">
+                    </div>
+                </div>
+                <!--Password Reset End-->
+                            </fieldset>
+            <div class="actions-toolbar">
+                <div class="primary" id="button-modal-contain" style="display: none">
+                    <button type="submit" class="action submit primary md" id="submit-md-prism">
+                        <span>Tạo mật khẩu mới của bạn</span></button>
+                </div>
+            </div>
+            <div class="privacy-policy">
+                            </div>
+        </form>
+    </div>
+</div>
+<script>
+    require(['jquery'], function($){
+         $('.modal-header').hide();
+    });
+</script>
+</div></footer><script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "storage-manager": {
+                            "component": "Magento_Catalog/js/storage-manager",
+                            "appendTo": "",
+                            "storagesConfiguration" : {"recently_viewed_product":{"requestConfig":{"syncUrl":"https:\/\/sandro.com.vn\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"recently_compared_product":{"requestConfig":{"syncUrl":"https:\/\/sandro.com.vn\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"product_data_storage":{"updateRequestConfig":{"url":"https:\/\/sandro.com.vn\/rest\/sandro_default\/V1\/products-render-info"},"requestConfig":{"syncUrl":"https:\/\/sandro.com.vn\/catalog\/product\/frontend_action_synchronize\/"},"allowToSendRequest":null}}                        }
+                    }
+                }
+            }
+        }
+</script>
+<style>
+@media (min-width: 768px) {
+.page-layout-cms-future .features-item .pagebuilder-column.features-image-fixed + .pagebuilder-column {
+    padding-bottom: 7.2395833333vw;
+}
+}
+<style><script>
+    require(['jquery', 'iframeResizer' ],
+        function ($) {
+            $(function () {
+                waitUntilExists(function() { return $('.embedded-iframe').length; }, function() {
+                    var iframe = $('.embedded-iframe'),
+                        headerHeight = $('header').outerHeight(),
+                        windowHeight = $(window).innerHeight(),
+                        availableHeight =  windowHeight - headerHeight - 70,
+                        isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
+                    iframe.css({'height': availableHeight + 'px'});
+
+                    iframe.on('load', function(){
+                        iFrameResize({
+                            log: false,
+                            minHeight: availableHeight,
+                            resizeFrom: 'parent',
+                            scrolling: true,
+                            inPageLinks: true,
+                            autoResize: true,
+                            heightCalculationMethod: isOldIE ? 'max' : 'bodyScroll',
+                            onInit: function(iframe) {
+                                iframe.style.height = availableHeight + 'px';
+                            },
+                            onResized: function(messageData) {
+                                setTimeout(function() {
+                                    messageData.iframe.style.visibility = 'visible';
+                                }, 300);
+                            },
+                            onMessage: function(messageData) {
+                                if (history.pushState && messageData.message.hasOwnProperty('trackNo')) {
+                                    var newUrl = window.location.protocol + '//' + window.location.host + window.location.pathname.replace(/\/$/, '') + '/' + messageData.message.trackNo;
+                                    window.history.pushState({path:newUrl}, '', newUrl);
+                                }
+                            }
+                        }, '.embedded-iframe');
+                    });
+
+                }, function() { });
+                function waitUntilExists(isReady, success, error, count, interval){
+                    if (count === undefined) {
+                        count = 300;
+                    }
+                    if (interval === undefined) {
+                        interval = 20;
+                    }
+                    if (isReady()) {
+                        success();
+                        return;
+                    }
+                    setTimeout(function(){
+                        if (!count) {
+                            if (error !== undefined) {
+                                error();
+                            }
+                        } else {
+                            waitUntilExists(isReady, success, error, count -1, interval);
+                        }
+                    }, interval);
+                }
+            });
+        });
+</script>
+</div>    </body>
+</html>
