@@ -1,13 +1,13 @@
-package com.cg;
+package com.cg.tp.sandro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ShopShoesVersion2Application {
+public class SandroApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ShopShoesVersion2Application.class, args);
+        SpringApplication.run(SandroApplication.class, args);
     }
 
 }

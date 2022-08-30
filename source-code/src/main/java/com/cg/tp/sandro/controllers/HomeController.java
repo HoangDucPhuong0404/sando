@@ -6,15 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/home")
+@RequestMapping()
 public class HomeController {
-    @GetMapping("")
+
+    @GetMapping()
     public ModelAndView show(){
-        ModelAndView modelAndView = new ModelAndView("/hello");
-        return modelAndView;
-    }
-    @GetMapping("/login")
-    public ModelAndView showLogin(){
-        return new ModelAndView("/login/login");
+        return new ModelAndView("/dashboard/product/list_products");
     }
 }

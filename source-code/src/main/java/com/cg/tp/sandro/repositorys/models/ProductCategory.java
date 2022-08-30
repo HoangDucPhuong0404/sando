@@ -1,7 +1,15 @@
 package com.cg.tp.sandro.repositorys.models;
 
+import lombok.*;
+import lombok.experimental.Accessors;
+
 import javax.persistence.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
 @Entity
 @Table(name = "product_category")
 public class ProductCategory {
@@ -18,29 +26,5 @@ public class ProductCategory {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "categoryId", nullable = false)
     private Category category;
-
-    public ProductCategoryId getId() {
-        return id;
-    }
-
-    public void setId(ProductCategoryId id) {
-        this.id = id;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 
 }

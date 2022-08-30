@@ -1,13 +1,19 @@
 package com.cg.tp.sandro.repositorys.models;
 
+import lombok.*;
+import lombok.experimental.Accessors;
 import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
 @Embeddable
 public class ProductCategoryId implements Serializable {
     private static final long serialVersionUID = -4333390330099977872L;
@@ -16,22 +22,6 @@ public class ProductCategoryId implements Serializable {
 
     @Column(name = "categoryId", nullable = false)
     private Long categoryId;
-
-    public Long getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Long productId) {
-        this.productId = productId;
-    }
-
-    public Long getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
-    }
 
     @Override
     public boolean equals(Object o) {

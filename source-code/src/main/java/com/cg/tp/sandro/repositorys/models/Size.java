@@ -1,9 +1,14 @@
 package com.cg.tp.sandro.repositorys.models;
 
+import lombok.*;
+import lombok.experimental.Accessors;
 import javax.persistence.*;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
 @Entity
 @Table(name = "size")
 public class Size {
@@ -13,22 +18,4 @@ public class Size {
 
     @Column(name = "size", nullable = false, length = 75)
     private String size;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
 }

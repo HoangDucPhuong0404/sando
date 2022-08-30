@@ -1,7 +1,6 @@
-//package com.cg.team_project2.service.jwt;
+package com.cg.tp.sandro.services.jwt;//package com.cg.tp.sandro.services.jwt;
 //
-//import com.cg.team_project2.model.UserPrinciple;
-//import io.jsonwebtoken.*;
+//import com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithm;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 //import org.springframework.security.core.Authentication;

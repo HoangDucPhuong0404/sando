@@ -1,5 +1,7 @@
 package com.cg.tp.sandro.repositorys.models;
 
+import lombok.*;
+import lombok.experimental.Accessors;
 import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
@@ -8,6 +10,11 @@ import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
 @Embeddable
 public class ProductSizeColorId implements Serializable {
     private static final long serialVersionUID = -6747260200057963877L;
@@ -19,30 +26,6 @@ public class ProductSizeColorId implements Serializable {
 
     @Column(name = "colorId", nullable = false)
     private Long colorId;
-
-    public Long getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Long productId) {
-        this.productId = productId;
-    }
-
-    public Long getSizeId() {
-        return sizeId;
-    }
-
-    public void setSizeId(Long sizeId) {
-        this.sizeId = sizeId;
-    }
-
-    public Long getColorId() {
-        return colorId;
-    }
-
-    public void setColorId(Long colorId) {
-        this.colorId = colorId;
-    }
 
     @Override
     public boolean equals(Object o) {
