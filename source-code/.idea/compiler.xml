@@ -6,16 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Team_project2" />
+        <module name="sandro" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Team_project2" target="1.8" />
+      <module name="sandro" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Team_project2" options="-parameters" />
+      <module name="sandro" options="-parameters" />
     </option>
   </component>
 </project>
