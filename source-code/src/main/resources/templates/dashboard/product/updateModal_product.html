@@ -1,0 +1,122 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<th:block th:fragment="modal-edit-product">
+  <div class="modal fade bs-example-modal-edit" tabindex="-1" role="dialog" aria-hidden="true" id="editModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-alert-danger hide"></div>
+          <h4>Product</h4>
+          <form id="modalEdit" data-parsley-validate class="form-horizontal form-label-left" method="post">
+
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
+              </label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" id="nameUp" name="nameUp" required="required" class="form-control col-md-7 col-xs-12">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Link Image <span class="required">*</span>
+              </label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="url" id="imageUp" name="image" required="required" class="form-control col-md-7 col-xs-12">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Title</label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input id="titleUp" class="form-control col-md-7 col-xs-12" type="text" name="title">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" >Price<span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input id="priceUp" class="form-control col-md-7 col-xs-12" type="number" name="priceUp" required="required" >
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">Quantity <span class="required">*</span>
+              </label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input id="quantityUp" name="quantityUp" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">size <span class="required">*</span>
+              </label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input id="sizeUp" name="sizeUp" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">Category</label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div  id="categoryUp" class="btn-group" data-toggle="buttons" >
+                  <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                    <input type="radio" name="categoryUp" value="1"> &nbsp; Nike &nbsp;
+                  </label>
+                  <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                    <input type="radio" name="categoryUp" value="2"> Adidas
+                  </label>
+                  <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                    <input type="radio" name="categoryUp" value="3"> Puma
+                  </label>
+                  <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                    <input type="radio" name="categoryUp" value="4"> New Balance
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="item form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" >Description <span class="required">*</span>
+              </label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <textarea id="descriptionUp" required="required" name="descriptionUp" class="form-control col-md-7 col-xs-12"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">Status <span class="required">*</span>
+              </label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+
+                <select name="statusUp" id="statusUp">
+                  <option value="1">Sold out !</option>
+                  <option value="2">Available</option>
+                  <option value="3">Brand new !</option>
+                </select>
+
+              </div>
+            </div>
+            <div class="ln_solid"></div>
+            <div class="form-group">
+              <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                <button class="btn btn-round btn-warning" type="button">Cancel</button>
+                <button class="btn btn-round btn-info" type="reset">Reset</button>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary btnUpdate" id="btnUpdate">Save changes</button>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+</th:block>
