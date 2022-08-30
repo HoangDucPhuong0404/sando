@@ -11,7 +11,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Team_project2" />
+          <element id="module-output" name="sandro" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.15" />
