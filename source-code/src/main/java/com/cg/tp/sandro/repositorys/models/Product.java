@@ -11,7 +11,6 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Accessors(chain = true)
 @Entity
 @Table(name = "product")
@@ -46,11 +45,11 @@ public class Product {
     @Column(name = "content")
     private String content;
 
-    @ManyToMany
-    @JoinTable(name = "product_category",
-            joinColumns = @JoinColumn(name = "productId"),
-            inverseJoinColumns = @JoinColumn(name = "categoryId"))
-    private Set<Category> categories = new LinkedHashSet<>();
+//    @ManyToMany
+//    @JoinTable(name = "product_category",
+//            joinColumns = @JoinColumn(name = "productId"),
+//            inverseJoinColumns = @JoinColumn(name = "categoryId"))
+//    private Set<Category> categories = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "product")
     private Set<OrderItem> orderItems = new LinkedHashSet<>();

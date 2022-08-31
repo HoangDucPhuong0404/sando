@@ -13,12 +13,10 @@ import java.time.Instant;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Data
-@Accessors(chain = true)
 public class ProductParam {
 
-    private Long id;
+    private Long productId;
 
     @NotNull(message = "Title is not null")
     @Size(max = 75)
@@ -43,7 +41,34 @@ public class ProductParam {
     @NotNull(message = "Content is not null")
     private String content;
 
-    private String isDelete;
+    // category
+    private Long categoryId;
+
+    @NotNull
+    @Size(max = 75)
+    private String categoryTitle;
+
+    @NotNull
+    @Size(max = 100)
+    private String categorySlug;
+
+    @Lob
+    @Column(name = "content")
+    private String categoryContent;
+
+    // color
+    private Long colorId;
+
+    @NotNull
+    @Size(max = 100)
+    private String colorTitle;
+
+    // size
+    private Long sizeId;
+
+    @NotNull
+    @Size(max = 75)
+    private String size;
 
 
     //product-media
