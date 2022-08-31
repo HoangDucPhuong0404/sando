@@ -1,8 +1,8 @@
-package com.cg.tp.sandro.services.implement;
+package com.cg.tp.sandro.services.color;
 
-import com.cg.tp.sandro.repositorys.IColorRepository;
-import com.cg.tp.sandro.repositorys.models.Color;
-import com.cg.tp.sandro.services.IColorService;
+import com.cg.tp.sandro.repositories.ColorRepository;
+import com.cg.tp.sandro.repositories.models.Color;
+import com.cg.tp.sandro.services.color.IColorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +10,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ColorService implements IColorService {
+public class ColorServiceImpl implements IColorService {
 
     @Autowired
-    private IColorRepository colorRepository;
+    private ColorRepository colorRepository;
 
     @Override
     public List<Color> findAll() {

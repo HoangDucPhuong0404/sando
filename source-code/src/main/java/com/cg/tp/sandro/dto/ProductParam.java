@@ -1,11 +1,14 @@
 package com.cg.tp.sandro.dto;
 
-import com.cg.tp.sandro.repositorys.models.ProductSizeColor;
-import lombok.*;
-import lombok.experimental.Accessors;
+import com.cg.tp.sandro.repositories.models.ProductSizeColor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Lob;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.Instant;

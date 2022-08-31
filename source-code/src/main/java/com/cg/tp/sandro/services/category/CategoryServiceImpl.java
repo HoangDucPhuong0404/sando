@@ -1,8 +1,8 @@
-package com.cg.tp.sandro.services.implement;
+package com.cg.tp.sandro.services.category;
 
-import com.cg.tp.sandro.repositorys.ICategoryRepository;
-import com.cg.tp.sandro.repositorys.models.Category;
-import com.cg.tp.sandro.services.ICategoryService;
+
+import com.cg.tp.sandro.repositories.CategoryRepository;
+import com.cg.tp.sandro.repositories.models.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +10,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CategoryService implements ICategoryService {
+public class CategoryServiceImpl implements ICategoryService{
 
     @Autowired
-    private ICategoryRepository categoryRepository;
+    private CategoryRepository categoryRepository;
+
 
     @Override
     public List<Category> findAll() {
@@ -22,16 +23,17 @@ public class CategoryService implements ICategoryService {
 
     @Override
     public Optional<Category> findById(Long id) {
-        return categoryRepository.findById(id);
+        return Optional.empty();
     }
+
 
     @Override
     public Category save(Category category) {
-        return categoryRepository.save(category);
+        return null;
     }
 
     @Override
     public void remove(Long id) {
-        categoryRepository.deleteById(id);
+
     }
 }

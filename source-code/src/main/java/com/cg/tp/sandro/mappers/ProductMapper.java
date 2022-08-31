@@ -1,7 +1,7 @@
 package com.cg.tp.sandro.mappers;
 
 import com.cg.tp.sandro.dto.ProductParam;
-import com.cg.tp.sandro.repositorys.models.*;
+import com.cg.tp.sandro.repositories.models.*;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,8 +1,8 @@
-package com.cg.tp.sandro.services.implement;
+package com.cg.tp.sandro.services.size;
 
-import com.cg.tp.sandro.repositorys.ISizeRepository;
-import com.cg.tp.sandro.repositorys.models.Size;
-import com.cg.tp.sandro.services.ISizeService;
+
+import com.cg.tp.sandro.repositories.SizeRepository;
+import com.cg.tp.sandro.repositories.models.Size;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,14 +10,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class SizeService implements ISizeService {
+public class SizeServiceImpl implements ISizeService {
 
     @Autowired
-    private ISizeRepository sizeRepository;
+    private SizeRepository sizeRepository;
+
 
     @Override
     public List<Size> findAll() {
-        return null;
+        return sizeRepository.findAll();
     }
 
     @Override

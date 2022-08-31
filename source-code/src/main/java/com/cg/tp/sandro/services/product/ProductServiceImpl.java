@@ -1,8 +1,7 @@
-package com.cg.tp.sandro.services.implement;
+package com.cg.tp.sandro.services.product;
 
-import com.cg.tp.sandro.repositorys.IProductRepository;
-import com.cg.tp.sandro.repositorys.models.Product;
-import com.cg.tp.sandro.services.IProductService;
+import com.cg.tp.sandro.repositories.ProductRepository;
+import com.cg.tp.sandro.repositories.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +9,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductService implements IProductService {
-
+public class ProductServiceImpl implements IProductService {
     @Autowired
-    private IProductRepository productRepository;
+    private ProductRepository productRepository;
+
 
     @Override
     public List<Product> findAll() {
