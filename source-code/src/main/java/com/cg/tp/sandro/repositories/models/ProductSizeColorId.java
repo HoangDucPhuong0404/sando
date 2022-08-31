@@ -12,7 +12,6 @@ import java.util.Objects;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Accessors(chain = true)
 @Embeddable
 public class ProductSizeColorId implements Serializable {

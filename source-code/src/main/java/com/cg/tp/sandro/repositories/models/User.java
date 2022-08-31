@@ -9,7 +9,6 @@ import java.time.Instant;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Accessors(chain = true)
 @Entity
 @Table(name = "user")
