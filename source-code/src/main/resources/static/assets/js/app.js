@@ -1,27 +1,5 @@
 class App {
 
-<<<<<<< HEAD
-
-    static DOMAIN = location.origin;
-
-    static BASE_URL_AUTH = this.DOMAIN + "/api/auth";
-    static BASE_URL_CUSTOMER = this.DOMAIN + "/api/customers";
-    static BASE_URL_TRANSFER = this.DOMAIN + "/api/transfers";
-    static BASE_URL_PROVINCE = "https://vapi.vnappmob.com/api/province";
-
-    static ERROR_400 = "Giao dịch không thành công, vui lòng kiểm tra lại dữ liệu.";
-    static ERROR_401 = "Access Denied! Invalid credentials.";
-    static ERROR_403 = "Access Denied! You are not authorized to perform this function.";
-    static ERROR_404 = "An error occurred. Please try again later!";
-    static ERROR_500 = "Lưu dữ liệu không thành công, vui lòng liên hệ quản trị hệ thống.";
-    static SUCCESS_CREATED = "Successful data generation !";
-    static SUCCESS_UPDATED = "Data update successful !";
-    static SUCCESS_DEPOSIT = "Successful deposit transaction !";
-    static SUCCESS_WITHDRAW = "Successful withdraw transaction !";
-    static SUCCESS_TRANSFER = "Successful transfer transaction !";
-    static SUCCESS_SUSPEND = "Succeeded client suspension !";
-
-
     static showSuspendedConfirmDialog() {
         return Swal.fire({
             icon: 'warning',
@@ -183,33 +161,6 @@ class Cart {
     }
 }
 
-class TransferFull {
-    constructor(senderId, senderName, email, recipientId, recipientName, createdOn, createdAt, balance, transferAmount, fees, feesAmount, transactionAmount) {
-        this.senderId = senderId;
-        this.senderName = senderName;
-        this.email = email;
-        this.recipientId = recipientId;
-        this.recipientName = recipientName;
-        this.createdOn = createdOn;
-        this.createdAt = createdAt;
-        this.balance = balance;
-        this.transferAmount = transferAmount;
-        this.fees = fees;
-        this.feesAmount = feesAmount;
-        this.transactionAmount = transactionAmount;
-    }
-}
-class Register {
-    constructor(id,fullName, phone, email, userName,password) {
-        this.id = id;
-        this.fullName = fullName;
-        this.phone = phone;
-        this.email = email;
-        this.userName= userName;
-        this.password = password;
-    }
-}
-=======
     static DOMAIN = location.origin;
 
     static BASE_URL_AUTH = this.DOMAIN + "/api/auth";
