@@ -1,9 +1,7 @@
-//package com.cg.team_project2.security;
+package com.cg.tp.sandro.security;//package com.cg.tp.sandro.security;
 //
-////import com.cg.team_project2.service.jwt.JwtService;
-////import com.cg.team_project2.service.user.IUserService;
-////import com.cg.team_project2.service.jwt.JwtService;
-//import com.cg.team_project2.service.user.IUserService;
+//import com.cg.tp.sandro.services.jwt.JwtService;
+//import com.cg.tp.sandro.services.user.IUserService;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 //import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,7 +15,6 @@
 //import javax.servlet.http.HttpServletRequest;
 //import javax.servlet.http.HttpServletResponse;
 //import java.io.IOException;
-//import java.util.Arrays;
 //
 //public class JwtAuthenticationFilter extends OncePerRequestFilter {
 //

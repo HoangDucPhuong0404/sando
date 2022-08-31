@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 //package com.cg.tp.sandro.services.register;
 //
 //import com.cg.team_project2.model.Register;
 //import com.cg.tp.sandro.repositories.RegisterRepository;
+=======
+package com.cg.tp.sandro.services.register;//package com.cg.tp.sandro.services.register;
+//
+//import com.cg.team_project2.model.Register;
+//import com.cg.tp.sandro.repositorys.RegisterRepository;
+>>>>>>> df4aeeb880421e6530fc993a53affde79843fbf9
 //import org.springframework.beans.factory.annotation.Autowired;
 //
 //import java.util.List;

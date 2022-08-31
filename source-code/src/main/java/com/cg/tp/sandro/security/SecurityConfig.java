@@ -1,7 +1,6 @@
-//package com.cg.team_project2.security;
+package com.cg.tp.sandro.security;//package com.cg.tp.sandro.security;
 //
-//import com.cg.team_project2.service.user.IUserService;
-////import com.cg.team_project2.service.user.IUserService;
+//import com.cg.tp.sandro.services.user.IUserService;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;

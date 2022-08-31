@@ -1,10 +1,18 @@
 package com.cg.tp.sandro.repositories.models;
 
+import lombok.*;
+import lombok.experimental.Accessors;
+
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
 @Entity
 @Table(name = "product")
 public class Product {
@@ -13,10 +21,10 @@ public class Product {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "title", nullable = false, length = 75)
+    @Column(name = "title")
     private String title;
 
-    @Column(name = "slug", nullable = false, length = 100)
+    @Column(name = "slug")
     private String slug;
 
     @Column(name = "mainImgUrl")
@@ -25,7 +33,7 @@ public class Product {
     @Column(name = "summary")
     private String summary;
 
-    @Column(name = "createdAt", nullable = false)
+    @Column(name = "createdAt")
     private Instant createdAt;
 
     @Column(name = "updatedAt")
@@ -56,6 +64,7 @@ public class Product {
     @OneToMany(mappedBy = "product")
     private Set<ProductSizeColor> productSizeColors = new LinkedHashSet<>();
 
+<<<<<<< HEAD:source-code/src/main/java/com/cg/tp/sandro/repositories/models/Product.java
 
 
     public Long getId() {
@@ -162,4 +171,6 @@ public class Product {
         this.productSizeColors = productSizeColors;
     }
 
+=======
+>>>>>>> df4aeeb880421e6530fc993a53affde79843fbf9:source-code/src/main/java/com/cg/tp/sandro/repositorys/models/Product.java
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:source-code/src/main/java/com/cg/tp/sandro/repositories/ProductRepository.java
 package com.cg.tp.sandro.repositories;
 
 import com.cg.tp.sandro.repositories.models.Product;
@@ -19,4 +20,16 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     @Modifying
     @Query(value = "UPDATE product p SET p.deleted = TRUE where p.id = :id", nativeQuery = true)
     Product deleteProductById(@Param("id")Long id);
+=======
+package com.cg.tp.sandro.repositorys;
+
+import com.cg.tp.sandro.repositorys.models.Product;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProductRepository extends PagingAndSortingRepository<Product, Long> {
+
+
+>>>>>>> df4aeeb880421e6530fc993a53affde79843fbf9:source-code/src/main/java/com/cg/tp/sandro/repositorys/ProductRepository.java
 }

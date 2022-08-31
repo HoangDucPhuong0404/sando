@@ -1,12 +1,19 @@
 package com.cg.tp.sandro.repositories.models;
 
+import lombok.*;
+import lombok.experimental.Accessors;
+
 import javax.persistence.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
 @Entity
 @Table(name = "product_media")
 public class ProductMedia {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cloud_id", nullable = false)
     private String id;
 
@@ -22,45 +29,5 @@ public class ProductMedia {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "uniqueStringId", nullable = false, referencedColumnName = "uniqueStringId")
     private ProductSizeColor uniqueString;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getFileFolder() {
-        return fileFolder;
-    }
-
-    public void setFileFolder(String fileFolder) {
-        this.fileFolder = fileFolder;
-    }
-
-    public String getFileName() {
-        return fileName;
-    }
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
-    public String getFileUrl() {
-        return fileUrl;
-    }
-
-    public void setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
-    }
-
-    public ProductSizeColor getUniqueString() {
-        return uniqueString;
-    }
-
-    public void setUniqueString(ProductSizeColor uniqueString) {
-        this.uniqueString = uniqueString;
-    }
 
 }
