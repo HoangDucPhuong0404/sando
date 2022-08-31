@@ -1,7 +1,8 @@
 package com.cg.tp.sandro.services.category;
 
-import com.cg.team_project2.model.Category;
-import com.cg.tp.sandro.repositorys.CategoryRepository;
+
+import com.cg.tp.sandro.repositories.CategoryRepository;
+import com.cg.tp.sandro.repositories.models.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

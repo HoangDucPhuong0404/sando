@@ -1,8 +1,8 @@
 package com.cg.tp.sandro.controllers.api;
 
 import com.cg.tp.sandro.exception.ResourceNotFoundException;
-import com.cg.team_project2.model.*;
-import com.cg.team_project2.model.dto.ProductDTO;
+
+import com.cg.tp.sandro.repositories.models.*;
 import com.cg.tp.sandro.services.category.ICategoryService;
 import com.cg.tp.sandro.services.color.IColorService;
 import com.cg.tp.sandro.services.order.IOrderService;
@@ -20,6 +20,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/product")
 public class ProductRestController {
+
     @Autowired
     private AppUtils appUtils;
 
@@ -66,7 +67,7 @@ public class ProductRestController {
         return new ResponseEntity<>(colors, HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("")
     public ResponseEntity<?> getAllProduct(){
         List<Product> products = productService.findAll();
         return new ResponseEntity<>(products, HttpStatus.OK);

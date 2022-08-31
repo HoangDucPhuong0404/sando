@@ -1,8 +1,9 @@
 package com.cg.tp.sandro.services.product;
 
-import com.cg.team_project2.model.Product;
-import com.cg.team_project2.model.dto.ProductDTO;
-import com.cg.tp.sandro.repositorys.ProductRepository;
+
+import com.cg.tp.sandro.dto.ProductDTO;
+import com.cg.tp.sandro.repositories.ProductRepository;
+import com.cg.tp.sandro.repositories.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -35,7 +36,7 @@ public class ProductServiceimp implements IProductService {
 
     @Override
     public Product save(Product product) {
-        return null;
+        return productRepository.save(product);
     }
 
     @Override
@@ -44,25 +45,27 @@ public class ProductServiceimp implements IProductService {
     }
 
 
+
+
     @Override
-    public List<ProductDTO> findAllProductDTOdeletedFalse() {
+    public List<ProductDTO> findAllProductDTODeletedFalse() {
         return null;
     }
 
-    @Override
-    public Page<Product> findAll(org.springframework.data.domain.Pageable pageable) {
-        return null;
-    }
-
-    @Override
-    public Page<Product> findAllDeletedIsFalse(org.springframework.data.domain.Pageable pageable) {
-        return productRepository.findAllByDeletedIsFalse((Pageable) PageRequest.of(1,10));
-    }
-
-    @Override
-    public Iterable<Product> findAllById(Long id) {
-        return null;
-    }
+//    @Override
+//    public Page<Product> findAll(org.springframework.data.domain.Pageable pageable) {
+//        return null;
+//    }
+//
+//    @Override
+//    public Page<Product> findAllDeletedIsFalse(org.springframework.data.domain.Pageable pageable) {
+//        return productRepository.findAllByDeletedIsFalse((Pageable) PageRequest.of(1,10));
+//    }
+//
+//    @Override
+//    public Iterable<Product> findAllById(Long id) {
+//        return null;
+//    }
 
     @Override
     public Optional<ProductDTO> getProductDTObyId(Long id) {
@@ -72,7 +75,7 @@ public class ProductServiceimp implements IProductService {
 
     @Override
     public Product deleteProductById(Long id) {
-        return null;
+        return productRepository.deleteProductById(id);
 //        return productRepository.deleteProductById(id);
     }
 }

@@ -1,7 +1,8 @@
 package com.cg.tp.sandro.services.color;
 
-import com.cg.team_project2.model.Color;
-import com.cg.tp.sandro.repositorys.ColorRepository;
+
+import com.cg.tp.sandro.repositories.ColorRepository;
+import com.cg.tp.sandro.repositories.models.Color;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,7 @@ public class ColorServiceimpl implements IColorService{
     public Color save(Color color) {
         return null;
     }
+
 
     @Override
     public void remove(Long id) {

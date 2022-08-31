@@ -1,7 +1,9 @@
 package com.cg.tp.sandro.services.order;
 
-import com.cg.team_project2.model.Order;
-import com.cg.tp.sandro.repositorys.OrderRepository;
+
+import com.cg.tp.sandro.repositories.OrderRepository;
+import com.cg.tp.sandro.repositories.models.Order;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +12,7 @@ import java.util.Optional;
 @Service
 public class OrderServiceimp implements IOrderService{
 
-  //  @Autowired
+    @Autowired
     private OrderRepository orderRepository;
 
     @Override
