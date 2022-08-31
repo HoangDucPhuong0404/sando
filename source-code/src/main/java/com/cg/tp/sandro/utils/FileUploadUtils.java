@@ -1,4 +1,4 @@
-package com.cg.utils;
+package com.cg.tp.sandro.utils;
 
 import org.springframework.web.multipart.MultipartFile;
 
