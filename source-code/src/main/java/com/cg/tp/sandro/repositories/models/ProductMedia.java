@@ -25,7 +25,7 @@ public class ProductMedia {
     @Column(name = "file_url", length = 500)
     private String fileUrl;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "uniqueStringId", nullable = false, referencedColumnName = "uniqueStringId")
     private ProductSizeColor uniqueString;
 

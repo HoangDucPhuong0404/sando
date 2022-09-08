@@ -1,4 +1,4 @@
-package com.cg.tp.sandro.repositorys;
+package com.cg.tp.sandro.repositories;
 
 import com.cg.tp.sandro.repositories.models.Color;
 import org.springframework.data.jpa.repository.JpaRepository;

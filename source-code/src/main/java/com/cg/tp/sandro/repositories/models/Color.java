@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "color")
 public class Color {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

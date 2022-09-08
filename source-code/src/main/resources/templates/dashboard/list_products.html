@@ -105,7 +105,6 @@
             url: page.urls.getAllProducts
         })
             .done(function (data) {
-                console.log(data)
                 data.forEach(item => {
                     product = item;
                     addRow();

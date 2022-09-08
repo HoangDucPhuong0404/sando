@@ -4,6 +4,8 @@ import lombok.*;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -30,5 +32,14 @@ public class Category {
     @Lob
     @Column(name = "content")
     private String content;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
+    private Set<ProductCategory> productCategories = new LinkedHashSet<>();
+
+//    @ManyToMany
+//    @JoinTable(name = "product_category",
+//            joinColumns = @JoinColumn(name = "categoryId"),
+//            inverseJoinColumns = @JoinColumn(name = "productId"))
+//    private Set<Product> products = new LinkedHashSet<>();
 
 }

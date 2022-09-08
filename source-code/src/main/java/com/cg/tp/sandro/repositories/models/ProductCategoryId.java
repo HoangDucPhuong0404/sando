@@ -12,10 +12,11 @@ import java.util.Objects;
 @Getter
 @Setter
 @NoArgsConstructor
-@Accessors(chain = true)
 @Embeddable
 public class ProductCategoryId implements Serializable {
+
     private static final long serialVersionUID = -4333390330099977872L;
+
     @Column(name = "productId", nullable = false)
     private Long productId;
 

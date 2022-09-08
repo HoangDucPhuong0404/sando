@@ -1,7 +1,6 @@
 package com.cg.tp.sandro.repositories.models;
 
 import lombok.*;
-import lombok.experimental.Accessors;
 import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
@@ -12,10 +11,12 @@ import java.util.Objects;
 @Getter
 @Setter
 @NoArgsConstructor
-@Accessors(chain = true)
+@AllArgsConstructor
 @Embeddable
 public class ProductSizeColorId implements Serializable {
+
     private static final long serialVersionUID = -6747260200057963877L;
+
     @Column(name = "productId", nullable = false)
     private Long productId;
 

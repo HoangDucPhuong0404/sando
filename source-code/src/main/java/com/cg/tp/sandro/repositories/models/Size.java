@@ -3,6 +3,7 @@ package com.cg.tp.sandro.repositories.models;
 import lombok.*;
 import lombok.experimental.Accessors;
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Getter
 @Setter
