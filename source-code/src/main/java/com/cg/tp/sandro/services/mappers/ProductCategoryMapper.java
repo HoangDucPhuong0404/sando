@@ -1,7 +1,7 @@
 package com.cg.tp.sandro.services.mappers;
 
 import com.cg.tp.sandro.repositories.models.ProductCategory;
-import com.cg.tp.sandro.services.dto.ProductCategoryDTO;
+import com.cg.tp.sandro.dto.ProductCategoryDTO;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,5 +1,6 @@
 package com.cg.tp.sandro.repositories.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.Accessors;
 
@@ -20,7 +21,7 @@ public class ProductSizeColor implements Serializable {
     private ProductSizeColorId id;
 
     @MapsId("productId")
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "productId", nullable = false)
     private Product product;
 

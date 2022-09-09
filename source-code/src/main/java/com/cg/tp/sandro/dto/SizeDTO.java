@@ -1,4 +1,4 @@
-package com.cg.tp.sandro.services.dto;
+package com.cg.tp.sandro.dto;
 
 import lombok.*;
 import lombok.experimental.Accessors;

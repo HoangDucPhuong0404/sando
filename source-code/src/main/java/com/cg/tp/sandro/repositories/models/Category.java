@@ -33,13 +33,8 @@ public class Category {
     @Column(name = "content")
     private String content;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
     private Set<ProductCategory> productCategories = new LinkedHashSet<>();
 
-//    @ManyToMany
-//    @JoinTable(name = "product_category",
-//            joinColumns = @JoinColumn(name = "categoryId"),
-//            inverseJoinColumns = @JoinColumn(name = "productId"))
-//    private Set<Product> products = new LinkedHashSet<>();
 
 }

@@ -12,13 +12,13 @@ import javax.persistence.*;
 @Entity
 @Table(name = "color")
 public class Color {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
     @Column(name = "title", nullable = false, length = 75)
     private String title;
+    @Column(name = "code", nullable = false, length = 75)
+    private String code;
 
 }

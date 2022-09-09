@@ -1,8 +1,8 @@
-package com.cg.tp.sandro.services.mappers;
+package com.cg.tp.sandro.services.mappers.product;
 
 import com.cg.tp.sandro.repositories.models.ProductMedia;
 import com.cg.tp.sandro.repositories.models.ProductSizeColor;
-import com.cg.tp.sandro.services.dto.ProductMediaDTO;
+import com.cg.tp.sandro.dto.ProductMediaDTO;
 import org.springframework.stereotype.Component;
 
 @Component

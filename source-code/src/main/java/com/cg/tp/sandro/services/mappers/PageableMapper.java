@@ -1,6 +1,6 @@
 package com.cg.tp.sandro.services.mappers;
 
-import com.cg.tp.sandro.services.dto.PageableResult;
+import com.cg.tp.sandro.dto.PageableResult;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 

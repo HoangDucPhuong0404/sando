@@ -1,10 +1,9 @@
-package com.cg.tp.sandro.services.dto;
+package com.cg.tp.sandro.dto;
 
 import com.cg.tp.sandro.repositories.models.Category;
 import lombok.*;
 import lombok.experimental.Accessors;
 
-import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 

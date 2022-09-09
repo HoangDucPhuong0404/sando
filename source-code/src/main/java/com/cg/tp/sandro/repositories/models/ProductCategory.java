@@ -1,5 +1,6 @@
 package com.cg.tp.sandro.repositories.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.Accessors;
 

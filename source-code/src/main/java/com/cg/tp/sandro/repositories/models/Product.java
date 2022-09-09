@@ -1,5 +1,6 @@
 package com.cg.tp.sandro.repositories.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.Accessors;
 import org.hibernate.annotations.Fetch;
@@ -9,6 +10,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -49,22 +51,6 @@ public class Product {
     @Column(name = "content")
     private String content;
 
-    @ManyToMany
-    @Fetch(FetchMode.JOIN)
-    @JoinTable(name = "product_category",
-            joinColumns = @JoinColumn(name = "productId"),
-            inverseJoinColumns = @JoinColumn(name = "categoryId"))
-    private Set<Category> categories = new LinkedHashSet<>();
-
-//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
-//    private Set<ProductCategory> productCategories = new LinkedHashSet<>();
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
-    private Set<OrderItem> orderItems = new LinkedHashSet<>();
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
-    private Set<CartItem> cartItems = new LinkedHashSet<>();
-
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "product")
-    private Set<ProductSizeColor> productSizeColors = new LinkedHashSet<>();
+    private Set<ProductSizeColor> productSizeColors;
 }

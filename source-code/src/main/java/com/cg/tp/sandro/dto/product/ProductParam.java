@@ -1,4 +1,4 @@
-package com.cg.tp.sandro.services.dto;
+package com.cg.tp.sandro.dto.product;
 
 import com.cg.tp.sandro.repositories.models.ProductSizeColor;
 import lombok.*;

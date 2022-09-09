@@ -1,4 +1,4 @@
-package com.cg.tp.sandro.services.dto;
+package com.cg.tp.sandro.dto;
 
 import com.cg.tp.sandro.repositories.models.Category;
 import com.cg.tp.sandro.repositories.models.Product;

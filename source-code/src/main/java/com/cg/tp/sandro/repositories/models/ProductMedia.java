@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @Accessors(chain = true)
 @Entity
 @Table(name = "product_media")
-public class ProductMedia {
+public class ProductMedia{
     @Id
     @Column(name = "cloud_id", nullable = false)
     private String id;
@@ -25,7 +26,7 @@ public class ProductMedia {
     @Column(name = "file_url", length = 500)
     private String fileUrl;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "uniqueStringId", nullable = false, referencedColumnName = "uniqueStringId")
     private ProductSizeColor uniqueString;
 
