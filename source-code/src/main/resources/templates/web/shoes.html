@@ -3187,9 +3187,9 @@
 <!--        </span>-->
 
 
-                    <div class="products wrapper grid products-grid">
+                    <div class="products wrapper grid products-grid" id="tbProduct">
                         <ol class="products list items product-items">
-                            <div id="tbProduct">
+<!--                            <div id="tbProduct">-->
                                    <textarea style="display:none" id="tempProduct">
                                   <li class="item product product-item" id="item_{0}">
                                 <div class="product-item-info"
@@ -3206,7 +3206,8 @@
                                         <span class="product-image-container product-image-container-41175">
         <span class="product-image-wrapper">
             <img lazy class="product-image-photo"
-                 src="{1}"
+                 src="
+                                       {1}"
                  data-original="/media/catalog/product/cache/a72dd292f5ebc7f905c5028ee744eec1/s/a/sandro_shach00680-20_v_3.jpg"
                  loading="lazy"
                  width="578"
@@ -3312,28 +3313,12 @@
                                 </div>
                             </li>
                             </textarea>
-                            </div>
-
-
+<!--                            </div>-->
                         </ol>
                         <div class="scroll-top-position">
                             <span class="scroll-top"></span>
                         </div>
                     </div>
-
-
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            </th:block>-->
-<!--                        </ol>-->
-<!--                        <div class="scroll-top-position">-->
-<!--                            <span class="scroll-top"></span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-
 
 
                     <!--                    // vùng hiển thị sản phẩm.-->
@@ -5032,7 +5017,7 @@ NREUM.info = {
 
     let page = {
         urls: {
-            getAllProducts: App.BASE_URL_PRODUCT,
+            getAllProducts: App.BASE_URL_PRODUCT
         }
     }
 
@@ -5057,10 +5042,11 @@ NREUM.info = {
             url: page.urls.getAllProducts
         })
             .done((data) => {
-                product = data;
-                alert("add")
-                console.log(product)
-                addItem();
+                data.forEach(item => {
+                    product = item;
+                    console.log("add")
+                    addItem();
+                })
             })
             .fail((jqXHR) => {
                 App.SweetAlert.showErrorAlert("Empty list product")

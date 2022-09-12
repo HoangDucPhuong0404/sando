@@ -25,9 +25,8 @@ public class FrontProductRestController {
     @GetMapping("/products")
     public ResponseEntity<?> findAll(@PageableDefault(size = 10)
                                              Pageable pageable) {
-        Page<ProductResult> productResultPageableResult = productService.findAll(pageable);
-
-        return new ResponseEntity<>(productResultPageableResult, HttpStatus.OK);
+        Page<ProductResult> paged = productService.findAll(pageable);
+        return new ResponseEntity<>(paged, HttpStatus.OK);
     }
 
 
