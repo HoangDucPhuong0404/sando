@@ -283,87 +283,182 @@
                   </div>
                   <div class="x_content">
 
-                    <form class="form-horizontal form-label-left" novalidate>
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post">
 
-                      <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
-                      </p>
-                      <span class="section">Personal Info</span>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="first-name" name="name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Link Image <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="py-20 h-screen bg-white px-2">
+                            <div class="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
+                              <div class="md:flex">
+                                <div class="w-full p-3">
+                                  <div class="relative border-dotted h-48 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center">
 
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
+                                    <div class="absolute">
+
+                                      <div class="flex flex-col items-center">
+                                        <i class="fa fa-folder-open fa-4x text-blue-700"></i>
+                                        <span class="block text-gray-400 font-normal">Attach you files here</span>
+                                      </div>
+                                    </div>
+
+                                    <input type="file" class="h-full w-full opacity-0" name="">
+
+
+
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+<!--                          <input type="url" id="last-name" name="image" required="required" class="form-control col-md-7 col-xs-12">-->
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Title</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="title" class="form-control col-md-7 col-xs-12" type="text" name="title">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" >Price<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="number" name="price" required="required" >
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Quantity <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
+                          <input id="quantity" name="quantity" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                        </div>
+                      </div>
+                      <!--                                                        <div class="form-group">-->
+                      <!--                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">size <span class="required">*</span>-->
+                      <!--                                                            </label>-->
+                      <!--                                                            <div class="col-md-6 col-sm-6 col-xs-12">-->
+                      <!--                                                                <input id="size" name="size" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">-->
+                      <!--                                                            </div>-->
+                      <!--                                                        </div>-->
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Size <span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="btn-group btn-group-justified" data-toggle="buttons">
+                            <label class="btn btn-primary active">
+                              <input type="radio" class="sr-only" id="aspectRatio0" name="aspectRatio" value="1.7777777777777777">
+                              <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 16 / 9">
+                            16:9
+                          </span>
+                            </label>
+                            <label class="btn btn-primary">
+                              <input type="radio" class="sr-only" id="aspectRatio1" name="aspectRatio" value="1.3333333333333333">
+                              <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 4 / 3">
+                            4:3
+                          </span>
+                            </label>
+                            <label class="btn btn-primary">
+                              <input type="radio" class="sr-only" id="aspectRatio2" name="aspectRatio" value="1">
+                              <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 1 / 1">
+                            1:1
+                          </span>
+                            </label>
+                            <label class="btn btn-primary">
+                              <input type="radio" class="sr-only" id="aspectRatio3" name="aspectRatio" value="0.6666666666666666">
+                              <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 2 / 3">
+                            2:3
+                          </span>
+                            </label>
+                            <label class="btn btn-primary">
+                              <input type="radio" class="sr-only" id="aspectRatio4" name="aspectRatio" value="NaN">
+                              <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: NaN">
+                            Free
+                          </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Color <span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="x_content">
+                            <button type="button" class="btn btn-success btn-circle btn-xl"></button>
+                            <button type="button" class="btn btn-secondary btn-circle btn-xl"></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl"></button>
+                            <button type="button" class="btn btn-danger btn-circle btn-xl"></button>
+                            <button type="button" class="btn btn-warning btn-circle btn-xl"></button>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Category</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div  id="category" class="btn-group" data-toggle="buttons" >
+                            <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="category" value="1"> &nbsp; Nike &nbsp;
+                            </label>
+                            <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="category" value="2"> Adidas
+                            </label>
+                            <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="category" value="3"> Puma
+                            </label>
+                            <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="category" value="4"> New Balance
+                            </label>
+                          </div>
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Description <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
+                          <textarea id="description" required="required" name="description" class="form-control col-md-7 col-xs-12"></textarea>
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Confirm Email <span class="required">*</span>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Status <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" id="email2" name="confirm_email" data-validate-linked="email" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Number <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" id="number" name="number" required="required" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">Website URL <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="url" id="website" name="website" required="required" placeholder="www.website.com" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="occupation">Occupation <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="occupation" type="text" name="occupation" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label for="password" class="control-label col-md-3">Password</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Repeat Password</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="password2" type="password" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Telephone <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="tel" id="telephone" name="phone" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Textarea <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <textarea id="textarea" required="required" name="textarea" class="form-control col-md-7 col-xs-12"></textarea>
+
+                          <!-- Example single danger button -->
+                          <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+
+<!--                          <select name="status">-->
+<!--                            <option value="1">Sold out !</option>-->
+<!--                            <option value="2">Available</option>-->
+<!--                            <option value="3">Brand new !</option>-->
+<!--                          </select>-->
+
                         </div>
                       </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
-                        <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button id="send" type="submit" class="btn btn-success">Submit</button>
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button class="btn btn-round btn-warning" type="button">Cancel</button>
+                          <button class="btn btn-round btn-info" type="reset">Reset</button>
+                          <button type="submit" class="btn btn-success" id="btnCreate">Submit</button>
                         </div>
                       </div>
+
                     </form>
                   </div>
                 </div>

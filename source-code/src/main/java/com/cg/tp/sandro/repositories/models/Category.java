@@ -26,7 +26,7 @@ public class Category {
     @Column(name = "title", nullable = false, length = 75)
     private String title;
 
-    @Column(name = "slug", nullable = false, length = 100)
+    @Column(name = "slug", nullable = true, length = 100)
     private String slug;
 
     @Lob
