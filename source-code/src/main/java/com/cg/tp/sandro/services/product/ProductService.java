@@ -41,12 +41,7 @@ public class ProductService implements IProductService {
             (Pageable pageable) {
 
         Page<Product> page = productRepository.findAllByDeletedIsFalse(pageable);
-        return page.map(new Function<Product, ProductResult>() {
-            @Override
-            public ProductResult apply(Product product) {
-                return productMapper.toDTO(product);
-            }
-        });
+        return page.map(productMapper::toDTO);
 
     }
 
@@ -63,12 +58,7 @@ public class ProductService implements IProductService {
     @Override
     public Page<ProductResult> findAll(Pageable pageable) {
         Page<Product> page = productRepository.findAll(pageable);
-        return page.map(new Function<Product, ProductResult>() {
-            @Override
-            public ProductResult apply(Product product) {
-                return productMapper.toDTO(product);
-            }
-        });
+        return page.map(productMapper::toDTO);
     }
 
 }
