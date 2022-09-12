@@ -70,30 +70,14 @@ class App {
 }
 
 class Product {
-    constructor(id, name, title, price, material, quantity, hot, bestseller, status,
-                sizeId, size,
-                colorId, color,
-                categoryId, nameCategory, description,
-                fileId, fileName, fileFolder) {
+    constructor(id, title, slug, mainImgUrl, summary, content, productSizeColors) {
         this.id = id;
-        this.name = name;
         this.title = title;
-        this.price = price;
-        this.material = material;
-        this.quantity = quantity;
-        this.hot = hot;
-        this.bestseller = bestseller;
-        this.status = status;
-        this.sizeId = sizeId;
-        this.size = size;
-        this.colorId = colorId;
-        this.color = color;
-        this.categoryId = categoryId;
-        this.nameCategory = nameCategory;
-        this.description = description;
-        this.fileId = fileId;
-        this.fileName = fileName;
-        this.fileFolder = fileFolder;
+        this.slug = slug;
+        this.mainImgUrl = mainImgUrl;
+        this.sumary = summary;
+        this.content = content;
+        this.productSizeColors = productSizeColors;
     }
 }
 
@@ -111,12 +95,6 @@ class Size {
     }
 }
 
-class ColorJS {
-    constructor(id, color) {
-        this.id = id;
-        this.color = color;
-    }
-}
 
 
 

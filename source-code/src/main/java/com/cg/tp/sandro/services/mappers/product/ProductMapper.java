@@ -4,11 +4,12 @@ import com.cg.tp.sandro.repositories.models.Product;
 import com.cg.tp.sandro.dto.product.ProductParam;
 import com.cg.tp.sandro.dto.product.ProductResult;
 import com.cg.tp.sandro.dto.product.ProductSizeColorResult;
+import com.cg.tp.sandro.repositories.models.ProductSizeColor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class ProductMapper {
@@ -27,12 +28,14 @@ public class ProductMapper {
 
 
     public ProductResult toDTO(Product product) {
-//        List<ProductSizeColorResult> productSizeColorList = new ArrayList<>();
-//        for (ProductSizeColor productSizeColor : product.getProductSizeColors()) {
-//            ProductSizeColorResult productSizeColorDTo = productSizeColorMapper.toDTO(productSizeColor);
-//            productSizeColorList.add(productSizeColorDTo);
-//        }
-        List<ProductSizeColorResult> productSizeColorList = product.getProductSizeColors().stream().map(productSizeColorMapper::toDTO).collect(Collectors.toList());
+
+        List<ProductSizeColorResult> productSizeColorList = new ArrayList<>();
+
+        for (ProductSizeColor productSizeColor : product.getProductSizeColors()) {
+            ProductSizeColorResult productSizeColorDTo = productSizeColorMapper.toDTO(productSizeColor);
+            productSizeColorList.add(productSizeColorDTo);
+        }
+//        List<ProductSizeColorResult> productSizeColorList = product.getProductSizeColors().stream().map(productSizeColorMapper::toDTO).collect(Collectors.toList());
         return new ProductResult()
                 .setId(product.getId())
                 .setTitle(product.getTitle())
