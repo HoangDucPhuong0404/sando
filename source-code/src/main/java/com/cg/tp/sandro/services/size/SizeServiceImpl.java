@@ -28,11 +28,16 @@ public class SizeServiceImpl implements ISizeService {
 
     @Override
     public Size save(Size size) {
-        return null;
+        return sizeRepository.save(size);
     }
 
     @Override
     public void remove(Long id) {
 
+    }
+
+    @Override
+    public Boolean existBySize(String size) {
+        return sizeRepository.existsBySize(size);
     }
 }

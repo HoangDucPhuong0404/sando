@@ -1,7 +1,9 @@
 package com.cg.tp.sandro.repositories.models;
 
+import com.cg.tp.sandro.dto.NewProductParam;
 import lombok.*;
 import lombok.experimental.Accessors;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.time.Instant;
@@ -42,6 +44,9 @@ public class Product {
     @Column(name = "publishedAt")
     private Instant publishedAt;
 
+    @Column(name = "deleted")
+    private boolean deleted;
+
     @Lob
     @Column(name = "content")
     private String content;
@@ -60,4 +65,13 @@ public class Product {
 
     @OneToMany(mappedBy = "product")
     private Set<ProductSizeColor> productSizeColors = new LinkedHashSet<>();
+
+
+    public NewProductParam toNewProductParam(){
+        return new NewProductParam()
+                .setTitle(title)
+                .setContent(content)
+                .setSlug(slug)
+                .setCreateAt(createdAt);
+    }
 }

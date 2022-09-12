@@ -17,7 +17,7 @@ public class ColorServiceImpl implements IColorService {
 
     @Override
     public List<Color> findAll() {
-        return null;
+        return colorRepository.findAll();
     }
 
     @Override
@@ -27,11 +27,16 @@ public class ColorServiceImpl implements IColorService {
 
     @Override
     public Color save(Color color) {
-        return null;
+        return colorRepository.save(color);
     }
 
     @Override
     public void remove(Long id) {
 
+    }
+
+    @Override
+    public Boolean existsByTitle(String title) {
+        return colorRepository.existsByTitle(title);
     }
 }

@@ -36,4 +36,9 @@ public class CategoryServiceImpl implements ICategoryService{
     public void remove(Long id) {
 
     }
+
+    @Override
+    public Boolean exitsByTitle(String title) {
+        return categoryRepository.existsByTitle(title);
+    }
 }
