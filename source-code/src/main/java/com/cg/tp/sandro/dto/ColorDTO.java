@@ -1,5 +1,6 @@
 package com.cg.tp.sandro.dto;
 
+<<<<<<< HEAD
 import lombok.*;
 import lombok.experimental.Accessors;
 
@@ -20,4 +21,19 @@ public class ColorDTO {
     @Size(max= 75)
     private String title;
 
+=======
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
+public class ColorDTO {
+    private Long id;
+
+    private String size;
+>>>>>>> 4b23b420a98b5d92f03fea98f665b0d41c1fcd35
 }

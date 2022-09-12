@@ -27,8 +27,8 @@ public class User {
     @Column(name = "email", length = 50)
     private String email;
 
-    @Column(name = "passwordHash", nullable = false, length = 32)
-    private String passwordHash;
+    @Column(name = "password", nullable = false, length = 32)
+    private String password;
 
     @Column(name = "admin", nullable = false)
     private Boolean admin = false;
@@ -42,8 +42,6 @@ public class User {
     @Column(name = "intro")
     private String intro;
 
-    @Lob
-    @Column(name = "profile")
-    private String profile;
+
 
 }
