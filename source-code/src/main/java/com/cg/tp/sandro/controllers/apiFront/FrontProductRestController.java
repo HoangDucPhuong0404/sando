@@ -1,10 +1,13 @@
 package com.cg.tp.sandro.controllers.apiFront;
 
-import com.cg.tp.sandro.repositories.IProductSizeColorRepository;
 import com.cg.tp.sandro.dto.PageableResult;
 import com.cg.tp.sandro.dto.product.ProductResult;
-import com.cg.tp.sandro.services.web.IProductService;
+import com.cg.tp.sandro.services.product.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,9 +23,9 @@ public class FrontProductRestController {
     private IProductService productService;
 
     @GetMapping("/products")
-    public ResponseEntity<?> findAll(@RequestParam(defaultValue = "0") Integer pageNo,
-                                     @RequestParam(defaultValue = "5") Integer pageSize) {
-        PageableResult<ProductResult> productResultPageableResult = productService.findAll(pageNo, pageSize);
+    public ResponseEntity<?> findAll(@PageableDefault(size = 10)
+                                             Pageable pageable) {
+        Page<ProductResult> productResultPageableResult = productService.findAll(pageable);
 
         return new ResponseEntity<>(productResultPageableResult, HttpStatus.OK);
     }

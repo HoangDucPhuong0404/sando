@@ -1,27 +1,28 @@
 package com.cg.tp.sandro.services.mappers;
 
+import com.cg.tp.sandro.dto.CategoryParam;
+import com.cg.tp.sandro.dto.CategoryResult;
 import com.cg.tp.sandro.repositories.models.Category;
-import com.cg.tp.sandro.dto.CategoryDTO;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CategoryMapper {
 
-    public Category toCategory(CategoryDTO categoryDTO) {
-        return new Category()
-                .setId(categoryDTO.getId())
-                .setTitle(categoryDTO.getTitle())
-                .setSlug(categoryDTO.getSlug())
-                .setContent(categoryDTO.getContent())
-                .setParent(categoryDTO.getParent());
+    public Category toModel(CategoryParam param) {
+        return new Category();
+//                .setId(param.getId())
+//                .setTitle(param.getTitle())
+//                .setSlug(param.getSlug())
+//                .setContent(param.getContent())
+//                .setParent(param.getParent());
     }
 
-    public CategoryDTO toCategoryDTO(Category category) {
-        return new CategoryDTO()
-                .setId(category.getId())
-                .setTitle(category.getTitle())
-                .setSlug(category.getSlug())
-                .setContent(category.getContent())
-                .setParent(category.getParent());
+    public CategoryResult toDTO(Category category) {
+        return new CategoryResult();
+//                .setId(category.getId())
+//                .setTitle(category.getTitle())
+//                .setSlug(category.getSlug())
+//                .setContent(category.getContent())
+//                .setParent(category.getParent());
     }
 }

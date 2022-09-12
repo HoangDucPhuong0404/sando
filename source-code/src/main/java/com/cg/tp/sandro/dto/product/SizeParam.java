@@ -11,6 +11,6 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class SizeParam {
     private Long id;
-    private String size;
+    private String title;
 
 }

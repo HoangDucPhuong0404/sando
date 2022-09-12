@@ -1,12 +1,10 @@
 package com.cg.tp.sandro.controllers.api;
 
+import com.cg.tp.sandro.dto.OrderResult;
 import com.cg.tp.sandro.repositories.models.Order;
 import com.cg.tp.sandro.services.order.IOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,12 +24,12 @@ public class OrderRestController {
 
 
     @GetMapping("")
-    public ResponseEntity<?> getAllOrders(){
-        List<Order> orders = orderService.findAll();
-        if (orders.isEmpty()){
+    public ResponseEntity<?> findAll(Pageable pageable) {
+        List<OrderResult> orders = orderService.findAll(pageable);
+        if (orders.isEmpty()) {
             return new ResponseEntity<>("Empty Order", HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(orders,HttpStatus.OK);
+        return new ResponseEntity<>(orders, HttpStatus.OK);
     }
 
 //    @GetMapping("")

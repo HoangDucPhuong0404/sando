@@ -11,8 +11,7 @@ public class SizeMapper {
     public Size toModel(SizeParam param) {
         return new Size()
                 .setId(param.getId())
-                .setTitle(param.getSize());
-        //TODO: XU LY CHYEUN DOI TITLE THANH CODE Small ->S setCode("S")
+                .setTitle(param.getTitle());
     }
 
     public SizeResult toDTO(Size size) {

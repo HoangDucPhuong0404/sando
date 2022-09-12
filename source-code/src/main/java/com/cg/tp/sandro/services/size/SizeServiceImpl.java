@@ -1,6 +1,8 @@
 package com.cg.tp.sandro.services.size;
 
 
+import com.cg.tp.sandro.dto.product.SizeParam;
+import com.cg.tp.sandro.dto.product.SizeResult;
 import com.cg.tp.sandro.repositories.SizeRepository;
 import com.cg.tp.sandro.repositories.models.Size;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +19,9 @@ public class SizeServiceImpl implements ISizeService {
 
 
     @Override
-    public List<Size> findAll() {
-        return sizeRepository.findAll();
+    public List<SizeResult> findAll() {
+        //return sizeRepository.findAll();
+        return null;
     }
 
     @Override
@@ -27,17 +30,14 @@ public class SizeServiceImpl implements ISizeService {
     }
 
     @Override
-    public Size save(Size size) {
-        return sizeRepository.save(size);
+    public SizeResult create(SizeParam size) {
+        // return sizeRepository.save(size);
+        return null;
     }
 
-    @Override
-    public void remove(Long id) {
-
-    }
 
     @Override
-    public Boolean existBySize(String size) {
-        return sizeRepository.existsBySize(size);
+    public boolean existsBySize(String title) {
+        return sizeRepository.existsByTitle(title);
     }
 }

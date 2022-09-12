@@ -1,22 +1,23 @@
-package com.cg.tp.sandro.services.web.implement;
+package com.cg.tp.sandro.services.categories;
 
-import com.cg.tp.sandro.repositories.ICategoryRepository;
+import com.cg.tp.sandro.dto.CategoryResult;
+import com.cg.tp.sandro.repositories.CategoryRepository;
 import com.cg.tp.sandro.repositories.models.Category;
-import com.cg.tp.sandro.services.web.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CateGoryService implements ICategoryService {
+public class CategoryService implements ICategoryService {
 
     @Autowired
-    private ICategoryRepository categoryRepository;
+    private CategoryRepository categoryRepository;
 
     @Override
-    public Iterable<Category> findAll() {
-        return categoryRepository.findAll();
+    public List<CategoryResult> findAll() {
+        return null;
     }
 
     @Override

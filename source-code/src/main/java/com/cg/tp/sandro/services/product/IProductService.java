@@ -1,21 +1,30 @@
 package com.cg.tp.sandro.services.product;
 
 
+import com.cg.tp.sandro.dto.PageableResult;
+import com.cg.tp.sandro.dto.product.ProductResult;
 import com.cg.tp.sandro.repositories.models.Product;
-import com.cg.tp.sandro.services.IGeneralService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.List;
+import java.util.Optional;
 
-public interface IProductService extends IGeneralService<Product> {
-    List<Product> findAllProductDeletedIsFalse();
+public interface IProductService {
 
-    Page<Product> findAllPageProduct(Pageable pageable);
+    Optional<Product> findById(Long id);
+
+    Product save(Product product);
+
+    void remove(Long id);
+
+
+    Page<ProductResult> findAllProductDeletedIsFalse(Pageable pageable);
+
 
     void deleteProduct(Long id);
 
-    List<Product> countProductDeletedIsFalse();
+    int countProductsDeletedFalse();
 
-    int countProductDeletedFalse();
+    Page<ProductResult> findAll(Pageable pageable);
+
 }

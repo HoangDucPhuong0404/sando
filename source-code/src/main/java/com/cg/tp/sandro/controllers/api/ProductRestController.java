@@ -1,14 +1,11 @@
 package com.cg.tp.sandro.controllers.api;
 
+import com.cg.tp.sandro.dto.CategoryResult;
 import com.cg.tp.sandro.dto.NewProductParam;
-import com.cg.tp.sandro.dto.ProductDTO;
-import com.cg.tp.sandro.mappers.ProductMapper;
-import com.cg.tp.sandro.repositories.SizeRepository;
+import com.cg.tp.sandro.dto.product.*;
 import com.cg.tp.sandro.repositories.models.Category;
-import com.cg.tp.sandro.repositories.models.Color;
 import com.cg.tp.sandro.repositories.models.Product;
-import com.cg.tp.sandro.repositories.models.Size;
-import com.cg.tp.sandro.services.category.ICategoryService;
+import com.cg.tp.sandro.services.categories.ICategoryService;
 import com.cg.tp.sandro.services.color.IColorService;
 import com.cg.tp.sandro.services.order.IOrderService;
 import com.cg.tp.sandro.services.product.IProductService;
@@ -29,7 +26,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/product")
+@RequestMapping("/api/products")
 public class ProductRestController {
 
     @Autowired
@@ -51,57 +48,53 @@ public class ProductRestController {
     private IOrderService orderService;
 
 
-
     @GetMapping("")
-    public ResponseEntity<?> showAllProducts(@PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
-        Page<Product> productPage = productService.findAllPageProduct(pageable);
-
-        if (productPage.isEmpty()){
-            return new ResponseEntity<>("List product is empty",HttpStatus.NOT_FOUND);
+    public ResponseEntity<?> showAllProducts(@PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+        Page<ProductResult> paged = productService.findAll(pageable);
+        if (paged.isEmpty()) {
+            return new ResponseEntity<>("List product is empty", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(productPage, HttpStatus.OK);
+        return new ResponseEntity<>(paged, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> findProductById(@PathVariable Long id){
+    public ResponseEntity<?> findProductById(@PathVariable Long id) {
         Optional<Product> productOptional = productService.findById(id);
-        if (productOptional.isPresent()){
-            return new ResponseEntity<>(productOptional,HttpStatus.OK);
+        if (productOptional.isPresent()) {
+            return new ResponseEntity<>(productOptional, HttpStatus.OK);
         }
-        return new ResponseEntity<>("Can't found",HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Can't found", HttpStatus.NOT_FOUND);
     }
 
     @PostMapping("/create")
-    public ResponseEntity<?> doCreateProduct(@Validated @RequestBody NewProductParam productParam, BindingResult bindingResult){
-        if (bindingResult.hasErrors()){
+    public ResponseEntity<?> doCreateProduct(@Validated @RequestBody NewProductParam productParam, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
         }
 
         Product newProduct = productService.save(productParam.toProduct());
-        return new ResponseEntity<>(newProduct,HttpStatus.CREATED);
+        return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
-    public ResponseEntity<?> doUpdate(@Validated @RequestBody NewProductParam newProductParam, BindingResult bindingResult){
-        if (bindingResult.hasErrors()){
+    public ResponseEntity<?> doUpdate(@Validated @RequestBody NewProductParam newProductParam, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
         }
         Product transferProduct = newProductParam.toProduct();
         Optional<Product> productOptional = productService.findById(transferProduct.getId());
-        if (productOptional.isPresent()){
+        if (productOptional.isPresent()) {
             Product updatedProduct = productService.save(productOptional.get());
-            return new ResponseEntity<>(updatedProduct,HttpStatus.OK);
+            return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
         }
         return new ResponseEntity<>("Can't update product", HttpStatus.NOT_FOUND);
     }
 
 
-
-
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> doDelete(@PathVariable Long id){
+    public ResponseEntity<?> doDelete(@PathVariable Long id) {
         Optional<Product> productOptional = productService.findById(id);
-        if (productOptional.isPresent()){
+        if (productOptional.isPresent()) {
             productOptional.get().setDeleted(true);
             productService.save(productOptional.get());
             return new ResponseEntity<>("Deleted product success !", HttpStatus.OK);
@@ -112,89 +105,84 @@ public class ProductRestController {
 //    CATEGORY rest ------->
 
     @PostMapping("/category/create")
-    public ResponseEntity<?> doCreateCategory(@RequestBody Category category, BindingResult bindingResult){
-        if (bindingResult.hasErrors()){
+    public ResponseEntity<?> doCreateCategory(@RequestBody Category category, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
         }
         Boolean exitsTitle = categoryService.exitsByTitle(category.getTitle());
-        if (exitsTitle){
+        if (exitsTitle) {
             return new ResponseEntity<>("Title category has arrived !", HttpStatus.BAD_REQUEST);
         }
         category.setId(0L);
         Category newCategory = categoryService.save(category);
-        return new ResponseEntity<>(newCategory,HttpStatus.OK);
+        return new ResponseEntity<>(newCategory, HttpStatus.OK);
     }
 
     @GetMapping("/category")
-    public ResponseEntity<?> showAllCategory(){
-        List<Category>categories = categoryService.findAll();
-        if (categories.isEmpty()){
+    public ResponseEntity<?> showAllCategory() {
+        List<CategoryResult> categories = categoryService.findAll();
+        if (categories.isEmpty()) {
             return new ResponseEntity<>("Empty category !", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(categories,HttpStatus.OK);
+        return new ResponseEntity<>(categories, HttpStatus.OK);
     }
 
 //    -----------> Size
 
     @PostMapping("/size/create")
-    public ResponseEntity<?> doCreateSize(@RequestBody Size size, BindingResult bindingResult){
-        if (bindingResult.hasErrors()){
+    public ResponseEntity<?> doCreateSize(@RequestBody SizeParam param, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
         }
-        Boolean exits = sizeService.existBySize(size.getSize());
-        if (exits){
+        Boolean exits = sizeService.existsBySize(param.getTitle());
+        if (exits) {
             return new ResponseEntity<>("Title category has arrived !", HttpStatus.BAD_REQUEST);
         }
-        size.setId(0L);
-        Size newSize = sizeService.save(size);
-        return new ResponseEntity<>(newSize,HttpStatus.OK);
+        param.setId(0L);
+        SizeResult newSize = sizeService.create(param);
+        return new ResponseEntity<>(newSize, HttpStatus.OK);
     }
 
     @GetMapping("/size")
-    public ResponseEntity<?> showAllSize(){
-        List<Size>sizes = sizeService.findAll();
-        if (sizes.isEmpty()){
+    public ResponseEntity<?> showAllSize() {
+        List<SizeResult> sizes = sizeService.findAll();
+        if (sizes.isEmpty()) {
             return new ResponseEntity<>("Empty Size !", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(sizes,HttpStatus.OK);
+        return new ResponseEntity<>(sizes, HttpStatus.OK);
     }
 
 
     @GetMapping("/color")
-    public ResponseEntity<?> showAllColor(){
-        List<Color>colors = colorService.findAll();
-        if (colors.isEmpty()){
+    public ResponseEntity<?> showAllColor() {
+        List<ColorResult> colors = colorService.findAll();
+        if (colors.isEmpty()) {
             return new ResponseEntity<>("Empty color !", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(colors,HttpStatus.OK);
+        return new ResponseEntity<>(colors, HttpStatus.OK);
     }
 
 
     @PostMapping("/color/create")
-    public ResponseEntity<?> doCreateColor(@RequestBody Color color, BindingResult bindingResult){
-        if (bindingResult.hasErrors()){
+    public ResponseEntity<?> doCreateColor(@RequestBody ColorParam colorParam, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
         }
-        Boolean exits = colorService.existsByTitle(color.getTitle());
-        if (exits){
+        Boolean exits = colorService.existsByTitle(colorParam.getTitle());
+        if (exits) {
             return new ResponseEntity<>("Title color has arrived !", HttpStatus.BAD_REQUEST);
         }
-        color.setId(0L);
-        Color newColor = colorService.save(color);
-        return new ResponseEntity<>(newColor,HttpStatus.OK);
+        colorParam.setId(0L);
+        ColorResult newColor = colorService.create(colorParam);
+        return new ResponseEntity<>(newColor, HttpStatus.OK);
     }
-
 
 
     @GetMapping("/count")
-    public ResponseEntity<?> countProduct(){
-        int countedProduct = productService.countProductDeletedFalse();
-        return new ResponseEntity<>(countedProduct,HttpStatus.OK);
+    public ResponseEntity<?> countProduct() {
+        int countedProduct = productService.countProductsDeletedFalse();
+        return new ResponseEntity<>(countedProduct, HttpStatus.OK);
     }
-
-
-
-
 
 
 }
