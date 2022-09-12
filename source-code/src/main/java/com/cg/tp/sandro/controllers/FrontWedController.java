@@ -22,6 +22,7 @@ public class FrontWedController {
     public ModelAndView homeSandro(@PageableDefault(size = 10) Pageable pageable) {
         ModelAndView modelAndView = new ModelAndView();
         Page<ProductResult> result = productService.findAll(pageable);
+        System.out.println(result);
         modelAndView.setViewName("web/shoes");
         modelAndView.addObject("products", result);
         return modelAndView;

@@ -22,12 +22,4 @@ public class FrontProductRestController {
     @Autowired
     private IProductService productService;
 
-    @GetMapping("/products")
-    public ResponseEntity<?> findAll(@PageableDefault(size = 10)
-                                             Pageable pageable) {
-        Page<ProductResult> paged = productService.findAll(pageable);
-        return new ResponseEntity<>(paged, HttpStatus.OK);
-    }
-
-
 }
