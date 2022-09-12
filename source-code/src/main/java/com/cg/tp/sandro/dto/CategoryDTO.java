@@ -1,5 +1,6 @@
 package com.cg.tp.sandro.dto;
 
+import com.cg.tp.sandro.repositories.models.Category;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,15 +11,12 @@ import lombok.NoArgsConstructor;
 public class CategoryDTO {
     private Long id;
 
-    private Long parentId;
-
-    private Long productId;
-
-    private String productName;
-
     private String title;
 
-    private String slug;
+    public Category toCategory(){
+        return new Category()
+                .setId(id)
+                .setTitle(title);
 
-    private String content;
+    }
 }

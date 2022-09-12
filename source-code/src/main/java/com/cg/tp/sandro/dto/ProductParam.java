@@ -30,6 +30,7 @@ public class ProductParam {
     private String slug;
 
     private String mainImgUrl;
+
     private String summary;
 
     @Column(name = "createdAt", nullable = false)
