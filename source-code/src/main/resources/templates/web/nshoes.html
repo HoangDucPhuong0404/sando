@@ -3106,35 +3106,58 @@
                                                          alt="RSE Picto Image" title="RSE Picto Image"/>
                                                 </a>
                                                 <span class="new-label">Mới</span>
+
+<!--                                            tự viết tan_dev : vùng chứ màu và size-->
                                         <div class="swatch-opt-41175"
                                              data-role="swatch-option-41175">
-                                            <th:block th:each="pSCL : ${product.productSizeColorList}">
-                                                <scan th:if="${pSCL.color.code = 'RED'}"></scan>
-                                            </th:block>
-                                            <th:block th:each="pSCL : ${product.productSizeColorList}">
-                                                    <scan th:utext="${pSCL.size.colde}"></scan>
+<!--                                            color-->
+                                            <th:block th:each="pSC : ${product.productSizeColorList}">
+                                                <scan th:if="${pSC.color.code=='RED'}">
+                                                    <button style="background: red; background-size: initial;"></button>
+                                                </scan>
+                                                <scan th:if="${pSC.color.code=='GREEN'}">
+                                                    <button style="background: green; background-size: initial;"></button>
+                                                </scan>
+                                                <scan th:if="${pSC.color.code=='PINK'}">
+                                                    <button style="background: pink; background-size: initial;"></button>
+                                                </scan>
+                                                <scan th:if="${pSC.color.code=='WHITE'}">
+                                                    <button style="background: wheat; background-size: initial;"></button>
+                                                </scan>
+                                                <scan th:if="${pSC.color.code=='BLACK'}">
+                                                    <button style="background: black; background-size: initial;"></button>
+                                                </scan>
+                                            </th:block> <br>
+
+<!--                                            size-->
+                                            <th:block th:each="pSC : ${product.productSizeColorList}">
+                                                <scan th:utext="${pSC.size.code}"></scan>
                                             </th:block>
                                         </div>
+<!--                                            tự viết tan_dev : vùng chứ màu và size-->
 
-                <!-- đoạn mã cũ hiển thị color, size -->
-                <script type="text/x-magento-init">
-                        {
-                            "[data-role=swatch-option-41175]": {
-                                "Magento_Swatches/js/swatch-renderer": {
-                                    "selectorProduct": ".product-item-details",
-                                    "onlySwatches": true,
-                                    "enableControlLabel": false,
-                                    "numberToShow": 16,
-                                    "jsonConfig": {"attributes":{"93":{"id":"93","code":"color","label":"M\u00e0u s\u1eafc","options":[{"id":"32","label":"\u0110en","products":["41174","41176","41177"]}],"position":"0"},"229":{"id":"229","code":"size","label":"K\u00edch th\u01b0\u1edbc","options":[{"id":"653","label":"41","products":["41174"]},{"id":"63","label":"42","products":["41177"]},{"id":"160","label":"43","products":["41176"]}],"position":"0"}},"template":"<%- data.price %>\u00a0\u20ab","currencyFormat":"%s\u00a0\u20ab","optionPrices":{"41174":{"baseOldPrice":{"amount":8575000},"oldPrice":{"amount":8575000},"basePrice":{"amount":8575000},"finalPrice":{"amount":8575000},"tierPrices":[],"msrpPrice":{"amount":0}},"41176":{"baseOldPrice":{"amount":8575000},"oldPrice":{"amount":8575000},"basePrice":{"amount":8575000},"finalPrice":{"amount":8575000},"tierPrices":[],"msrpPrice":{"amount":0}},"41177":{"baseOldPrice":{"amount":8575000},"oldPrice":{"amount":8575000},"basePrice":{"amount":8575000},"finalPrice":{"amount":8575000},"tierPrices":[],"msrpPrice":{"amount":0}}},"priceFormat":{"pattern":"%s\u00a0\u20ab","precision":0,"requiredPrecision":0,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":true},"prices":{"baseOldPrice":{"amount":8575000},"oldPrice":{"amount":8575000},"basePrice":{"amount":8575000},"finalPrice":{"amount":8575000}},"productId":"41175","chooseText":"Ch\u1ecdn m\u1ed9t t\u00f9y ch\u1ecdn...","images":{"41174":[{"thumb":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/thumbnail.jpg","img":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","full":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","caption":"","position":"0","isMain":true,"type":"image","videoUrl":null}],"41176":[{"thumb":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/thumbnail.jpg","img":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","full":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","caption":"","position":"0","isMain":true,"type":"image","videoUrl":null}],"41177":[{"thumb":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/thumbnail.jpg","img":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","full":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","caption":"","position":"0","isMain":true,"type":"image","videoUrl":null}]},"index":{"41174":{"93":"32","229":"653"},"41176":{"93":"32","229":"160"},"41177":{"93":"32","229":"63"}},"channel":"website","salesChannelCode":"base","sku":{"41174":"SHACH00680-20-41","41176":"SHACH00680-20-43","41177":"SHACH00680-20-42"}},
-                                    "jsonSwatchConfig": {"93":{"32":{"type":"1","value":"#0d0d0d","label":"\u0110en"},"additional_data":"{\"swatch_input_type\":\"visual\",\"update_product_preview_image\":\"1\",\"use_product_image_for_swatch\":\"1\"}"},"229":{"653":{"type":"0","value":"41","label":"41","label_store_fr":"41"},"63":{"type":"0","value":"42","label":"42","label_store_fr":"42"},"160":{"type":"0","value":"43","label":"43","label_store_fr":"43"},"additional_data":"{\"swatch_input_type\":\"text\",\"update_product_preview_image\":\"0\",\"use_product_image_for_swatch\":0}"}},
-                                    "mediaCallback": "https\u003A\u002F\u002Fsandro.com.vn\u002Fswatches\u002Fajax\u002Fmedia\u002F",
-                                    "jsonSwatchImageSizeConfig": {"swatchImage":{"width":30,"height":20},"swatchThumb":{"height":90,"width":110}},
-                                    "showTooltip": 0,
-                                    "inProductListPage": 1
-                                }
-                            }
-                        }
-                </script>
+
+
+
+                                                <!-- đoạn mã cũ hiển thị color, size... HỎI A.CỬ ĐOẠN MÃ NÀY?-->
+<!--                <script type="text/x-magento-init">-->
+<!--                        {-->
+<!--                            "[data-role=swatch-option-41175]": {-->
+<!--                                "Magento_Swatches/js/swatch-renderer": {-->
+<!--                                    "selectorProduct": ".product-item-details",-->
+<!--                                    "onlySwatches": true,-->
+<!--                                    "enableControlLabel": false,-->
+<!--                                    "numberToShow": 16,-->
+<!--                                    "jsonConfig": {"attributes":{"93":{"id":"93","code":"color","label":"M\u00e0u s\u1eafc","options":[{"id":"32","label":"\u0110en","products":["41174","41176","41177"]}],"position":"0"},"229":{"id":"229","code":"size","label":"K\u00edch th\u01b0\u1edbc","options":[{"id":"653","label":"41","products":["41174"]},{"id":"63","label":"42","products":["41177"]},{"id":"160","label":"43","products":["41176"]}],"position":"0"}},"template":"<%- data.price %>\u00a0\u20ab","currencyFormat":"%s\u00a0\u20ab","optionPrices":{"41174":{"baseOldPrice":{"amount":8575000},"oldPrice":{"amount":8575000},"basePrice":{"amount":8575000},"finalPrice":{"amount":8575000},"tierPrices":[],"msrpPrice":{"amount":0}},"41176":{"baseOldPrice":{"amount":8575000},"oldPrice":{"amount":8575000},"basePrice":{"amount":8575000},"finalPrice":{"amount":8575000},"tierPrices":[],"msrpPrice":{"amount":0}},"41177":{"baseOldPrice":{"amount":8575000},"oldPrice":{"amount":8575000},"basePrice":{"amount":8575000},"finalPrice":{"amount":8575000},"tierPrices":[],"msrpPrice":{"amount":0}}},"priceFormat":{"pattern":"%s\u00a0\u20ab","precision":0,"requiredPrecision":0,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":true},"prices":{"baseOldPrice":{"amount":8575000},"oldPrice":{"amount":8575000},"basePrice":{"amount":8575000},"finalPrice":{"amount":8575000}},"productId":"41175","chooseText":"Ch\u1ecdn m\u1ed9t t\u00f9y ch\u1ecdn...","images":{"41174":[{"thumb":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/thumbnail.jpg","img":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","full":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","caption":"","position":"0","isMain":true,"type":"image","videoUrl":null}],"41176":[{"thumb":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/thumbnail.jpg","img":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","full":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","caption":"","position":"0","isMain":true,"type":"image","videoUrl":null}],"41177":[{"thumb":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/thumbnail.jpg","img":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","full":"https:\/\/sandro.com.vn\/static\/version1660176089\/frontend\/Openasia\/Sandro\/vi_VN\/Magento_Catalog\/images\/product\/placeholder\/image.jpg","caption":"","position":"0","isMain":true,"type":"image","videoUrl":null}]},"index":{"41174":{"93":"32","229":"653"},"41176":{"93":"32","229":"160"},"41177":{"93":"32","229":"63"}},"channel":"website","salesChannelCode":"base","sku":{"41174":"SHACH00680-20-41","41176":"SHACH00680-20-43","41177":"SHACH00680-20-42"}},-->
+<!--                                    "jsonSwatchConfig": {"93":{"32":{"type":"1","value":"#0d0d0d","label":"\u0110en"},"additional_data":"{\"swatch_input_type\":\"visual\",\"update_product_preview_image\":\"1\",\"use_product_image_for_swatch\":\"1\"}"},"229":{"653":{"type":"0","value":"41","label":"41","label_store_fr":"41"},"63":{"type":"0","value":"42","label":"42","label_store_fr":"42"},"160":{"type":"0","value":"43","label":"43","label_store_fr":"43"},"additional_data":"{\"swatch_input_type\":\"text\",\"update_product_preview_image\":\"0\",\"use_product_image_for_swatch\":0}"}},-->
+<!--                                    "mediaCallback": "https\u003A\u002F\u002Fsandro.com.vn\u002Fswatches\u002Fajax\u002Fmedia\u002F",-->
+<!--                                    "jsonSwatchImageSizeConfig": {"swatchImage":{"width":30,"height":20},"swatchThumb":{"height":90,"width":110}},-->
+<!--                                    "showTooltip": 0,-->
+<!--                                    "inProductListPage": 1-->
+<!--                                }-->
+<!--                            }-->
+<!--                        }-->
+<!--                </script>-->
 
                                                 <!-- đoạn mã cũ hiển thị giá sản phẩm-->
                                                 <!--                                                <script type="text/x-magento-init">-->
