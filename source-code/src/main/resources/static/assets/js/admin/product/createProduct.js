@@ -1,5 +1,6 @@
 let tempRowProduct = $.trim($('#tempRowProduct').val());
 
+
 let tempTablePick = $.trim($('#tempTablePick').val());
 
 
@@ -15,22 +16,19 @@ function addRowProduct(product) {
 
 function addTempTablePick(){
     // let colorSizeParam = new ColorSizeParam()
-<<<<<<< HEAD
-    let sizeId = $('#sizeCr').attr("data-id");
-    let colorId = $('#colorCr').attr("data-id");
-    $("#tablePick tbody").prepend($(tempTablePick(product.name, size,color)));
-=======
+    let nameProduct = $('#nameCr').val();
     let sizeName = $('#sizeCr:selected').text();
     let colorName = $('#colorCr:selected').text();
-    $("#tablePick tbody").prepend($(tempTablePick(product.name, sizeName,colorName)));
->>>>>>> 0acdf25a481e509105e91b29f2e1ff9e41e95d50
+    $("#tablePick tbody").prepend($(tempTablePick(nameProduct, sizeName,colorName)));
 }
 
 
-function drawVersionTable() {
-    
 
-}
+    $('#btnAdd').on('click', () => {
+        $('#tablePick tbody').html('')
+        addTempTablePick();
+    })
+
 
 
 
@@ -67,16 +65,18 @@ $(document).ready(function () {
             App.SweetAlert.showErrorAlert(jqXHR.message)
         }
     )
-    api.product.findById(id,(data) => {
-            $.each(data, (i, item) => {
-                let str = ` <option data-id="${item.id}" value="${item.code}">${item.title}</option>`;
-                $('#colorCr').prepend(str);
-                $('#colorUp').prepend(str);
-            })
-        }, (jqXHR) => {
-            App.SweetAlert.showErrorAlert(jqXHR.message)
-        }
-    )
+    // api.product.findById(id,(data) => {
+    //         $.each(data, (i, item) => {
+    //             let str = ` <option data-id="${item.id}" value="${item.code}">${item.title}</option>`;
+    //             $('#colorCr').prepend(str);
+    //             $('#colorUp').prepend(str);
+    //         })
+    //     }, (jqXHR) => {
+    //         App.SweetAlert.showErrorAlert(jqXHR.message)
+    //     }
+    // )
+
+
     api.product.findAll((data) => {
             $('#tbListProduct tbody').html('');
 
@@ -379,80 +379,80 @@ function handleExportModal() {
 
 
 
-$("#createGeneralPr").validate({
-    rules: {
-        nameCr:{
-            required: true
-        },
-        slugCr:{
-            required: true
-        },
-        priceCr:{
-            required: true,
-
-            min: 0,
-
-            max:100000
-        },
-        categoryCr:{
-            required:true
-        }
-    },
-    message:{
-        nameCr:{
-            required: "Name product can not be empty "
-        },
-        slugCr:{
-            required: "Slug product can not be empty "
-        },
-        priceCr:{
-            required: "Price product can not be empty ",
-
-            min: "Price must be bigger than 0",
-
-            max: "Too expensive"
-        },
-        categoryCr:{
-            required: "Pick one Category please "
-        }
-    },
-    submitHandler: function (){
-
-    }
-})
-
-$("#createAddPr").validate({
-    rules: {
-        sizeCr: {
-            required: true
-        },
-        quantityCr:{
-            required:true,
-
-            min:0,
-
-            max: 1000
-        },
-        colorCr:{
-            required:true
-        }
-    },
-    message: {
-        sizeCr: {
-            required: "Size can not be empty please !"
-        },
-        quantityCr:{
-            required:"Quantity can not be empty please !",
-
-            min: "Quantity must bigger than 0",
-
-            max: "Too much product couldn't be sold off !"
-        },
-        colorCr:{
-            required:"Pick a one color please !"
-        }
-    },
-    submitHandler: function (){
-
-    }
-})
+// $("#createGeneralPr").validate({
+//     rules: {
+//         nameCr:{
+//             required: true
+//         },
+//         slugCr:{
+//             required: true
+//         },
+//         priceCr:{
+//             required: true,
+//
+//             min: 0,
+//
+//             max:100000
+//         },
+//         categoryCr:{
+//             required:true
+//         }
+//     },
+//     message:{
+//         nameCr:{
+//             required: "Name product can not be empty "
+//         },
+//         slugCr:{
+//             required: "Slug product can not be empty "
+//         },
+//         priceCr:{
+//             required: "Price product can not be empty ",
+//
+//             min: "Price must be bigger than 0",
+//
+//             max: "Too expensive"
+//         },
+//         categoryCr:{
+//             required: "Pick one Category please "
+//         }
+//     },
+//     submitHandler: function (){
+//
+//     }
+// })
+//
+// $("#createAddPr").validate({
+//     rules: {
+//         sizeCr: {
+//             required: true
+//         },
+//         quantityCr:{
+//             required:true,
+//
+//             min:0,
+//
+//             max: 1000
+//         },
+//         colorCr:{
+//             required:true
+//         }
+//     },
+//     message: {
+//         sizeCr: {
+//             required: "Size can not be empty please !"
+//         },
+//         quantityCr:{
+//             required:"Quantity can not be empty please !",
+//
+//             min: "Quantity must bigger than 0",
+//
+//             max: "Too much product couldn't be sold off !"
+//         },
+//         colorCr:{
+//             required:"Pick a one color please !"
+//         }
+//     },
+//     submitHandler: function (){
+//
+//     }
+// })
