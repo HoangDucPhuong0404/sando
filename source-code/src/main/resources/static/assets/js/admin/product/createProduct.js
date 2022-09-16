@@ -15,9 +15,15 @@ function addRowProduct(product) {
 
 function addTempTablePick(){
     // let colorSizeParam = new ColorSizeParam()
+<<<<<<< HEAD
     let sizeId = $('#sizeCr').attr("data-id");
     let colorId = $('#colorCr').attr("data-id");
     $("#tablePick tbody").prepend($(tempTablePick(product.name, size,color)));
+=======
+    let sizeName = $('#sizeCr:selected').text();
+    let colorName = $('#colorCr:selected').text();
+    $("#tablePick tbody").prepend($(tempTablePick(product.name, sizeName,colorName)));
+>>>>>>> 0acdf25a481e509105e91b29f2e1ff9e41e95d50
 }
 
 
