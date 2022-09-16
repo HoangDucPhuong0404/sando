@@ -476,7 +476,7 @@
 
                                     <div class="form-group">
                                         <div class="col-md-9 col-md-offset-3">
-                                            <button class="btn btn-success">Add</button>
+                                            <button id="btnAdd" class="btn btn-success">Add</button>
                                         </div>
                                     </div>
 
@@ -628,6 +628,7 @@
         <!-- /footer content -->
     </div>
 </div>
+<th:block th:insert="admin/dashboard/product/temp_table_pick::temp_table_pick" />
 
 <!-- jQuery -->
 <th:block th:include="/layout/script :: script "/>

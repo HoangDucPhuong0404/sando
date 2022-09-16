@@ -44,8 +44,6 @@ public class FrontWebController {
         return modelAndView;
     }
 
-
-
     @GetMapping("/profile")
     public ModelAndView profileSandro(){
         return new ModelAndView("web/profile");
