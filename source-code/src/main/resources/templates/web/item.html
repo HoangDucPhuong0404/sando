@@ -4138,7 +4138,7 @@
         <a href="javascript:history.go(-1)" class="mobile-back-button" title="Trở lại">Trở lại</a>
 
 <!--        items-->
-        <th:block th:object="${product}" th:each="pSCL : ${product.productSizeColorList}">
+        <th:block th:object="${product}">
             <div class="columns">
                 <div class="column main">
                     <!--                info product-->
@@ -4204,7 +4204,7 @@
                                              data-thumb-height="90" data-option-tooltip-value="#c2c19b"
                                              style="background: #c2c19b no-repeat center; background-size: initial;">
                                             <span data-option-label="Be" title="Be"
-                                                  style="background: #c2c19b no-repeat center;">
+                                                  style="background: #c2c19b no-repeat center;" >
                                             </span>
                                         </div>
 
@@ -4222,31 +4222,42 @@
                                 <div class="swatch-attribute size" data-attribute-code="size" data-attribute-id="229"><span
                                         id="option-label-size-229" class="swatch-attribute-label">Kích thước</span><span
                                         class="swatch-attribute-selected-option"></span>
-                                    <div aria-activedescendant="" tabindex="0" aria-invalid="false" aria-required="true"
-                                         role="listbox" aria-labelledby="option-label-size-229"
-                                         class="swatch-attribute-options clearfix">
-                                        <div class="swatch-option text" id="option-label-size-229-item-407" index="0"
-                                             aria-checked="false" aria-describedby="option-label-size-229" tabindex="0"
-                                             data-option-type="0" data-option-id="407" data-option-label="45" title="45"
-                                             aria-label="45" role="option" data-thumb-width="110" data-thumb-height="90"
-                                             data-option-label-fr="45" data-option-tooltip-value="45"><span>45</span></div>
-                                        <div class="swatch-option text" id="option-label-size-229-item-160" index="1"
-                                             aria-checked="false" aria-describedby="option-label-size-229" tabindex="0"
-                                             data-option-type="0" data-option-id="160" data-option-label="43" title="43"
-                                             aria-label="43" role="option" data-thumb-width="110" data-thumb-height="90"
-                                             data-option-label-fr="43" data-option-tooltip-value="43"><span>43</span></div>
-                                        <div class="swatch-option text" id="option-label-size-229-item-125" index="2"
-                                             aria-checked="false" aria-describedby="option-label-size-229" tabindex="0"
-                                             data-option-type="0" data-option-id="125" data-option-label="44" title="44"
-                                             aria-label="44" role="option" data-thumb-width="110" data-thumb-height="90"
-                                             data-option-label-fr="44" data-option-tooltip-value="44"><span>44</span></div>
+
                                         <div aria-activedescendant="" tabindex="0" aria-invalid="false" aria-required="true"
                                              role="listbox" aria-labelledby="option-label-size-229"
-                                             class="swatch-attribute-options clearfix"></div>
-                                        <input class="swatch-input super-attribute-select" name="super_attribute[229]"
-                                               type="text" value="" data-selector="super_attribute[229]"
-                                               data-validate="{required: true}" aria-required="true" aria-invalid="false">
-                                    </div>
+                                             class="swatch-attribute-options clearfix">
+
+
+                                                <div class="swatch-option text" id="option-label-size-229-item-407" index="0"
+                                                     aria-checked="false" aria-describedby="option-label-size-229" tabindex="0"
+                                                     data-option-type="0" data-option-id="407" data-option-label="45" title="45"
+                                                     aria-label="45" role="option" data-thumb-width="110" data-thumb-height="90"
+                                                     data-option-label-fr="45" data-option-tooltip-value="45">
+                                                    <span>45</span>
+                                                </div>
+
+                                                                                    <div class="swatch-option text" id="option-label-size-229-item-160" index="1"
+                                                                                         aria-checked="false" aria-describedby="option-label-size-229" tabindex="0"
+                                                                                         data-option-type="0" data-option-id="160" data-option-label="43" title="43"
+                                                                                         aria-label="43" role="option" data-thumb-width="110" data-thumb-height="90"
+                                                                                         data-option-label-fr="43" data-option-tooltip-value="43">
+                                                                                        <span>43</span>
+                                                                                    </div>
+                                                                                    <div class="swatch-option text" id="option-label-size-229-item-125" index="2"
+                                                                                         aria-checked="false" aria-describedby="option-label-size-229" tabindex="0"
+                                                                                         data-option-type="0" data-option-id="125" data-option-label="44" title="44"
+                                                                                         aria-label="44" role="option" data-thumb-width="110" data-thumb-height="90"
+                                                                                         data-option-label-fr="44" data-option-tooltip-value="44">
+                                                                                        <span>44</span>
+                                                                                    </div>
+                                            <div aria-activedescendant="" tabindex="0" aria-invalid="false" aria-required="true"
+                                                 role="listbox" aria-labelledby="option-label-size-229"
+                                                 class="swatch-attribute-options clearfix"></div>
+                                            <input class="swatch-input super-attribute-select" name="super_attribute[229]"
+                                                   type="text" value="" data-selector="super_attribute[229]"
+                                                   data-validate="{required: true}" aria-required="true" aria-invalid="false">
+                                        </div>
+
                                 </div>
                             </div>
 
@@ -4272,15 +4283,35 @@
                                                      aria-invalid="false" aria-required="true" role="listbox"
                                                      aria-labelledby="option-label-color-93"
                                                      class="swatch-attribute-options clearfix">
-                                                    <div class="swatch-option color selected"
-                                                         id="option-label-color-93-item-50" index="0" aria-checked="true"
-                                                         aria-describedby="option-label-color-93" tabindex="0"
-                                                         data-option-type="1" data-option-id="50" data-option-label="Be"
-                                                         title="Be" aria-label="Be" role="option" data-thumb-width="110"
-                                                         data-thumb-height="90" data-option-tooltip-value="#c2c19b"
-                                                         style="background: #c2c19b no-repeat center; background-size: initial;">
-                                                    <span data-option-label="Be" title="Be"
-                                                          style="background: #c2c19b no-repeat center;"></span></div>
+
+                                                    <th:block th:each="pSC : ${product.productSizeColorList}">
+                                                        <div class="swatch-option color selected"
+                                                             id="option-label-color-93-item-50" index="0" aria-checked="true"
+                                                             aria-describedby="option-label-color-93" tabindex="0"
+                                                             data-option-type="1" data-option-id="50" data-option-label="Be"
+                                                             title="Be" aria-label="Be" role="option" data-thumb-width="110"
+                                                             data-thumb-height="90" data-option-tooltip-value="#c2c19b"
+                                                             style="background: #c2c19b no-repeat center; background-size: initial;">
+                                                    <span data-option-label="Be" th:title="${pSC.color.title}"
+                                                          th:if="${pSC.color.code=='RED'}" style="background: red;">
+                                                    </span>
+                                                     <span data-option-label="Be" th:title="${pSC.color.title}"
+                                                           th:if="${pSC.color.code=='BLACK'}" style="background: black;">
+                                                    </span>
+                                                    <span data-option-label="Be" th:title="${pSC.color.title}"
+                                                          th:if="${pSC.color.code=='WHITE'}" style="background: wheat;">
+                                                    </span>
+                                                    <span data-option-label="Be" th:title="${pSC.color.title}"
+                                                          th:if="${pSC.color.code=='GREEN'}" style="background: green;">
+                                                    </span>
+                                                    <span data-option-label="Be" th:title="${pSC.color.title}"
+                                                          th:if="${pSC.color.code=='PINK'}" style="background: deeppink;">
+                                                    </span>
+
+                                                        </div>
+
+                                                    </th:block>
+
                                                     <div aria-activedescendant="" tabindex="0" aria-invalid="false"
                                                          aria-required="true" role="listbox"
                                                          aria-labelledby="option-label-color-93"
@@ -4299,27 +4330,32 @@
                                                      aria-required="true" role="listbox"
                                                      aria-labelledby="option-label-size-229"
                                                      class="swatch-attribute-options clearfix">
-                                                    <div class="swatch-option text" id="option-label-size-229-item-407"
-                                                         index="0" aria-checked="false"
-                                                         aria-describedby="option-label-size-229" tabindex="0"
-                                                         data-option-type="0" data-option-id="407" data-option-label="45"
-                                                         title="45" aria-label="45" role="option" data-thumb-width="110"
-                                                         data-thumb-height="90" data-option-label-fr="45"
-                                                         data-option-tooltip-value="45"><span>45</span></div>
-                                                    <div class="swatch-option text" id="option-label-size-229-item-160"
-                                                         index="1" aria-checked="false"
-                                                         aria-describedby="option-label-size-229" tabindex="0"
-                                                         data-option-type="0" data-option-id="160" data-option-label="43"
-                                                         title="43" aria-label="43" role="option" data-thumb-width="110"
-                                                         data-thumb-height="90" data-option-label-fr="43"
-                                                         data-option-tooltip-value="43"><span>43</span></div>
-                                                    <div class="swatch-option text" id="option-label-size-229-item-125"
-                                                         index="2" aria-checked="false"
-                                                         aria-describedby="option-label-size-229" tabindex="0"
-                                                         data-option-type="0" data-option-id="125" data-option-label="44"
-                                                         title="44" aria-label="44" role="option" data-thumb-width="110"
-                                                         data-thumb-height="90" data-option-label-fr="44"
-                                                         data-option-tooltip-value="44"><span>44</span></div>
+                                                    <th:block th:each="pSC : ${product.productSizeColorList}">
+                                                        <div class="swatch-option text" id="option-label-size-229-item-407"
+                                                             index="0" aria-checked="false"
+                                                             aria-describedby="option-label-size-229" tabindex="0"
+                                                             data-option-type="0" data-option-id="407" data-option-label="45"
+                                                             title="45" aria-label="45" role="option" data-thumb-width="110"
+                                                             data-thumb-height="90" data-option-label-fr="45"
+                                                             data-option-tooltip-value="45">
+                                                            <span th:utext="${pSC.size.code}"></span>
+                                                        </div>
+                                                    </th:block>
+
+<!--                                                    <div class="swatch-option text" id="option-label-size-229-item-160"-->
+<!--                                                         index="1" aria-checked="false"-->
+<!--                                                         aria-describedby="option-label-size-229" tabindex="0"-->
+<!--                                                         data-option-type="0" data-option-id="160" data-option-label="43"-->
+<!--                                                         title="43" aria-label="43" role="option" data-thumb-width="110"-->
+<!--                                                         data-thumb-height="90" data-option-label-fr="43"-->
+<!--                                                         data-option-tooltip-value="43"><span>43</span></div>-->
+<!--                                                    <div class="swatch-option text" id="option-label-size-229-item-125"-->
+<!--                                                         index="2" aria-checked="false"-->
+<!--                                                         aria-describedby="option-label-size-229" tabindex="0"-->
+<!--                                                         data-option-type="0" data-option-id="125" data-option-label="44"-->
+<!--                                                         title="44" aria-label="44" role="option" data-thumb-width="110"-->
+<!--                                                         data-thumb-height="90" data-option-label-fr="44"-->
+<!--                                                         data-option-tooltip-value="44"><span>44</span></div>-->
                                                     <div aria-activedescendant="" tabindex="0" aria-invalid="false"
                                                          aria-required="true" role="listbox"
                                                          aria-labelledby="option-label-size-229"
