@@ -9,6 +9,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface IProductRepository extends JpaRepository<Product, Long> {
     Page<Product> findAll(Pageable pageable);
@@ -20,4 +22,6 @@ public interface IProductRepository extends JpaRepository<Product, Long> {
     @Modifying
     @Query(value = "UPDATE product p SET p.deleted = TRUE WHERE p.id = :id", nativeQuery = true)
     void deleteProduct(@Param("id") Long id);
+
+    Optional<Product> findProductBySlug(String slug);
 }

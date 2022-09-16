@@ -25,6 +25,9 @@ public interface IProductService {
 
     int countProductsDeletedFalse();
 
+    // tan_dev
     Page<ProductResult> findAll(Pageable pageable);
 
+    // tan_dev
+    ProductResult findProductBySlug(String slug);
 }

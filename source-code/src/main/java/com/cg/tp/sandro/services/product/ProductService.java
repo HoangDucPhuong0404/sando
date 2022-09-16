@@ -61,4 +61,13 @@ public class ProductService implements IProductService {
         return page.map(productMapper::toDTO);
     }
 
+    @Override
+    public ProductResult findProductBySlug(String slug) {
+        Optional<Product> product = productRepository.findProductBySlug(slug);
+        ProductResult productResult = productMapper.toDTO(product.get());
+        return productResult;
+    }
+
+
+
 }

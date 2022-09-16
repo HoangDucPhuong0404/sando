@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -20,17 +21,30 @@ public class FrontWebController {
 
     @GetMapping()
     public ModelAndView homeSandro(@PageableDefault(size = 10) Pageable pageable) {
+
         ModelAndView modelAndView = new ModelAndView();
         Page<ProductResult> result = productService.findAll(pageable);
+
         modelAndView.setViewName("web/nshoes");
         modelAndView.addObject("products", result);
+
         return modelAndView;
     }
 
-    @GetMapping("/item")
-    public ModelAndView itemSandro(){
-        return new ModelAndView("web/item");
+    @GetMapping("/{slug}")
+    public ModelAndView itemSandro(@PathVariable("slug") String slug) {
+
+        ModelAndView modelAndView = new ModelAndView();
+
+        ProductResult result = productService.findProductBySlug(slug);
+
+        modelAndView.addObject("product", result);
+        modelAndView.setViewName("web/item");
+
+        return modelAndView;
     }
+
+
 
     @GetMapping("/profile")
     public ModelAndView profileSandro(){

@@ -3051,17 +3051,17 @@
                             <!--/*@thymesVar id="products" type="com.cg.tp.sandro.controllers.FrontWebController"*/-->
                             <th:block th:each="product : ${products}">
                                 <li class="item product product-item">
-                                    <div th:type="hidden" name="slug" th:field="*{slug}"></div>
                                     <div class="product-item-info"
                                          id="product-item-info_41175"
                                          data-container="product-grid">
-                                        <div class="product photo product-item-photo" data-current-image=""
-                                             title="Giày trainer da - SHACH00680"
+                                        <div class="product photo product-item-photo"
+                                             data-current-image=""
+                                             th:title="${product.content}"
                                              data-product-id="41175">
                                             <span class="prev prev-product-item" data-product-id="41175">Trước</span>
                                             <div class="infinitescroll">
                                                 <a class="infinitescroll-product-link"
-                                                   href="/giay-trainer-da-shach00680.html"
+                                                   th:href="@{/products/__${product.slug}__}"
                                                    tabindex="-1">
                                         <span class="product-image-container product-image-container-41175">
         <span class="product-image-wrapper">
@@ -3176,11 +3176,9 @@
                             class="price-wrapper ">
     <!--                    data-price-amount="8575000"-->
                         <!--                    class="price"-->
-                        <th:block th:if="${product.productSizeColorList}"
-                                  th:each=" pSCL : ${product.productSizeColorList}">
-                            <span th:utext="${pSCL.price}"></span>
+                        <th:block th:each=" pSCL, iState : ${product.productSizeColorList}">
+                            <span th:if="${iState.first}" th:utext="${pSCL.price}"></span>
                         </th:block>
-                            <span th:unless="${product.productSizeColorList}">LIÊN HỆ CỦA HÀNG</span>
                     </span>
                 </span>
         </span>
@@ -4183,5 +4181,47 @@ NREUM.info = {
     "errorBeacon": "bam.nr-data.net",
     "agent": ""
 }</script>
+
+<script src="/assets/web/js/jquery-3.6.0.min.js"></script>
+<script src="/assets/web/js/jquery.validate.js"></script>
+<script src="/assets/web/js/app.js"></script>
+
+<!--my code -->
+<script>
+
+    let product = new Product();
+    let page = {
+        urls: {
+            getAllProducts: App.BASE_URL_PRODUCT
+        }
+    }
+
+    function findBySlug(slug) {
+        return $.ajax({
+            type: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+
+            },
+            url: page.urls.getAllProducts + slug
+        }). done ((data) => {
+            product = data;
+        })
+    }
+
+    function handleShowProduct() {
+        let btnProduct = $(".product-item");
+
+        btnProduct.on("click", () =>{
+            let slug = $(this).data("slug");
+            console.log(slug)
+            findBySlug(slug)
+        })
+    }
+
+    handleShowProduct();
+
+</script>
 </body>
 </html>
