@@ -77,7 +77,6 @@ public class ProductRestController {
             return appUtils.mapErrorToResponse(bindingResult);
         }
 
-
         ProductResult newProduct = productService.create(param);
         return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
     }

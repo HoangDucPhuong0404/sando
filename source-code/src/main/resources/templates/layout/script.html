@@ -1,51 +1,54 @@
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <div>
-<th:block th:fragment = "script">
+    <th:block th:fragment="script">
 
-    <!-- jQuery -->
-    <script type="text/javascript" src="/assets/gentella/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script type="text/javascript" src="/assets/gentella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script type="text/javascript" src="/assets/gentella/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script type="text/javascript" src="/assets/gentella/vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script type="text/javascript" src="/assets/gentella/vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script type="text/javascript" src="/assets/gentella/vendors/gauge.js/dist/gauge.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script type="text/javascript" src="/assets/gentella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script type="text/javascript" src="/assets/gentella/vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script type="text/javascript" src="/assets/gentella/vendors/skycons/skycons.js"></script>
-    <!-- Flot -->
-    <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.js"></script>
-    <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.pie.js"></script>
-    <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.time.js"></script>
-    <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.stack.js"></script>
-    <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script type="text/javascript" src="/assets/gentella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script type="text/javascript" src="/assets/gentella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script type="text/javascript" src="/assets/gentella/vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script type="text/javascript" src="/assets/gentella/vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script type="text/javascript" src="/assets/gentella/vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script type="text/javascript" src="/assets/gentella/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script type="text/javascript" src="/assets/gentella/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script type="text/javascript" src="/assets/gentella/vendors/moment/min/moment.min.js"></script>
-    <script type="text/javascript" src="/assets/gentella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <!-- jQuery -->
+        <script type="text/javascript" src="/assets/admin/vendors/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/admin/vendors/jquery/jquery.validate-1.19.3.min.js/"></script>
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="/assets/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- FastClick -->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/fastclick/lib/fastclick.js"></script>-->
+<!--        &lt;!&ndash; NProgress &ndash;&gt;-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/nprogress/nprogress.js"></script>-->
+<!--        &lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/Chart.js/dist/Chart.min.js"></script>-->
+<!--        &lt;!&ndash; gauge.js &ndash;&gt;-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/gauge.js/dist/gauge.min.js"></script>-->
+<!--        &lt;!&ndash; bootstrap-progressbar &ndash;&gt;-->
+<!--        <script type="text/javascript"-->
+<!--                src="/assets/gentella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>-->
+<!--        &lt;!&ndash; iCheck &ndash;&gt;-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/iCheck/icheck.min.js"></script>-->
+<!--        &lt;!&ndash; Skycons &ndash;&gt;-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/skycons/skycons.js"></script>-->
+<!--        &lt;!&ndash; Flot &ndash;&gt;-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.js"></script>-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.pie.js"></script>-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.time.js"></script>-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.stack.js"></script>-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/Flot/jquery.flot.resize.js"></script>-->
+<!--        &lt;!&ndash; Flot plugins &ndash;&gt;-->
+<!--        <script type="text/javascript"-->
+<!--                src="/assets/gentella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/flot.curvedlines/curvedLines.js"></script>-->
+<!--        &lt;!&ndash; DateJS &ndash;&gt;-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/DateJS/build/date.js"></script>-->
+<!--        &lt;!&ndash; JQVMap &ndash;&gt;-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/jqvmap/dist/jquery.vmap.js"></script>-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>-->
+<!--        <script type="text/javascript"-->
+<!--                src="/assets/gentella/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>-->
+<!--        &lt;!&ndash; bootstrap-daterangepicker &ndash;&gt;-->
+<!--        <script type="text/javascript" src="/assets/gentella/vendors/moment/min/moment.min.js"></script>-->
+<!--        <script type="text/javascript"-->
+<!--                src="/assets/gentella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>-->
 
-    <!-- Custom Theme Scripts -->
-    <script type="text/javascript" src="/assets/gentella/build/js/custom.min.js"></script>
+        <!-- Custom Theme Scripts -->
+        <script type="text/javascript" src="/assets/admin/vendors/gentella/custom.min.js"></script>
 
 
-
-</th:block>
+    </th:block>
 </div>
