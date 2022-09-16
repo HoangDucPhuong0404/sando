@@ -1,4 +1,4 @@
-package com.cg.tp.sandro.services.mappers;
+package com.cg.tp.sandro.mappers;
 
 import org.springframework.stereotype.Component;
 

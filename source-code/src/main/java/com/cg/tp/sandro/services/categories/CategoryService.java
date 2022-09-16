@@ -1,13 +1,15 @@
 package com.cg.tp.sandro.services.categories;
 
-import com.cg.tp.sandro.dto.CategoryResult;
+import com.cg.tp.sandro.dto.category.CategoryResult;
 import com.cg.tp.sandro.repositories.CategoryRepository;
 import com.cg.tp.sandro.repositories.models.Category;
+import com.cg.tp.sandro.mappers.CategoryMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class CategoryService implements ICategoryService {
@@ -15,9 +17,12 @@ public class CategoryService implements ICategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    @Autowired
+    private CategoryMapper categoryMapper;
+
     @Override
     public List<CategoryResult> findAll() {
-        return null;
+        return categoryRepository.findAll().stream().map(categoryMapper::toDTO).collect(Collectors.toList());
     }
 
     @Override

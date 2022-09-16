@@ -1,4 +1,4 @@
-package com.cg.tp.sandro.services.mappers.product;
+package com.cg.tp.sandro.mappers.product;
 
 import com.cg.tp.sandro.repositories.models.ProductMedia;
 import com.cg.tp.sandro.repositories.models.ProductSizeColor;

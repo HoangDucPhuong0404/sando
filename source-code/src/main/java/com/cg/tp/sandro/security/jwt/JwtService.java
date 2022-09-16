@@ -1,4 +1,4 @@
-package com.cg.tp.sandro.services.jwt;//package com.cg.tp.sandro.services.jwt;
+package com.cg.tp.sandro.security.jwt;//package com.cg.tp.sandro.security.jwt;
 //
 //import com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithm;
 //import org.slf4j.Logger;

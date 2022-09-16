@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/order")
+@RequestMapping("/api/orders")
 public class OrderRestController {
 
     @Autowired
@@ -47,6 +47,11 @@ public class OrderRestController {
         }
         return new ResponseEntity<>("Can not find product !", HttpStatus.NOT_FOUND);
     }
+
+//    @GetMapping("/revenue")
+//    public ResponseEntity<?> totalRevenue(){
+//
+//    }
 
 
 }

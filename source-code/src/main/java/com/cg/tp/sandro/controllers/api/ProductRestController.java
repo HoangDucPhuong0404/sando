@@ -1,8 +1,12 @@
 package com.cg.tp.sandro.controllers.api;
 
-import com.cg.tp.sandro.dto.CategoryResult;
-import com.cg.tp.sandro.dto.NewProductParam;
+import com.cg.tp.sandro.dto.category.CategoryResult;
+import com.cg.tp.sandro.dto.color.ColorParam;
+import com.cg.tp.sandro.dto.color.ColorResult;
+import com.cg.tp.sandro.dto.product.UpdateProductParam;
 import com.cg.tp.sandro.dto.product.*;
+import com.cg.tp.sandro.dto.size.SizeParam;
+import com.cg.tp.sandro.dto.size.SizeResult;
 import com.cg.tp.sandro.repositories.models.Category;
 import com.cg.tp.sandro.repositories.models.Product;
 import com.cg.tp.sandro.services.categories.ICategoryService;
@@ -51,9 +55,6 @@ public class ProductRestController {
     @GetMapping("")
     public ResponseEntity<?> showAllProducts(@PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
         Page<ProductResult> paged = productService.findAll(pageable);
-        if (paged.isEmpty()) {
-            return new ResponseEntity<>("List product is empty", HttpStatus.NOT_FOUND);
-        }
         return new ResponseEntity<>(paged, HttpStatus.OK);
     }
 
@@ -67,25 +68,28 @@ public class ProductRestController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<?> doCreateProduct(@Validated @RequestBody NewProductParam productParam, BindingResult bindingResult) {
+    public ResponseEntity<?> doCreateProduct(@Validated @RequestBody CreateProductParam param, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
         }
 
-        Product newProduct = productService.save(productParam.toProduct());
+
+        ProductResult newProduct = productService.create(param);
         return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
-    public ResponseEntity<?> doUpdate(@Validated @RequestBody NewProductParam newProductParam, BindingResult bindingResult) {
+    public ResponseEntity<?> doUpdate(@Validated @RequestBody UpdateProductParam updateProductParam, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
         }
-        Product transferProduct = newProductParam.toProduct();
-        Optional<Product> productOptional = productService.findById(transferProduct.getId());
+        Optional<Product> productOptional = productService.findById(updateProductParam.getProductId());
+
+
         if (productOptional.isPresent()) {
-            Product updatedProduct = productService.save(productOptional.get());
-            return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
+            ProductResult updatedProduct = productService.update(updateProductParam);
+           // Product updatedProduct = productService.save(productOptional.get());
+            return new ResponseEntity<>(updatedProduct,HttpStatus.OK);// new ResponseEntity<>(updatedProduct, HttpStatus.OK);
         }
         return new ResponseEntity<>("Can't update product", HttpStatus.NOT_FOUND);
     }
@@ -95,8 +99,8 @@ public class ProductRestController {
     public ResponseEntity<?> doDelete(@PathVariable Long id) {
         Optional<Product> productOptional = productService.findById(id);
         if (productOptional.isPresent()) {
-            productOptional.get().setDeleted(true);
-            productService.save(productOptional.get());
+            productService.deleteProduct(id);
+           // productService.save(productOptional.get());
             return new ResponseEntity<>("Deleted product success !", HttpStatus.OK);
         }
         return new ResponseEntity<>("Can't find out product", HttpStatus.NOT_FOUND);
@@ -121,9 +125,6 @@ public class ProductRestController {
     @GetMapping("/category")
     public ResponseEntity<?> showAllCategory() {
         List<CategoryResult> categories = categoryService.findAll();
-        if (categories.isEmpty()) {
-            return new ResponseEntity<>("Empty category !", HttpStatus.NOT_FOUND);
-        }
         return new ResponseEntity<>(categories, HttpStatus.OK);
     }
 
@@ -143,22 +144,16 @@ public class ProductRestController {
         return new ResponseEntity<>(newSize, HttpStatus.OK);
     }
 
-    @GetMapping("/size")
+    @GetMapping("/sizes")
     public ResponseEntity<?> showAllSize() {
         List<SizeResult> sizes = sizeService.findAll();
-        if (sizes.isEmpty()) {
-            return new ResponseEntity<>("Empty Size !", HttpStatus.NOT_FOUND);
-        }
         return new ResponseEntity<>(sizes, HttpStatus.OK);
     }
 
 
-    @GetMapping("/color")
+    @GetMapping("/colors")
     public ResponseEntity<?> showAllColor() {
         List<ColorResult> colors = colorService.findAll();
-        if (colors.isEmpty()) {
-            return new ResponseEntity<>("Empty color !", HttpStatus.NOT_FOUND);
-        }
         return new ResponseEntity<>(colors, HttpStatus.OK);
     }
 

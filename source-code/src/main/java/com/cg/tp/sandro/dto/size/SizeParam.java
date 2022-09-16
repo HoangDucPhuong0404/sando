@@ -1,4 +1,4 @@
-package com.cg.tp.sandro.dto.product;
+package com.cg.tp.sandro.dto.size;
 
 import lombok.*;
 import lombok.experimental.Accessors;

@@ -1,7 +1,7 @@
-package com.cg.tp.sandro.services.mappers.product;
+package com.cg.tp.sandro.mappers.product;
 
-import com.cg.tp.sandro.dto.product.ColorParam;
-import com.cg.tp.sandro.dto.product.ColorResult;
+import com.cg.tp.sandro.dto.color.ColorParam;
+import com.cg.tp.sandro.dto.color.ColorResult;
 import com.cg.tp.sandro.repositories.models.Color;
 import org.springframework.stereotype.Component;
 

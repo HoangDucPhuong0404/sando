@@ -1,15 +1,14 @@
 package com.cg.tp.sandro.services.color;
 
-import com.cg.tp.sandro.dto.product.ColorParam;
-import com.cg.tp.sandro.dto.product.ColorResult;
+import com.cg.tp.sandro.dto.color.ColorParam;
+import com.cg.tp.sandro.dto.color.ColorResult;
 import com.cg.tp.sandro.repositories.ColorRepository;
-import com.cg.tp.sandro.repositories.models.Color;
-import com.cg.tp.sandro.services.color.IColorService;
+import com.cg.tp.sandro.mappers.product.ColorMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ColorServiceImpl implements IColorService {
@@ -17,6 +16,9 @@ public class ColorServiceImpl implements IColorService {
     @Autowired
     private ColorRepository colorRepository;
 
+
+    @Autowired
+    private ColorMapper colorMapper;
 //    @Override
 //    public List<Color> findAll() {
 //        return colorRepository.findAll();
@@ -44,7 +46,7 @@ public class ColorServiceImpl implements IColorService {
 
     @Override
     public List<ColorResult> findAll() {
-        return null;
+        return colorRepository.findAll().stream().map(colorMapper::toDTO).collect(Collectors.toList());
     }
 
     @Override

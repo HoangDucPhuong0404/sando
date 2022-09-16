@@ -265,7 +265,7 @@
         <div class="row top_tiles" style="margin: 10px 0;">
           <div class="col-md-3 col-sm-3 col-xs-6 tile">
             <span id="totalProduct">Total Product</span>
-            <h2>231,809</h2>
+
             <span class="sparkline_one" style="height: 160px;">
                       <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
                   </span>
@@ -835,6 +835,15 @@
 
 <!-- jQuery -->
 <th:block th:include="/layout/script :: script "/>
+<script type="text/javascript" src="/assets/js/admin/api/category-api.js"></script>
+<script type="text/javascript" src="/assets/js/admin/api/color-api.js"></script>
+<script type="text/javascript" src="/assets/js/admin/api/size-api.js"></script>
+<script type="text/javascript" src="/assets/js/admin/api/product-api.js"></script>
+<script type="text/javascript" src="/assets/js/admin/api/api.js"></script>
+<script type="text/javascript" src="/assets/js/admin/product/createProduct.js"></script>
+<script>
+drawTotalPr oduct();
 
+</script>
 </body>
 </html>

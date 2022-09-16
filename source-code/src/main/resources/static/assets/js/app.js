@@ -9,38 +9,7 @@ class App {
             });
         }
 
-<<<<<<< HEAD
-    static DOMAIN = location.origin;
 
-    static BASE_URL_AUTH = this.DOMAIN + "/api/auth";
-    static BASE_URL_PRODUCT = this.DOMAIN + "/api/products";
-    static BASE_URL_CATEGORY = this.DOMAIN + "/api/categories";
-    static BASE_URL_SIZE = this.DOMAIN + "/api/sizes";
-    static BASE_URL_COLOR = this.DOMAIN + "/api/colors";
-
-    static BASE_URL_CLOUD_IMAGE = "https://res.cloudinary.com/ngocbich/image/upload";
-    static BASE_SCALE_IMAGE = "c_limit,w_150,h_100,q_100";
-
-    static showSuspendedConfirmDialog() {
-        return Swal.fire({
-            icon: 'warning',
-            text: 'Are you sure to suspend the selected customer ?',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, please suspend this client !',
-            cancelButtonText: 'Cancel',
-        })
-=======
-        static showErrorAlert(m) {
-            iziToast.error({
-                title: 'Error',
-                position: 'topRight',
-                timeout: 2500,
-                message: m,
-            });
-        }
->>>>>>> 4b23b420a98b5d92f03fea98f665b0d41c1fcd35
     }
 
 
@@ -58,8 +27,8 @@ class App {
         static showErrorAlert(t) {
             Swal.fire({
                 icon: 'error',
-                title: 'Warning',
-                text: t,
+                title: t,
+                text: 't',
             })
         }
     }
@@ -86,39 +55,23 @@ class App {
     }
 }
 
-<<<<<<< HEAD
-// class LocationRegion {
-//     constructor(id, provinceId, provinceName, districtId, districtName, wardId, wardName, address) {
-//         this.id = id;
-//         this.provinceId = provinceId;
-//         this.provinceName = provinceName;
-//         this.districtId = districtId;
-//         this.districtName = districtName;
-//         this.wardId = wardId;
-//         this.wardName = wardName;
-//         this.address = address;
-//     }
-// }
 
 
-=======
+
+
 
 
 class Product {
-    constructor(id,name,image, category, size, color ,title,price,quantity,status,description, createAt) {
+    constructor(id,title,image,slug,productSizeColor,content, createAt) {
         this.id = id;
-        this.name = name;
-        this.image = image;
-        this.category = category;
-        this.size = size;
-        this.color = color;
-        this.image = image;
         this.title = title;
-        this.price = price;
-        this.quantity = quantity;
-        this.status = status
-        this.description = description;
+        this.image = image;
+        this.slug = slug;
         this.createAt = createAt;
+        this.content = content;
+        this.productSizeColor = productSizeColor;
+
+
     }
 }
 
@@ -171,16 +124,41 @@ class Cart {
 
 
 
+}
+class UpdateProduct{
+    constructor() {
 
-
-
-
-
-
-
+    }
+}
+class ColorSizeParam {
+    constructor(colorId, sizeId, price, quantity) {
+        this.colorId = colorId;
+        this.sizeId = sizeId;
+        this.price = price;
+        this.quantity = quantity;
+    }
 }
 
+class CreateProduct {
+    constructor(title, slug, content, categoryId) {
+        this.title = title;
+        this.slug = slug;
+        this.content = content;
+        this.categoryId = categoryId;
+    }
+}
 
+class ProductSizeColor {
+    constructor(sizeId, sizeTitle, colorId, colorTitle, quantity, price, uniqueStringId) {
+        this.sizeId = sizeId;
+        this.sizeTitle = sizeTitle;
+        this.colorId = colorId;
+        this.colorTitle = colorTitle;
+        this.quantity = quantity;
+        this.price = price;
+        this.uniqueStringId = uniqueStringId;
+    }
+}
 
 class Category {
     constructor(id, title) {
@@ -207,4 +185,4 @@ class Color {
 
 
 
->>>>>>> 4b23b420a98b5d92f03fea98f665b0d41c1fcd35
+

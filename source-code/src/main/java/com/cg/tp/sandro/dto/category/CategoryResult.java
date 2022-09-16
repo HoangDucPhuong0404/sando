@@ -1,12 +1,12 @@
-package com.cg.tp.sandro.dto.product;
+package com.cg.tp.sandro.dto.category;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 @Data
 @Accessors(chain = true)
-public class SizeResult {
-    private Long id;
+public class CategoryResult {
+    private long id;
+    private String slug;
     private String title;
-    private String code;
 }

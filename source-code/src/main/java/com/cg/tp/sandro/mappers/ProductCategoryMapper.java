@@ -1,4 +1,4 @@
-package com.cg.tp.sandro.services.mappers;
+package com.cg.tp.sandro.mappers;
 
 import com.cg.tp.sandro.repositories.models.ProductCategory;
 import com.cg.tp.sandro.dto.ProductCategoryDTO;

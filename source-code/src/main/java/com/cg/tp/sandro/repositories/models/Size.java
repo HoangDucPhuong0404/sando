@@ -14,6 +14,7 @@ import java.io.Serializable;
 @Table(name = "size")
 public class Size {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     @Column(name = "title", nullable = false, length = 75)

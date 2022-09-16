@@ -1,5 +1,7 @@
 package com.cg.tp.sandro.dto.product;
 
+import com.cg.tp.sandro.dto.color.ColorResult;
+import com.cg.tp.sandro.dto.size.SizeResult;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

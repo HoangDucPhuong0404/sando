@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+
 <head>
     <th:block th:include="layout/head :: head "/>
 </head>
@@ -27,7 +29,7 @@
                 </div>
                 <!-- /menu profile quick info -->
 
-                <br />
+                <br/>
 
                 <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
@@ -40,7 +42,8 @@
 
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-product-hunt"></i> Product <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-product-hunt"></i> Product <span
+                                    class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="http://localhost:8091/admin/product/create">Create</a></li>
                                     <li><a href="http://localhost:8091/admin/product">List</a></li>
@@ -82,7 +85,8 @@
                                     <li><a href="http://localhost:8091/admin/order">Order</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span
+                                    class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="chartjs.html">Chart JS</a></li>
 
@@ -171,7 +175,8 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
-                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                               aria-expanded="false">
                                 <img src="/assets/images/anonymous.jpeg" alt="">Boss
                                 <span class=" fa fa-angle-down"></span>
                             </a>
@@ -189,14 +194,15 @@
                         </li>
 
                         <li role="presentation" class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
+                               aria-expanded="false">
                                 <i class="fa fa-envelope-o"></i>
                                 <span class="badge bg-green">6</span>
                             </a>
                             <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                                 <li>
                                     <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -208,7 +214,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -220,7 +226,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -232,7 +238,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -288,7 +294,8 @@
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="#">Settings 1</a>
                                             </li>
@@ -303,137 +310,88 @@
                             </div>
                             <div class="x_content">
 
-                                <form id="createGeneralPr" data-parsley-validate class="form-horizontal form-label-left" method="post">
+                                <form id="createGeneralPr" data-parsley-validate class="form-horizontal form-label-left"
+                                      method="post">
 
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Title <span
+                                                class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" id="nameCr" name="nameCr"  class="form-control col-md-7 col-xs-12">
+                                            <input type="text" id="nameCr" name="titleCr"
+                                                   class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="slugCr" class="control-label col-md-3 col-sm-3 col-xs-12">Slug</label>
+                                        <label for="slugCr"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Slug</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="slugCr" class="form-control col-md-7 col-xs-12" type="text" name="slugCr">
+                                            <input id="slugCr" class="form-control col-md-7 col-xs-12" type="text"
+                                                   name="slugCr">
                                         </div>
                                     </div>
+<!--                                    <div class="form-group">-->
+<!--                                        <label for="priceCR"-->
+<!--                                               class="control-label col-md-3 col-sm-3 col-xs-12">Price<span-->
+<!--                                                class="required">*</span></label>-->
+<!--                                        <div class="col-md-6 col-sm-6 col-xs-12">-->
+<!--                                            <input id="priceCR" class="form-control col-md-7 col-xs-12" type="number"-->
+<!--                                                   name="priceCr" required="required">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                     <div class="form-group">
-                                        <label for="priceCR" class="control-label col-md-3 col-sm-3 col-xs-12" >Price<span class="required">*</span></label>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Category <span
+                                                class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="priceCR" class="form-control col-md-7 col-xs-12" type="number" name="priceCr" required="required" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Category <span class="required">*</span></label>
-                                        <div class="col-md-9 col-md-offset-3" >
                                             <!--                                            <div  id="categoryCr" class="btn-group" data-toggle="buttons" >-->
-                                            <div class="x_content " id="categoryCr">
+                                            <div class="x_content ">
 
-                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                    <input type="radio" name="categoryCr" value="1"> &nbsp; Nike &nbsp;
-                                                </label>
-                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                    <input type="radio" name="categoryCr" value="2"> Adidas
-                                                </label>
-                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                    <input type="radio" name="categoryCr" value="3"> Puma
-                                                </label>
-                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                    <input type="radio" name="categoryCr" value="4"> New Balance
-                                                </label>
 
+                                                <select id="categoryCr" class="form-select form-select-lg mb-3"
+                                                        aria-label=".form-select-lg example" name="statusCr">
+                                                </select>
+                                                <button id="addCategory" type="button"> <i class="fa fa-plus-circle"></i> Add Category</button>
+                                                <div class="modal" tabindex="-1" role="dialog" id="addCategoryModal">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title">Modal title</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                               <input type="text" id="titleCategory">
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-<!--                                    <div class="form-group">-->
-<!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Quantity <span class="required">*</span>-->
-<!--                                        </label>-->
-<!--                                        <div class="col-md-6 col-sm-6 col-xs-12">-->
-<!--                                            <input id="quantityCr" name="quantity" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-                                    <!--                                                        <div class="form-group">-->
-                                    <!--                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">size <span class="required">*</span>-->
-                                    <!--                                                            </label>-->
-                                    <!--                                                            <div class="col-md-6 col-sm-6 col-xs-12">-->
-                                    <!--                                                                <input id="size" name="size" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">-->
-                                    <!--                                                            </div>-->
-                                    <!--                                                        </div>-->
-
-
-<!--                                    <div class="form-group">-->
-<!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Color <span class="required">*</span></label>-->
-<!--                                        <div class="col-md-6 col-sm-6 col-xs-12">-->
-<!--                                            <div class="x_content"  id="colorCr">-->
-<!--&lt;!&ndash;                                                <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                </button>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                <button type="button" class="btn btn-secondary btn-circle btn-xl"></button>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                <button type="button" class="btn btn-primary btn-circle btn-xl"></button>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                <button type="button" class="btn btn-danger btn-circle btn-xl"></button>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                <button type="button" class="button button5">50%</button>&ndash;&gt;-->
-<!--                                                <label class="btn btn-round btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-<!--                                                    <input type="radio" name="category" value="1"> &nbsp; Nike &nbsp;-->
-<!--                                                </label>-->
-<!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-<!--                                                    <input type="radio" name="category" value="2"> Adidas-->
-<!--                                                </label>-->
-<!--                                                <label class="btn btn-round btn-success" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-<!--                                                    <input type="radio" name="category" value="3"> Puma-->
-<!--                                                </label>-->
-<!--                                                <label class="btn btn-round btn-warning" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-<!--                                                    <input type="radio" name="category" value="4"> New Balance-->
-<!--                                                </label>-->
-
-
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-
-<!--                                    <div class="form-group">-->
-<!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Category <span class="required">*</span></label>-->
-<!--                                        <div class="col-md-6 col-sm-6 col-xs-12" >-->
-<!--&lt;!&ndash;                                            <div  id="categoryCr" class="btn-group" data-toggle="buttons" >&ndash;&gt;-->
-<!--                                                <div class="x_content" id="categoryCr">-->
-
-<!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-<!--                                                    <input type="radio" name="category" value="1"> &nbsp; Nike &nbsp;-->
-<!--                                                </label>-->
-<!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-<!--                                                    <input type="radio" name="category" value="2"> Adidas-->
-<!--                                                </label>-->
-<!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-<!--                                                    <input type="radio" name="category" value="3"> Puma-->
-<!--                                                </label>-->
-<!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-<!--                                                    <input type="radio" name="category" value="4"> New Balance-->
-<!--                                                </label>-->
-
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="item form-group">-->
-<!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Description <span class="required">*</span>-->
-<!--                                        </label>-->
-<!--                                        <div class="col-md-6 col-sm-6 col-xs-12">-->
-<!--                                            <textarea id="descriptionCr" required="required" name="description" class="form-control col-md-7 col-xs-12"></textarea>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Description <span class="required">*</span>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Description <span
+                                                class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea id="description" name="description" class="form-control col-md-7 col-xs-12"></textarea>
+                                            <textarea id="descriptionCr" name="description"
+                                                      class="form-control col-md-7 col-xs-12"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Status <span class="required">*</span>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Status <span
+                                                class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
 
                                             <!-- Example single danger button -->
-                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="statusCr" name="statusCr">
+                                            <select class="form-select form-select-lg mb-3"
+                                                    aria-label=".form-select-lg example" id="statusCr" name="statusCr">
                                                 <option selected>Status</option>
                                                 <option value="1">Sold out !</option>
                                                 <option value="2">Available</option>
@@ -451,11 +409,13 @@
                                     </div>
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
-                                        <div class="col-md-9 col-md-offset-3">
-                                            <button class="btn btn-round btn-warning" type="button">Cancel</button>
-                                            <button class="btn btn-round btn-info" type="reset">Reset</button>
-                                            <button type="submit" class="btn btn-round btn-success" id="btnCreate">Submit</button>
-                                        </div>
+<!--                                        <div class="col-md-9 col-md-offset-3">-->
+<!--                                            <button class="btn btn-round btn-warning" type="button">Cancel</button>-->
+<!--                                            <button class="btn btn-round btn-info" type="reset">Reset</button>-->
+<!--                                            <button type="button" class="btn btn-round btn-success" id="btnCreate">-->
+<!--                                                Submit-->
+<!--                                            </button>-->
+<!--                                        </div>-->
                                     </div>
 
                                 </form>
@@ -465,12 +425,13 @@
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Add Information</h2>
+                                <h2>Additional Information</h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="#">Settings 1</a>
                                             </li>
@@ -484,95 +445,38 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-                                <br />
+                                <br/>
                                 <form class="form-horizontal form-label-left" id="createAddPr">
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Size <span class="required">*</span></label>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Size <span
+                                                class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <div class="btn-group btn-group-justified" data-toggle="buttons" id="sizeCr">
-                                                <label class="btn btn-primary active">
-                                                    <input type="radio" class="sr-only"  name="aspectRatio" value="1.7777777777777777">
-                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 16 / 9">
-                            16:9
-                          </span>
-                                                </label>
-                                                <label class="btn btn-primary">
-                                                    <input type="radio" class="sr-only" id="aspectRatio1" name="aspectRatio" value="1.3333333333333333">
-                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 4 / 3">
-                            4:3
-                          </span>
-                                                </label>
-                                                <label class="btn btn-primary">
-                                                    <input type="radio" class="sr-only" id="aspectRatio2" name="aspectRatio" value="1">
-                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 1 / 1">
-                            1:1
-                          </span>
-                                                </label>
-                                                <label class="btn btn-primary">
-                                                    <input type="radio" class="sr-only" id="aspectRatio3" name="aspectRatio" value="0.6666666666666666">
-                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 2 / 3">
-                            2:3
-                          </span>
-                                                </label>
-                                                <label class="btn btn-primary">
-                                                    <input type="radio" class="sr-only" id="aspectRatio4" name="aspectRatio" value="NaN">
-                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: NaN">
-                            Free
-                          </span>
-                                                </label>
+                                            <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                                <select id="sizeCr">
+                                                </select>
+                                                <button id="addSize" type="button"> <i class="fa fa-plus-circle"></i> Add Size</button>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Quantity <span class="required">*</span>
-                                        </label>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Color <span
+                                                class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="quantity" name="quantityCr" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Color <span class="required">*</span></label>
-                                        <div class="col-md-9 col-md-offset-3">
-                                            <div class="x_content"  id="colorCr">
-                                                <!--                                                <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i>-->
-                                                <!--                                                </button>-->
-                                                <!--                                                <button type="button" class="btn btn-secondary btn-circle btn-xl"></button>-->
-                                                <!--                                                <button type="button" class="btn btn-primary btn-circle btn-xl"></button>-->
-                                                <!--                                                <button type="button" class="btn btn-danger btn-circle btn-xl"></button>-->
-                                                <!--                                                <button type="button" class="button button5">50%</button>-->
-                                                <label class="btn btn-round btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                    <input type="radio" name="colorCr" value="1"> &nbsp;  &nbsp;
-                                                </label>
-                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                    <input type="radio" name="colorCr" value="2">
-                                                </label>
-                                                <label class="btn btn-round btn-success" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                    <input type="radio" name="colorCr" value="3">
-                                                </label>
-                                                <label class="btn btn-round btn-warning" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                    <input type="radio" name="colorCr" value="4">
-                                                </label>
-
-
+                                            <div class="x_content">
+                                                <select id="colorCr">
+                                                </select>
+                                                <button id="addColor" type="button"> <i class="fa fa-plus-circle"></i> Add Color</button>
                                             </div>
                                         </div>
                                     </div>
-<!--                                    <div class="form-group">-->
-<!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-3">Credit Card Mask</label>-->
-<!--                                        <div class="col-md-9 col-sm-9 col-xs-9">-->
-<!--                                            <input type="text" class="form-control" data-inputmask="'mask' : '9999-9999-9999-9999'">-->
-<!--                                            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
                                     <div class="ln_solid"></div>
 
                                     <div class="form-group">
                                         <div class="col-md-9 col-md-offset-3">
-                                            <button type="submit" class="btn btn-primary">Cancel</button>
-                                            <button type="submit" class="btn btn-success">Submit</button>
+                                            <button class="btn btn-success">Add</button>
                                         </div>
                                     </div>
 
@@ -590,7 +494,8 @@
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="#">Settings 1</a>
                                             </li>
@@ -605,11 +510,13 @@
                             </div>
                             <div class="x_content">
 
-                                <form id="createProductForm" data-parsley-validate class="form-horizontal form-label-left" method="post">
+                                <form id="createProductForm" data-parsley-validate
+                                      class="form-horizontal form-label-left" method="post">
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="image">Link Image <span class="required">*</span>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="image">Link Image
+                                            <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <div class="py-20 h-screen bg-white px-2">
@@ -626,9 +533,8 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <input type="file" class="h-full w-full opacity-0" name="" id="imageCr">
-
-
+                                                                <input type="file" class="h-full w-full opacity-0"
+                                                                       name="" id="imageCr">
 
 
                                                             </div>
@@ -636,126 +542,76 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--                          <input type="url" id="last-name" name="image" required="required" class="form-control col-md-7 col-xs-12">-->
                                         </div>
                                     </div>
-
-                                    <!--                                    <div class="form-group">-->
-                                    <!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Quantity <span class="required">*</span>-->
-                                    <!--                                        </label>-->
-                                    <!--                                        <div class="col-md-6 col-sm-6 col-xs-12">-->
-                                    <!--                                            <input id="quantityCr" name="quantity" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">-->
-                                    <!--                                        </div>-->
-                                    <!--                                    </div>-->
-                                    <!--                                                        <div class="form-group">-->
-                                    <!--                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">size <span class="required">*</span>-->
-                                    <!--                                                            </label>-->
-                                    <!--                                                            <div class="col-md-6 col-sm-6 col-xs-12">-->
-                                    <!--                                                                <input id="size" name="size" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">-->
-                                    <!--                                                            </div>-->
-                                    <!--                                                        </div>-->
-                                    <!--                                    <div class="form-group">-->
-                                    <!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Size <span class="required">*</span></label>-->
-                                    <!--                                        <div class="col-md-6 col-sm-6 col-xs-12">-->
-                                    <!--                                            <div class="btn-group btn-group-justified" data-toggle="buttons" id="sizeCr">-->
-                                    <!--&lt;!&ndash;                                                <label class="btn btn-primary active">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <input type="radio" class="sr-only"  name="aspectRatio" value="1.7777777777777777">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 16 / 9">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                            16:9&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                          </span>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                </label>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                <label class="btn btn-primary">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <input type="radio" class="sr-only" id="aspectRatio1" name="aspectRatio" value="1.3333333333333333">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 4 / 3">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                            4:3&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                          </span>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                </label>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                <label class="btn btn-primary">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <input type="radio" class="sr-only" id="aspectRatio2" name="aspectRatio" value="1">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 1 / 1">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                            1:1&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                          </span>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                </label>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                <label class="btn btn-primary">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <input type="radio" class="sr-only" id="aspectRatio3" name="aspectRatio" value="0.6666666666666666">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: 2 / 3">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                            2:3&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                          </span>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                </label>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                <label class="btn btn-primary">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <input type="radio" class="sr-only" id="aspectRatio4" name="aspectRatio" value="NaN">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                    <span class="docs-tooltip" data-toggle="tooltip" title="aspectRatio: NaN">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                            Free&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                          </span>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                </label>&ndash;&gt;-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </div>-->
-                                    <!--                                    </div>-->
-
-                                    <!--                                    <div class="form-group">-->
-                                    <!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Color <span class="required">*</span></label>-->
-                                    <!--                                        <div class="col-md-6 col-sm-6 col-xs-12">-->
-                                    <!--                                            <div class="x_content"  id="colorCr">-->
-                                    <!--&lt;!&ndash;                                                <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                </button>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                <button type="button" class="btn btn-secondary btn-circle btn-xl"></button>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                <button type="button" class="btn btn-primary btn-circle btn-xl"></button>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                <button type="button" class="btn btn-danger btn-circle btn-xl"></button>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;                                                <button type="button" class="button button5">50%</button>&ndash;&gt;-->
-                                    <!--                                                <label class="btn btn-round btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-                                    <!--                                                    <input type="radio" name="category" value="1"> &nbsp; Nike &nbsp;-->
-                                    <!--                                                </label>-->
-                                    <!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-                                    <!--                                                    <input type="radio" name="category" value="2"> Adidas-->
-                                    <!--                                                </label>-->
-                                    <!--                                                <label class="btn btn-round btn-success" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-                                    <!--                                                    <input type="radio" name="category" value="3"> Puma-->
-                                    <!--                                                </label>-->
-                                    <!--                                                <label class="btn btn-round btn-warning" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-                                    <!--                                                    <input type="radio" name="category" value="4"> New Balance-->
-                                    <!--                                                </label>-->
-
-
-                                    <!--                                            </div>-->
-                                    <!--                                        </div>-->
-                                    <!--                                    </div>-->
-
-                                    <!--                                    <div class="form-group">-->
-                                    <!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Category <span class="required">*</span></label>-->
-                                    <!--                                        <div class="col-md-6 col-sm-6 col-xs-12" >-->
-                                    <!--&lt;!&ndash;                                            <div  id="categoryCr" class="btn-group" data-toggle="buttons" >&ndash;&gt;-->
-                                    <!--                                                <div class="x_content" id="categoryCr">-->
-
-                                    <!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-                                    <!--                                                    <input type="radio" name="category" value="1"> &nbsp; Nike &nbsp;-->
-                                    <!--                                                </label>-->
-                                    <!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-                                    <!--                                                    <input type="radio" name="category" value="2"> Adidas-->
-                                    <!--                                                </label>-->
-                                    <!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-                                    <!--                                                    <input type="radio" name="category" value="3"> Puma-->
-                                    <!--                                                </label>-->
-                                    <!--                                                <label class="btn btn-round btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">-->
-                                    <!--                                                    <input type="radio" name="category" value="4"> New Balance-->
-                                    <!--                                                </label>-->
-
-                                    <!--                                            </div>-->
-                                    <!--                                        </div>-->
-                                    <!--                                    </div>-->
-                                    <!--                                    <div class="item form-group">-->
-                                    <!--                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Description <span class="required">*</span>-->
-                                    <!--                                        </label>-->
-                                    <!--                                        <div class="col-md-6 col-sm-6 col-xs-12">-->
-                                    <!--                                            <textarea id="descriptionCr" required="required" name="description" class="form-control col-md-7 col-xs-12"></textarea>-->
-                                    <!--                                        </div>-->
-                                    <!--                                    </div>-->
-
                                     <div class="ln_solid"></div>
 
 
                                 </form>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Version <small></small></h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Settings 1</a>
+                                            </li>
+                                            <li><a href="#">Settings 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <table class="table table-striped" id="tablePick">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name Version</th>
+                                        <th>Size</th>
+                                        <th>Color</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+<!--                                    <tr>-->
+<!--                                        <th scope="row">1</th>-->
+<!--                                        <td>Mark</td>-->
+<!--                                        <td>-->
+<!--                                            <div>-->
+<!--                                                <input type="number" id="priceC">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div>-->
+<!--                                                <input type="number" id="quantityCR">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-4">
+                        <a href="http://localhost:8091/admin/product" type="button" class="btn btn-primary">Out</a>
+                        <button class="btn btn-success" id="btnCreateProduct">Create</button>
                     </div>
                 </div>
             </div>
@@ -775,9 +631,14 @@
 
 <!-- jQuery -->
 <th:block th:include="/layout/script :: script "/>
-<script type="text/javascript" src="/assets/js/product_list.js"></script>
-<script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/admin/api/category-api.js"></script>
 
-</script>
+<script type="text/javascript" src="/assets/js/admin/api/color-api.js"></script>
+<script type="text/javascript" src="/assets/js/admin/api/size-api.js"></script>
+<script type="text/javascript" src="/assets/js/admin/api/product-api.js"></script>
+<script type="text/javascript" src="/assets/js/admin/api/api.js"></script>
+<script type="text/javascript" src="/assets/js/admin/product/createProduct.js"></script>
+
 </body>
 </html>

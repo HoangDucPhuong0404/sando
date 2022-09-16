@@ -1,7 +1,9 @@
 package com.cg.tp.sandro.controllers;
 
 import com.cg.tp.sandro.repositories.models.Order;
+import com.cg.tp.sandro.repositories.models.Product;
 import com.cg.tp.sandro.services.order.IOrderService;
+import com.cg.tp.sandro.services.product.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +19,23 @@ public class HomeController {
 
     @Autowired
     private IOrderService orderService;
+
+    @Autowired
+    private IProductService productService;
+
+    @GetMapping("/product/{id}")
+    public ModelAndView showDetailProduct(@PathVariable Long id){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("admin/dashboard/product/productDetail");
+        Optional<Product> productOptional = productService.findById(id);
+        if (productOptional.isPresent()){
+            modelAndView.addObject("product", productOptional);
+        }else {
+            modelAndView.addObject("message", "Not found !" );
+        }
+
+        return modelAndView;
+    }
 
     @GetMapping("/product")
     public ModelAndView showProduct(){
