@@ -15,10 +15,7 @@ public interface IProductService {
     Optional<Product> findById(Long id);
 
     void remove(Long id);
-
-
     Page<ProductResult> findAllProductDeletedIsFalse(Pageable pageable);
-
 
     void deleteProduct(Long id);
 
@@ -29,4 +26,5 @@ public interface IProductService {
     ProductResult create(CreateProductParam param);
 
     ProductResult update(UpdateProductParam updateProductParam);
+    ProductResult findProductBySlug(String slug);
 }

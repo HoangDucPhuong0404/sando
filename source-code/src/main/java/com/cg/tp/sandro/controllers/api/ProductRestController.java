@@ -51,6 +51,10 @@ public class ProductRestController {
     @Autowired
     private IOrderService orderService;
 
+    @GetMapping("/sdf")
+    public Page<ProductResult> homeSandroo(@PageableDefault(size = 10) Pageable pageable) {
+        return productService.findAll(pageable);
+    }
 
     @GetMapping("")
     public ResponseEntity<?> showAllProducts(@PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
