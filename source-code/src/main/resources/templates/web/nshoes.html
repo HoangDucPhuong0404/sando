@@ -3173,10 +3173,10 @@
 
                                                 <!--                                            </script>-->
                                             </div>
-
+<!-- fix btn-viewProduct, th:data-id="${product.slug}"-->
                                             <strong class="product name product-item-name">
-                                                <a class="product-item-link"
-                                                   th:utext="${product.title}">
+                                                <a class="product-item-link btn-viewProduct"
+                                                   th:utext="${product.title}" th:data-id="${product.slug}">
                                                 </a>
                                             </strong>
                                             <div class="price-box price-final_price"
@@ -3194,8 +3194,8 @@
                             class="price-wrapper ">
     <!--                    data-price-amount="8575000"-->
                         <!--                    class="price"-->
-                        <th:block th:each=" pSCL, iState : ${product.productSizeColorList}">
-                            <span th:if="${iState.first}" th:utext="${pSCL.price}"></span>
+                        <th:block th:each=" pSC, iState : ${product.productSizeColorList}">
+                            <span th:if="${iState.first}" th:utext="${pSC.price}"></span>
                         </th:block>
                     </span>
                 </span>
@@ -4208,11 +4208,6 @@ NREUM.info = {
 <script>
 
     let product = new Product();
-    let page = {
-        urls: {
-            getAllProducts: App.BASE_URL_PRODUCT
-        }
-    }
 
     function findBySlug(slug) {
         return $.ajax({
@@ -4220,11 +4215,14 @@ NREUM.info = {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
-
             },
             url: page.urls.getAllProducts + slug
         }). done ((data) => {
+
+
             product = data;
+        }). fail(() =>{
+            alert("Không tìm thấy sản phẩn!")
         })
     }
 
